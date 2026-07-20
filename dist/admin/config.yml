@@ -1,0 +1,55 @@
+# Public admin/index.html — Panel de administración Decap CMS
+# La Dra. entra aquí para gestionar la web
+---
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Páginas"
+    description: "Contenido de las páginas principales"
+    files:
+      - name: "home"
+        label: "Inicio"
+        file: "src/content/pages/home.md"
+        fields:
+          - { label: "Título Hero", name: "hero_title", widget: "string" }
+          - { label: "Subtítulo Hero", name: "hero_subtitle", widget: "text" }
+          - { label: "CTA Hero", name: "hero_cta", widget: "string", default: "Reserva tu primera consulta" }
+          - { label: "Texto diferenciación 1", name: "diff_1_title", widget: "string" }
+          - { label: "Texto diferenciación 1 (detalle)", name: "diff_1_text", widget: "text" }
+          - { label: "Texto diferenciación 2", name: "diff_2_title", widget: "string" }
+          - { label: "Texto diferenciación 2 (detalle)", name: "diff_2_text", widget: "text" }
+          - { label: "Texto diferenciación 3", name: "diff_3_title", widget: "string" }
+          - { label: "Texto diferenciación 3 (detalle)", name: "diff_3_text", widget: "text" }
+          - { label: "Sobre la Dra.", name: "about_text", widget: "markdown" }
+
+  - name: "servicios"
+    label: "Servicios"
+    description: "Servicios médicos de la clínica"
+    create: true
+    folder: "src/content/servicios"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título del servicio", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+
+  - name: "blog"
+    label: "Blog"
+    description: "Artículos del blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Autor", name: "author", widget: "string", default: "Dra. Nuria Ugarte" }
+      - { label: "Resumen", name: "excerpt", widget: "text" }
+      - { label: "Imagen destacada", name: "image", widget: "image", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
