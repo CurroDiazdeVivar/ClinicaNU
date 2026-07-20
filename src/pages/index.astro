@@ -1,0 +1,340 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getEntry } from 'astro:content';
+
+const home = await getEntry('pages', 'home');
+const { data } = home;
+---
+
+<Layout title="Inicio" description="Clínica Dra. Nuria Ugarte. Médica especialista en nutrición clínica en Logroño. 25 años de experiencia. Tecnología Tanita. Medicina basada en evidencia.">
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="hero__badge">🏥 Médica especialista · 25 años de experiencia</span>
+        <h1>{data.hero_title} <span class="highlight">en Logroño</span></h1>
+        <p class="hero__subtitle">{data.hero_subtitle}</p>
+        <div class="hero__ctas">
+          <a href="/contacto" class="btn btn-primary">{data.hero_cta}</a>
+          <a href="/nutricion" class="btn btn-outline">Cómo funciona</a>
+        </div>
+      </div>
+      <div class="hero__image">
+        <!-- Placeholder: foto real de la Dra. con bata blanca en consulta, 600x800 -->
+        <div class="hero__image-placeholder">
+          <span>📸</span>
+          <small>Foto Dra. Ugarte</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIFERENCIACIÓN ===== -->
+  <section class="section bg-alt">
+    <div class="container">
+      <h2 class="section__title-centered">¿Por qué elegir una consulta médica?</h2>
+      <p class="section__subtitle-centered">No encontrará dietas de moda ni tratamientos sin supervisión. Esto es medicina real.</p>
+      <div class="grid-3">
+        <div class="card diff-card">
+          <span class="diff-icon">✅</span>
+          <h3>{data.diff_1_title}</h3>
+          <p>{data.diff_1_text}</p>
+        </div>
+        <div class="card diff-card">
+          <span class="diff-icon">📊</span>
+          <h3>{data.diff_2_title}</h3>
+          <p>{data.diff_2_text}</p>
+        </div>
+        <div class="card diff-card">
+          <span class="diff-icon">🛡️</span>
+          <h3>{data.diff_3_title}</h3>
+          <p>{data.diff_3_text}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title-centered">Servicios Médicos</h2>
+      <p class="section__subtitle-centered">Tratamientos supervisados por la Dra. Nuria Ugarte, especialista en nutrición clínica.</p>
+      <div class="grid-3">
+        <a href="/nutricion" class="card service-card">
+          <span class="service-icon">🥗</span>
+          <h3>Nutrición Clínica</h3>
+          <p>Planes personalizados para pérdida de peso, control metabólico, diabetes, hipertensión y patologías digestivas. Con evaluación Tanita y seguimiento continuo.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/oncoestetica" class="card service-card">
+          <span class="service-icon">🌸</span>
+          <h3>Oncoestética</h3>
+          <p>Cuidados dermatológicos y nutricionales para pacientes oncológicos. Mejora de la calidad de vida durante y después de los tratamientos.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/alopecia" class="card service-card">
+          <span class="service-icon">💆</span>
+          <h3>Alopecia — Factores de Crecimiento</h3>
+          <p>Tratamiento médico para la caída del cabello con factores de crecimiento autólogos. Enfoque clínico, no cosmético.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE LA DRA. ===== -->
+  <section class="section bg-alt">
+    <div class="container about">
+      <div class="about__image">
+        <div class="about__image-placeholder">
+          <span>📸</span>
+          <small>Foto Dra. Ugarte</small>
+        </div>
+      </div>
+      <div class="about__content">
+        <h2>Sobre la Dra. Nuria Ugarte</h2>
+        <p>{data.about_text}</p>
+        <a href="/equipo" class="btn btn-primary">Conoce al equipo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section__title-centered">Lo que dicen nuestros pacientes</h2>
+      <div class="grid-2 testimonials">
+        <div class="card testimonial">
+          <p>"Empecé por recomendación de mi endocrino y no puedo estar más satisfecha. La Dra. Ugarte me ha ayudado a perder peso de forma saludable, sin dietas imposibles."</p>
+          <div class="testimonial__author">
+            <strong>María L.</strong>
+            <span>Logroño</span>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <p>"Después de probar mil métodos, por fin alguien me explicó qué le pasa a mi cuerpo con un informe real de la Tanita. El seguimiento es constante y cercano."</p>
+          <div class="testimonial__author">
+            <strong>Carlos G.</strong>
+            <span>Logroño</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="section cta-final">
+    <div class="container cta-final__inner">
+      <h2>¿Listo para empezar con medicina real?</h2>
+      <p>Reserve su primera consulta y descubra la diferencia de un enfoque médico con 25 años de experiencia.</p>
+      <a href="/contacto" class="btn btn-primary btn-lg">Reserva tu cita</a>
+      <p class="cta-final__phone">O llámenos al <a href="tel:+34941234567">941 234 567</a></p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* ===== HERO ===== */
+  .hero {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
+  }
+  .hero__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .hero__badge {
+    display: inline-block;
+    background: var(--color-accent-light);
+    color: var(--color-white);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+  }
+  .highlight {
+    color: var(--color-accent);
+  }
+  .hero__subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+  .hero__ctas {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .hero__image-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--color-border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 3rem;
+  }
+  .hero__image-placeholder small {
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    .hero h1 { font-size: 2.5rem; }
+  }
+  @media (max-width: 768px) {
+    .hero {
+      padding: 3rem 0;
+    }
+    .hero__inner {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .hero h1 { font-size: 2.2rem; }
+    .hero__image {
+      order: -1;
+    }
+    .hero__image-placeholder {
+      aspect-ratio: 4/3;
+      max-height: 300px;
+    }
+  }
+
+  /* ===== DIFERENCIACIÓN ===== */
+  .bg-alt {
+    background: var(--color-bg-alt);
+  }
+  .section__title-centered {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .section__subtitle-centered {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  }
+  .diff-card {
+    text-align: center;
+  }
+  .diff-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .diff-card h3 {
+    margin-bottom: 0.8rem;
+  }
+
+  /* ===== SERVICIOS ===== */
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .service-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .service-card h3 {
+    margin-bottom: 0.8rem;
+  }
+  .service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+  }
+
+  /* ===== ABOUT ===== */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  .about__image-placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--color-border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--color-text-muted);
+  }
+  @media (max-width: 1024px) {
+    .about {
+      gap: 3rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .about {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+
+  /* ===== TESTIMONIOS ===== */
+  .testimonial p {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .testimonial__author {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial__author strong {
+    color: var(--color-primary);
+  }
+  .testimonial__author span {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  /* ===== CTA FINAL ===== */
+  .cta-final {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    text-align: center;
+  }
+  .cta-final h2 {
+    color: var(--color-white);
+    margin-bottom: 1rem;
+  }
+  .cta-final p {
+    color: rgba(255,255,255,0.9);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  .cta-final__phone {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  .cta-final__phone a {
+    color: var(--color-white);
+    font-weight: 600;
+  }
+  .btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+</style>

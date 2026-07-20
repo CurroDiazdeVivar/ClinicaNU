@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Nutrición Clínica" description="Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y supervisión de la Dra. Nuria Ugarte. 25 años de experiencia.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Nutrición Clínica</h1>
+      <p>Planes médicos personalizados con evaluación precisa y seguimiento continuo.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Medicina nutricional con rigor científico</h2>
+        <p>La nutrición clínica va mucho más allá de una simple dieta. En la consulta de la Dra. Nuria Ugarte, cada tratamiento comienza con una evaluación médica completa y un análisis preciso de su composición corporal mediante la balanza Tanita de última generación.</p>
+        <p>No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se diseña específicamente para usted, teniendo en cuenta su historial clínico, sus análisis, su metabolismo y sus objetivos reales.</p>
+
+        <h3>¿Cuándo acudir a una consulta de nutrición clínica?</h3>
+        <ul>
+          <li><strong>Pérdida de peso</strong> — cuando ha probado dietas por su cuenta sin resultados duraderos.</li>
+          <li><strong>Control metabólico</strong> — diabetes tipo 2, resistencia a la insulina, colesterol elevado, hipertensión.</li>
+          <li><strong>Patologías digestivas</strong> — SII, enfermedad inflamatoria intestinal, reflujo, intolerancias.</li>
+          <li><strong>Nutrición deportiva</strong> — optimización del rendimiento y composición corporal.</li>
+          <li><strong>Embarazo y lactancia</strong> — alimentación para la salud de la madre y el bebé.</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Primera consulta:</strong> historia clínica y medición Tanita.</li>
+            <li><strong>Plan personalizado:</strong> objetivo realista, pautas claras.</li>
+            <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
+            <li><strong>App digital:</strong> acceso a su evolución desde casa.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>💶 Tarifas</h3>
+          <p>Primera consulta: <strong>60€</strong></p>
+          <p>Revisiones: <strong>40€</strong></p>
+          <p>Incluye informe Tanita digital.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-alt">
+    <div class="container">
+      <h2 class="section__title-centered">Tecnología Tanita</h2>
+      <p class="section__subtitle-centered">La balanza Tanita de última generación mide con precisión su composición corporal: masa muscular, grasa visceral, agua corporal, metabolismo basal y más. Un informe digital que guía el tratamiento con datos objetivos, no con suposiciones.</p>
+      <div style="text-align:center;">
+        <a href="/tecnologia-tanita" class="btn btn-outline">Conoce la tecnología Tanita</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 {
+    margin-bottom: 1.5rem;
+  }
+  .service-content__main h3 {
+    margin: 2rem 0 1rem;
+  }
+  .service-content__main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-content__main li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-content__main li:last-child {
+    border-bottom: none;
+  }
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-content__sidebar ol {
+    padding-left: 1.2rem;
+  }
+  .service-content__sidebar ol li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

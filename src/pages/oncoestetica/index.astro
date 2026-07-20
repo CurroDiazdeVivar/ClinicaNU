@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Oncoestética" description="Cuidados dermatológicos y nutricionales para pacientes oncológicos en Logroño. Mejora de la calidad de vida durante y después del tratamiento.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Oncoestética</h1>
+      <p>Cuidados especializados para pacientes oncológicos, con enfoque médico y humano.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Acompañamiento médico durante el tratamiento oncológico</h2>
+        <p>La oncoestética aborda los efectos secundarios de los tratamientos oncológicos sobre la piel, el cabello y las uñas, así como el estado nutricional del paciente. El objetivo es mejorar la calidad de vida durante y después del tratamiento.</p>
+        <p>La Dra. Ugarte combina su experiencia en nutrición clínica y medicina estética para ofrecer un acompañamiento integral, siempre bajo supervisión médica y coordinado con el oncólogo del paciente.</p>
+        <h3>¿Qué tratamientos ofrecemos?</h3>
+        <ul>
+          <li><strong>Cuidado de la piel</strong> — hidratación profunda, protección y regeneración durante la radioterapia y quimioterapia.</li>
+          <li><strong>Nutrición oncológica</strong> — planes alimenticios para mantener la masa muscular, gestionar efectos secundarios y fortalecer el sistema inmune.</li>
+          <li><strong>Factores de crecimiento</strong> — para la regeneración capilar tras la quimioterapia.</li>
+          <li><strong>Asesoramiento en cuidados estéticos</strong> — productos y rutinas seguras durante el tratamiento.</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>👩‍⚕️ Enfoque integral</h3>
+          <p>Todos los tratamientos son supervisados por la Dra. Ugarte y coordinados con su oncólogo. No realizamos procedimientos sin el visto bueno del equipo médico que lleva su caso.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

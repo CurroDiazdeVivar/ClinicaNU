@@ -1,0 +1,52 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id.replace('src/content/blog/', '').replace('.md', '') },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title} description={post.data.excerpt}>
+  <section class="page-header">
+    <div class="container">
+      <p class="blog-post__date">{post.data.date.toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <h1>{post.data.title}</h1>
+      <p class="blog-post__author">Por {post.data.author}</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width: 750px; margin: 0 auto;">
+      <Content />
+      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+        <a href="/blog" class="btn btn-outline">← Volver al blog</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .blog-post__date {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  .blog-post__author {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+  }
+</style>

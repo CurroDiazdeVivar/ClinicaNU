@@ -1,0 +1,276 @@
+---
+// Layout principal — Clínica Dra. Nuria Ugarte
+export interface Props {
+  title: string;
+  description: string;
+}
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title} | Clínica Dra. Nuria Ugarte</title>
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="header__logo">
+        <span class="header__logo-icon">⚕️</span>
+        <div>
+          <span class="header__logo-title">Dra. Nuria Ugarte</span>
+          <span class="header__logo-sub">Medicina & Nutrición Clínica</span>
+        </div>
+      </a>
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="/">Inicio</a>
+        <a href="/nutricion">Nutrición Clínica</a>
+        <a href="/oncoestetica">Oncoestética</a>
+        <a href="/alopecia">Alopecia</a>
+        <a href="/tecnologia-tanita">Tecnología Tanita</a>
+        <a href="/equipo">Equipo</a>
+        <a href="/blog">Blog</a>
+        <a href="/contacto">Contacto</a>
+      </nav>
+      <a href="/contacto" class="btn btn-primary header__cta">Reserva tu cita</a>
+      <button class="header__menu-btn" aria-label="Menú" id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <slot />
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <h4>Dra. Nuria Ugarte</h4>
+        <p>Médica especialista en nutrición clínica con 25 años de experiencia. Medicina basada en evidencia, tecnología avanzada y trato humano.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Servicios</h4>
+        <nav aria-label="Servicios">
+          <a href="/nutricion">Nutrición Clínica</a>
+          <a href="/oncoestetica">Oncoestética</a>
+          <a href="/alopecia">Alopecia — Factores de Crecimiento</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h4>Contacto</h4>
+        <address>
+          <p>Calle Ejemplo, 12 · 26001 Logroño, La Rioja</p>
+          <p>📞 <a href="tel:+34941234567">941 234 567</a></p>
+          <p>✉️ <a href="mailto:info@clinicanuriaugarte.es">info@clinicanuriaugarte.es</a></p>
+        </address>
+      </div>
+      <div class="footer__col">
+        <h4>Horario</h4>
+        <p>Lunes a Viernes: 9:00 - 14:00 · 16:00 - 20:00</p>
+        <p>Sábados: 9:00 - 13:00</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2025 Clínica Dra. Nuria Ugarte. Todos los derechos reservados.</p>
+        <nav aria-label="Legal">
+          <a href="#">Aviso Legal</a>
+          <a href="#">Política de Privacidad</a>
+          <a href="#">Política de Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Menú móvil toggle
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('.header__nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('header__nav--open');
+      });
+    }
+  </script>
+</body>
+</html>
+
+<style>
+  /* ============ HEADER ============ */
+  .header {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(8px);
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    gap: 1rem;
+  }
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .header__logo-icon {
+    font-size: 1.8rem;
+  }
+  .header__logo-title {
+    display: block;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    line-height: 1.1;
+  }
+  .header__logo-sub {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .header__nav {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+  }
+  .header__nav a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--color-text);
+    padding: 0.3rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .header__nav a:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+  }
+  .header__cta {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.4rem;
+    flex-shrink: 0;
+  }
+  .header__menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+  @media (max-width: 1024px) {
+    .header__nav a {
+      font-size: 0.82rem;
+      gap: 0.8rem;
+    }
+    .header__cta {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .header__nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--color-white);
+      flex-direction: column;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+    .header__nav--open {
+      display: flex;
+    }
+    .header__cta {
+      display: none;
+    }
+    .header__menu-btn {
+      display: block;
+    }
+  }
+
+  /* ============ FOOTER ============ */
+  .footer {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 4rem 0 0;
+  }
+  .footer__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+  .footer h4 {
+    color: var(--color-white);
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .footer p, .footer address p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: normal;
+  }
+  .footer a {
+    color: rgba(255,255,255,0.8);
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+  }
+  .footer a:hover { color: var(--color-white); }
+  .footer__bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding: 1.5rem 0;
+  }
+  .footer__bottom > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer__bottom p {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .footer__bottom nav {
+    display: flex;
+    gap: 1rem;
+  }
+  .footer__bottom nav a {
+    font-size: 0.8rem;
+    display: inline;
+  }
+  @media (max-width: 1024px) {
+    .footer__inner {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .footer__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

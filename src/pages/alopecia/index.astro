@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Alopecia — Factores de Crecimiento" description="Tratamiento médico para la caída del cabello con factores de crecimiento autólogos en Logroño. Enfoque clínico supervisado por la Dra. Nuria Ugarte.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Alopecia — Factores de Crecimiento</h1>
+      <p>Tratamiento médico regenerativo para la caída del cabello.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Tratamiento clínico, no cosmético</h2>
+        <p>La alopecia tiene causas médicas que requieren un diagnóstico preciso. En la consulta de la Dra. Ugarte, el tratamiento comienza con una evaluación de las causas subyacentes: hormonales, metabólicas, nutricionales o autoinmunes.</p>
+        <p>El tratamiento con factores de crecimiento autólogos utiliza las propiedades regenerativas de su propia sangre para estimular el folículo piloso y frenar la caída.</p>
+        <h3>¿En qué consiste?</h3>
+        <ul>
+          <li>Evaluación médica completa para determinar el tipo de alopecia.</li>
+          <li>Extracción de sangre y procesamiento para obtener factores de crecimiento.</li>
+          <li>Aplicación mediante microinyecciones en el cuero cabelludo.</li>
+          <li>Sesiones cada 3-4 semanas, según pauta médica.</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>🔬 ¿Son seguros?</h3>
+          <p>Al ser factores de crecimiento autólogos (de su propia sangre), el riesgo de reacción alérgica es mínimo. Es un tratamiento biocompatible supervisado por la Dra. Ugarte.</p>
+        </div>
+        <div class="card">
+          <h3>💡 Combinado con nutrición</h3>
+          <p>La caída del cabello suele tener un componente nutricional. Complementamos el tratamiento con un plan alimenticio específico para fortalecer el cabello desde dentro.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,87 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Blog" description="Artículos sobre nutrición clínica, salud y bienestar escritos por la Dra. Nuria Ugarte. Información rigurosa y basada en evidencia.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Artículos sobre nutrición clínica, salud y bienestar, escritos por la Dra. Nuria Ugarte.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="blog-grid">
+        {posts.map((post) => (
+          <article class="card blog-card">
+            <div class="blog-card__image-placeholder">
+              <span>📝</span>
+            </div>
+            <div class="blog-card__content">
+              <span class="blog-card__date">{post.data.date.toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+              <h3>{post.data.title}</h3>
+              <p>{post.data.excerpt}</p>
+              <a href={`/blog/${post.slug}`} class="blog-card__link">Leer más →</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+  .blog-card {
+    padding: 0;
+    overflow: hidden;
+  }
+  .blog-card__image-placeholder {
+    height: 200px;
+    background: var(--color-bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--color-text-muted);
+  }
+  .blog-card__content {
+    padding: 1.5rem;
+  }
+  .blog-card__date {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .blog-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  .blog-card p {
+    font-size: 0.95rem;
+  }
+  .blog-card__link {
+    display: inline-block;
+    margin-top: 0.8rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+</style>

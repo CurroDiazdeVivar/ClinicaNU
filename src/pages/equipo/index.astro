@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Equipo" description="Conozca al equipo médico de la Clínica Dra. Nuria Ugarte en Logroño. Especialistas en nutrición clínica, oncoestética y medicina regenerativa.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Nuestro Equipo</h1>
+      <p>Profesionales sanitarios comprometidos con su salud.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container" style="max-width: 800px; margin: 0 auto;">
+      <div class="card team-member">
+        <div class="team-member__image">
+          <div class="team-member__placeholder">
+            <span>📸</span>
+            <small>Foto Dra. Ugarte</small>
+          </div>
+        </div>
+        <div class="team-member__info">
+          <h2>Dra. Nuria Ugarte</h2>
+          <p class="team-member__role">Médica especialista en Nutrición Clínica</p>
+          <p>Más de 25 años de experiencia en nutrición clínica, oncoestética y medicina regenerativa. Formada en la Universidad de Zaragoza y con trayectoria en el servicio de endocrinología del Hospital San Pedro de Logroño.</p>
+          <p>Miembro de la Sociedad Española de Nutrición Clínica y Metabolismo (SENPE) y de la Sociedad Española de Medicina Estética (SEME).</p>
+          <p>Su enfoque combina el rigor de la medicina basada en evidencia con una atención cercana y personalizada. Cree firmemente que la nutrición médica es la herramienta más poderosa para prevenir y tratar enfermedades.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); }
+
+  .team-member {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    padding: 2.5rem;
+  }
+  .team-member__placeholder {
+    width: 100%;
+    aspect-ratio: 1;
+    background: var(--color-border);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--color-text-muted);
+  }
+  .team-member__placeholder small {
+    font-size: 0.85rem;
+  }
+  .team-member__role {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 768px) {
+    .team-member {
+      grid-template-columns: 1fr;
+    }
+    .team-member__image {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+</style>

@@ -1,0 +1,138 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Contacto" description="Reserve su cita en la Clínica Dra. Nuria Ugarte en Logroño. Nutrición clínica con tecnología Tanita. 25 años de experiencia.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Contacto y reserva de citas</h1>
+      <p>Estaremos encantados de atenderle. Reserve su primera consulta o resuelva sus dudas.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contacto">
+      <div class="contacto__info">
+        <div class="card">
+          <h3>📍 Dirección</h3>
+          <p>Calle Ejemplo, 12<br/>26001 Logroño, La Rioja</p>
+        </div>
+        <div class="card">
+          <h3>📞 Teléfono</h3>
+          <p><a href="tel:+349****4567">941 234 567</a></p>
+        </div>
+        <div class="card">
+          <h3>✉️ Email</h3>
+          <p><a href="mailto:info@clinicanuriaugarte.es">info@clinicanuriaugarte.es</a></p>
+        </div>
+        <div class="card">
+          <h3>🕐 Horario</h3>
+          <p><strong>Lunes a Viernes:</strong> 9:00 - 14:00 · 16:00 - 20:00</p>
+          <p><strong>Sábados:</strong> 9:00 - 13:00</p>
+        </div>
+      </div>
+      <div class="contacto__form">
+        <div class="card">
+          <h3>Formulario de contacto</h3>
+          <p>Déjenos sus datos y le llamaremos para concertar su cita.</p>
+          <form action="#" method="POST" class="form">
+            <div class="form__group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Su nombre" />
+            </div>
+            <div class="form__group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" required placeholder="Su teléfono" />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="Su email" />
+            </div>
+            <div class="form__group">
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Indíquenos el motivo de su consulta..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Solicitar cita</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 {
+    color: var(--color-white);
+    margin-bottom: 0.5rem;
+  }
+  .page-header p {
+    color: rgba(255,255,255,0.9);
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .contacto__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .contacto__info .card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .form__group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-text);
+  }
+  .form__group input,
+  .form__group textarea {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    background: var(--color-bg);
+    transition: border-color 0.2s;
+  }
+  .form__group input:focus,
+  .form__group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary-light);
+    box-shadow: 0 0 0 3px rgba(43, 111, 154, 0.1);
+  }
+
+  @media (max-width: 1024px) {
+    .contacto {
+      gap: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .contacto {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
