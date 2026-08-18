@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('nutricion'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Nutrición Clínica" description="Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y supervisión de la Dra. Nuria Ugarte. 25 años de experiencia.">
@@ -13,18 +17,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="section">
     <div class="container service-content">
       <div class="service-content__main">
-        <h2>Medicina nutricional con rigor científico</h2>
-        <p>La nutrición clínica va mucho más allá de una simple dieta. En la consulta de la Dra. Nuria Ugarte, cada tratamiento comienza con una evaluación médica completa y un análisis preciso de su composición corporal mediante la balanza Tanita de última generación.</p>
-        <p>No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se diseña específicamente para usted, teniendo en cuenta su historial clínico, sus análisis, su metabolismo y sus objetivos reales.</p>
-
-        <h3>¿Cuándo acudir a una consulta de nutrición clínica?</h3>
-        <ul>
-          <li><strong>Pérdida de peso</strong> — cuando ha probado dietas por su cuenta sin resultados duraderos.</li>
-          <li><strong>Control metabólico</strong> — diabetes tipo 2, resistencia a la insulina, colesterol elevado, hipertensión.</li>
-          <li><strong>Patologías digestivas</strong> — SII, enfermedad inflamatoria intestinal, reflujo, intolerancias.</li>
-          <li><strong>Nutrición deportiva</strong> — optimización del rendimiento y composición corporal.</li>
-          <li><strong>Embarazo y lactancia</strong> — alimentación para la salud de la madre y el bebé.</li>
-        </ul>
+        <Content />
       </div>
       <div class="service-content__sidebar">
         <div class="card">

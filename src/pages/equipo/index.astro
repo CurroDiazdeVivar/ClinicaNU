@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('equipo'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Equipo" description="Conozca al equipo médico de la Clínica Dra. Nuria Ugarte en Logroño. Especialistas en nutrición clínica, cuidados oncológicos y medicina regenerativa.">
@@ -21,9 +25,7 @@ import Layout from '../../layouts/Layout.astro';
         <div class="team-member__info">
           <h2>Dra. Nuria Ugarte</h2>
           <p class="team-member__role">Médica especialista en Nutrición Clínica</p>
-          <p>Más de 25 años de experiencia en nutrición clínica, cuidados oncológicos y medicina regenerativa. Formada en la Universidad de Zaragoza y con trayectoria en el servicio de endocrinología del Hospital San Pedro de Logroño.</p>
-          <p>Miembro de la Sociedad Española de Nutrición Clínica y Metabolismo (SENPE) y de la Sociedad Española de Medicina Regenerativa.</p>
-          <p>Su enfoque combina el rigor de la medicina basada en evidencia con una atención cercana y personalizada. Cree firmemente que la nutrición médica es la herramienta más poderosa para prevenir y tratar enfermedades.</p>
+          <Content />
         </div>
       </div>
     </div>

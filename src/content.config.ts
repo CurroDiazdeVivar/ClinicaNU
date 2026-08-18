@@ -59,10 +59,21 @@ const especialidadesCollection = defineCollection({
   }),
 });
 
+const seccionesCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/secciones' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+  }),
+});
+
 export const collections = {
   pages: pagesCollection,
   servicios: serviciosCollection,
   blog: blogCollection,
   tratamientos: tratamientosCollection,
   especialidades: especialidadesCollection,
+  secciones: seccionesCollection,
 };

@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('contacto'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Contacto" description="Reserve su cita en la Clínica Dra. Nuria Ugarte en Logroño. Nutrición clínica con tecnología Tanita. 25 años de experiencia.">
@@ -13,6 +17,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="section">
     <div class="container contacto">
       <div class="contacto__info">
+        <Content />
         <div class="card">
           <h3>📍 Dirección</h3>
           <p>Calle Ejemplo, 12<br/>26001 Logroño, La Rioja</p>

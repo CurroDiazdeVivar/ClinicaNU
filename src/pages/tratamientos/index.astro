@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('tratamientos'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Tratamientos Médicos" description="Tratamientos médicos avanzados en medicina facial, corporal y láser. Siempre bajo supervisión de la Dra. Nuria Ugarte.">
@@ -12,6 +16,7 @@ import Layout from '../../layouts/Layout.astro';
 
   <section class="section">
     <div class="container">
+      <Content />
       <div class="grid-3">
         <a href="/tratamientos/faciales" class="card service-card">
           <span class="service-icon">👤</span>

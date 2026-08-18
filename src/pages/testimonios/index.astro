@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('testimonios'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Testimonios de pacientes" description="Experiencias reales de pacientes de la Clínica Dra. Nuria Ugarte en Logroño.">
@@ -11,6 +15,7 @@ import Layout from '../../layouts/Layout.astro';
   </section>
   <section class="section">
     <div class="container">
+      <Content />
       <div class="grid-3">
         <div class="card">
           <h3>Mª Ángeles, 45 años</h3>

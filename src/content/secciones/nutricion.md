@@ -1,0 +1,25 @@
+---
+title: "Nutrición Clínica"
+description: "Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y supervisión de la Dra. Nuria Ugarte. 25 años de experiencia."
+---
+
+## Medicina nutricional con rigor científico
+
+La nutrición clínica va mucho más allá de una simple dieta. En la consulta de la Dra. Nuria Ugarte, cada tratamiento comienza con una evaluación médica completa y un análisis preciso de su composición corporal mediante la balanza Tanita de última generación.
+
+No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se diseña específicamente para usted, teniendo en cuenta su historial clínico, sus análisis, su metabolismo y sus objetivos reales.
+
+## ¿Cuándo acudir a una consulta de nutrición clínica?
+
+- **Pérdida de peso** — cuando ha probado dietas por su cuenta sin resultados duraderos.
+- **Control metabólico** — diabetes tipo 2, resistencia a la insulina, colesterol elevado, hipertensión.
+- **Patologías digestivas** — SII, enfermedad inflamatoria intestinal, reflujo, intolerancias.
+- **Nutrición deportiva** — optimización del rendimiento y composición corporal.
+- **Embarazo y lactancia** — alimentación para la salud de la madre y el bebé.
+
+## El proceso
+
+1. **Primera consulta:** historia clínica y medición Tanita.
+2. **Plan personalizado:** objetivo realista, pautas claras.
+3. **Seguimiento:** revisiones periódicas y ajustes.
+4. **App digital:** acceso a su evolución desde casa.

@@ -1,5 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+const secciones = await getCollection('secciones');
+const sec = secciones.find(s => s.id.includes('tecnologia'));
+const { Content } = await render(sec);
 ---
 
 <Layout title="Tecnología médica avanzada" description="Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso. Tanita y EPIXLIFE en Logroño.">
@@ -12,8 +16,7 @@ import Layout from '../../layouts/Layout.astro';
   <section class="section">
     <div class="container service-content">
       <div class="service-content__main">
-        <h2>Medicina basada en datos</h2>
-        <p>En la Clínica Dra. Nuria Ugarte utilizamos tecnologías médicas avanzadas para proporcionar diagnósticos precisos y tratamientos personalizados basados en datos objetivos.</p>
+        <Content />
         
         <div class="grid-2" style="margin-top: 2rem;">
           <div class="card">

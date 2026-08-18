@@ -84,3 +84,16 @@ collections:
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "secciones"
+    label: "Secciones"
+    description: "Páginas del menú: La Doctora, hubs, testimonios, contacto"
+    folder: "src/content/secciones"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
