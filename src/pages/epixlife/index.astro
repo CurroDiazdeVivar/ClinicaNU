@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('epixlife'));
@@ -7,12 +8,8 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="EPIXLIFE" description="Tecnología médica avanzada no invasiva para análisis de piel, cabello y estado antioxidante corporal.">
-  <section class="page-header">
-    <div class="container">
-      <h1>EPIXLIFE</h1>
-      <p>Tecnología médica avanzada no invasiva</p>
-    </div>
-  </section>
+  <PageHeader title="EPIXLIFE" description="Tecnología médica avanzada no invasiva para análisis de piel, cabello y estado antioxidante corporal." />
+
   <section class="section">
     <div class="container service-content">
       <div class="service-content__main">
@@ -20,24 +17,16 @@ const { Content } = await render(sec);
       </div>
       <div class="service-content__sidebar">
         <div class="card">
-          <h3>🔬 Tecnología validada</h3>
+          <h3>Tecnología validada</h3>
           <p>EPIXLIFE está respaldada por evidencia científica y es utilizada por profesionales médicos en todo el mundo.</p>
         </div>
-        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Consulta gratuita</a>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicitar información</a>
       </div>
     </div>
   </section>
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
   .service-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

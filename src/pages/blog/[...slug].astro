@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -15,13 +16,12 @@ const { Content } = await render(post);
 ---
 
 <Layout title={post.data.title} description={post.data.excerpt}>
-  <section class="page-header">
-    <div class="container">
-      <p class="blog-post__date">{post.data.date.toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-      <h1>{post.data.title}</h1>
-      <p class="blog-post__author">Por {post.data.author}</p>
-    </div>
-  </section>
+  <PageHeader
+    title={post.data.title}
+    date={post.data.date.toLocaleDateString('es', { year: 'numeric', month: 'long', day: 'numeric' })}
+    author={post.data.author}
+  />
+
   <section class="section">
     <div class="container" style="max-width: 750px; margin: 0 auto;">
       <Content />
@@ -31,22 +31,3 @@ const { Content } = await render(post);
     </div>
   </section>
 </Layout>
-
-<style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .blog-post__date {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-  }
-  .blog-post__author {
-    color: rgba(255,255,255,0.8);
-    font-size: 0.95rem;
-  }
-</style>
