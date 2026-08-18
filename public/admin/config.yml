@@ -2,8 +2,11 @@
 # La Dra. entra aquí para gestionar la web
 ---
 backend:
-  name: git-gateway
+  name: github
+  repo: CurroDiazdeVivar/ClinicaNU
   branch: main
+  base_url: https://prueba.clinicanuriaugarte.es/api/oauth
+  auth_endpoint: auth
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
