@@ -22,49 +22,84 @@ import '../styles/global.css';
   <!-- Header -->
   <header class="header">
     <div class="container header__inner">
-      <a href="/" class="header__logo">
-        <span class="header__logo-icon">⚕️</span>
-        <div>
-          <span class="header__logo-title">Dra. Nuria Ugarte</span>
-          <span class="header__logo-sub">Medicina & Nutrición Clínica</span>
-        </div>
+      <a href="/" class="header__logo" aria-label="Clínica Dra. Nuria Ugarte - Inicio">
+        <img
+          src="/img/logo-clinica.png"
+          alt="Clínica Dra. Nuria Ugarte"
+          class="header__logo-img"
+          width="126"
+          height="55"
+          loading="eager"
+        />
       </a>
-      <nav class="header__nav" aria-label="Navegación principal">
-        <a href="/">Inicio</a>
-        <a href="/equipo">La Doctora</a>
+
+      <nav class="header__nav" id="main-nav" aria-label="Navegación principal">
+        <a href="/" class="header__nav-link">Inicio</a>
+        <a href="/equipo" class="header__nav-link">La Doctora</a>
+
         <div class="dropdown">
-          <a href="/nutricion">Nutrición Clínica</a>
-          <div class="dropdown-content">
-            <a href="/nutricion/dieta-fodmap">Dieta FODMAP</a>
-            <a href="/nutricion/dieta-equilibrada">Dieta equilibrada</a>
-            <a href="/nutricion/dieta-proteinada">Dieta proteinada</a>
-            <a href="/nutricion-deportiva">Nutrición deportiva</a>
-            <a href="/nutricion/micronutricion">Micronutrición</a>
-            <a href="/nutricion/intolerancia-alimentaria">Intolerancia alimentaria</a>
-            <a href="/nutricion/paciente-oncologico">Nutrición en paciente oncológico</a>
-            <a href="/epixlife">EPIXLIFE</a>
+          <a href="/nutricion" class="header__nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Nutrición Clínica</span>
+            <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-content" role="menu">
+            <a href="/nutricion/dieta-fodmap" role="menuitem">Dieta FODMAP</a>
+            <a href="/nutricion/dieta-equilibrada" role="menuitem">Dieta equilibrada</a>
+            <a href="/nutricion/dieta-proteinada" role="menuitem">Dieta proteinada</a>
+            <a href="/nutricion-deportiva" role="menuitem">Nutrición deportiva</a>
+            <a href="/nutricion/micronutricion" role="menuitem">Micronutrición</a>
+            <a href="/nutricion/intolerancia-alimentaria" role="menuitem">Intolerancia alimentaria</a>
+            <a href="/nutricion/paciente-oncologico" role="menuitem">Nutrición en paciente oncológico</a>
+            <a href="/epixlife" role="menuitem">EPIXLIFE</a>
           </div>
         </div>
+
         <div class="dropdown">
-          <a href="/oncologia-cuidados">Oncología y Cuidados</a>
-          <div class="dropdown-content">
-            <a href="/oncologia-cuidados/paciente-oncologico">Cuidados en el paciente oncológico</a>
-            <a href="/oncologia-cuidados/dermocosmetica">Dermocosmética oncológica</a>
+          <a href="/oncologia-cuidados" class="header__nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Oncología y Cuidados</span>
+            <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-content" role="menu">
+            <a href="/oncologia-cuidados/paciente-oncologico" role="menuitem">Cuidados en el paciente oncológico</a>
+            <a href="/oncologia-cuidados/dermocosmetica" role="menuitem">Dermocosmética oncológica</a>
           </div>
         </div>
-        <a href="/medicina-capilar">Medicina Capilar</a>
+
+        <a href="/medicina-capilar" class="header__nav-link">Medicina Capilar</a>
+
         <div class="dropdown">
-          <a href="/tecnologia">Tecnología</a>
-          <div class="dropdown-content">
-            <a href="/tecnologia-tanita">Tanita</a>
-            <a href="/epixlife">EPIXLIFE</a>
+          <a href="/tecnologia" class="header__nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Tecnología</span>
+            <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-content" role="menu">
+            <a href="/tecnologia-tanita" role="menuitem">Tanita</a>
+            <a href="/epixlife" role="menuitem">EPIXLIFE</a>
           </div>
         </div>
-        <a href="/blog">Blog</a>
-        <a href="/contacto">Contacto</a>
+
+        <a href="/blog" class="header__nav-link">Blog</a>
+        <a href="/contacto" class="header__nav-link">Contacto</a>
+
+        <div class="header__cta-wrapper-mobile">
+          <a href="/contacto" class="btn btn-primary header__cta-mobile">Reserva tu cita</a>
+        </div>
       </nav>
-      <a href="/contacto" class="btn btn-primary header__cta">Reserva tu cita</a>
-      <button class="header__menu-btn" aria-label="Menú" id="menu-toggle">☰</button>
+
+      <div class="header__actions">
+        <a href="/contacto" class="btn btn-primary header__cta">Reserva tu cita</a>
+        <button class="header__menu-btn" aria-label="Abrir menú" aria-expanded="false" id="menu-toggle">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -123,32 +158,76 @@ import '../styles/global.css';
   </footer>
 
   <script>
-    // Menú móvil toggle
+    // Header Navigation & Mobile Menu Logic
     const toggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('.header__nav');
+    const nav = document.getElementById('main-nav');
+
     if (toggle && nav) {
-      toggle.addEventListener('click', () => {
-        nav.classList.toggle('header__nav--open');
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = nav.classList.toggle('header__nav--open');
+        toggle.classList.toggle('is-active', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
       });
     }
 
-    // Dropdown functionality
+    // Dropdown toggle functionality for mobile & tablet screens (click-based)
     document.querySelectorAll('.dropdown').forEach(dropdown => {
-      dropdown.addEventListener('click', (e) => {
-        if (window.innerWidth <= 768) {
-          e.preventDefault();
-          dropdown.classList.toggle('active');
-        }
-      });
-    });
+      const toggleLink = dropdown.querySelector('.dropdown-toggle');
+      if (toggleLink) {
+        toggleLink.addEventListener('click', (e) => {
+          if (window.innerWidth <= 1024) {
+            e.preventDefault();
+            e.stopPropagation();
+            const isCurrentlyActive = dropdown.classList.contains('active');
 
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('.dropdown')) {
-        document.querySelectorAll('.dropdown').forEach(dropdown => {
-          dropdown.classList.remove('active');
+            // Close other open dropdowns in mobile accordion style
+            document.querySelectorAll('.dropdown.active').forEach(other => {
+              if (other !== dropdown) {
+                other.classList.remove('active');
+                other.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+              }
+            });
+
+            dropdown.classList.toggle('active', !isCurrentlyActive);
+            toggleLink.setAttribute('aria-expanded', (!isCurrentlyActive).toString());
+          }
         });
       }
+    });
+
+    // Close dropdowns and mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement | null;
+      if (target && !target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown.active').forEach(dropdown => {
+          dropdown.classList.remove('active');
+          dropdown.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+      }
+      if (target && !target.closest('.header') && nav && nav.classList.contains('header__nav--open')) {
+        nav.classList.remove('header__nav--open');
+        if (toggle) {
+          toggle.classList.remove('is-active');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Abrir menú');
+        }
+      }
+    });
+
+    // Close mobile nav when clicking internal links (except dropdown toggles)
+    nav?.querySelectorAll('a:not(.dropdown-toggle)').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 1024 && nav.classList.contains('header__nav--open')) {
+          nav.classList.remove('header__nav--open');
+          if (toggle) {
+            toggle.classList.remove('is-active');
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.setAttribute('aria-label', 'Abrir menú');
+          }
+        }
+      });
     });
   </script>
 </body>
@@ -158,122 +237,261 @@ import '../styles/global.css';
   /* ============ HEADER ============ */
   .header {
     background: var(--color-white);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(226, 226, 221, 0.8);
     position: sticky;
     top: 0;
-    z-index: 100;
-    backdrop-filter: blur(8px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(27, 58, 92, 0.05);
+    transition: box-shadow 0.25s ease;
   }
+
   .header__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    gap: 1rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+    gap: 1.25rem;
+    max-width: 1240px;
+    margin: 0 auto;
   }
+
+  /* Logo */
   .header__logo {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
     text-decoration: none;
     flex-shrink: 0;
   }
-  .header__logo-icon {
-    font-size: 1.8rem;
-  }
-  .header__logo-title {
+
+  .header__logo-img {
+    height: 52px;
+    width: auto;
+    max-height: 55px;
     display: block;
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    color: var(--color-primary);
-    font-weight: 600;
-    line-height: 1.1;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
   }
-  .header__logo-sub {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--color-text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+
+  .header__logo:hover .header__logo-img {
+    opacity: 0.9;
   }
+
+  /* Nav Links Desktop */
   .header__nav {
     display: flex;
-    gap: 1.2rem;
     align-items: center;
+    gap: clamp(0.6rem, 1.1vw, 1.2rem);
+    margin: 0;
+    padding: 0;
   }
-  .header__nav a {
-    font-size: 0.88rem;
+
+  .header__nav-link {
+    font-size: clamp(0.82rem, 0.88vw, 0.9rem);
     font-weight: 500;
     color: var(--color-text);
-    padding: 0.3rem 0;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
-  }
-  .header__nav a:hover {
-    color: var(--color-primary);
-    border-bottom-color: var(--color-primary);
-  }
-  .header__cta {
-    font-size: 0.85rem;
-    padding: 0.6rem 1.4rem;
-    flex-shrink: 0;
-  }
-  .header__menu-btn {
-    display: none;
+    padding: 0.5rem 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
     background: none;
     border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .header__nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.25rem;
+    right: 0.25rem;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.2s ease;
+  }
+
+  .header__nav-link:hover {
     color: var(--color-primary);
   }
 
-  /* Dropdown Styles */
+  .header__nav-link:hover::after,
+  .dropdown:hover > .header__nav-link::after {
+    transform: scaleX(1);
+  }
+
+  .dropdown:hover > .header__nav-link {
+    color: var(--color-primary);
+  }
+
+  /* Dropdown indicator icon */
+  .dropdown-chevron {
+    transition: transform 0.25s ease, color 0.2s ease;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+
+  .dropdown:hover .dropdown-chevron,
+  .dropdown.active .dropdown-chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  /* Dropdown container */
   .dropdown {
     position: relative;
+    display: inline-flex;
+    align-items: center;
   }
-  .dropdown-content {
-    display: none;
+
+  /* Invisible hover bridge */
+  .dropdown::after {
+    content: '';
     position: absolute;
-    background: var(--color-white);
-    min-width: 200px;
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 0.5rem 0;
-    z-index: 1000;
     top: 100%;
+    left: -10px;
+    right: -10px;
+    height: 14px;
+    display: block;
+  }
+
+  /* Dropdown Panel */
+  .dropdown-content {
+    position: absolute;
+    top: calc(100% + 6px);
     left: 0;
+    min-width: 260px;
+    background: var(--color-white);
+    border: 1px solid rgba(226, 226, 221, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(27, 58, 92, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+    padding: 0.45rem 0;
+    z-index: 1050;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    pointer-events: none;
+    transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.2s;
   }
-  .dropdown:hover .dropdown-content {
-    display: block;
+
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
-  .dropdown.active .dropdown-content {
-    display: block;
-  }
+
+  /* Dropdown items */
   .dropdown-content a {
-    color: var(--color-text);
-    padding: 0.7rem 1.5rem;
     display: block;
+    padding: 0.65rem 1.25rem;
     font-size: 0.85rem;
-    border-bottom: none;
+    font-weight: 500;
+    color: var(--color-text);
+    text-decoration: none;
+    line-height: 1.35;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease, border-color 0.15s ease;
   }
+
   .dropdown-content a:hover {
     background: var(--color-bg-alt);
     color: var(--color-primary);
+    border-left-color: var(--color-primary);
+    padding-left: 1.45rem;
   }
 
-  @media (max-width: 1024px) {
-    .header__nav a {
-      font-size: 0.82rem;
-      gap: 0.8rem;
-    }
-    .header__cta {
-      font-size: 0.8rem;
-      padding: 0.5rem 1rem;
-    }
+  /* Actions & CTA */
+  .header__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
   }
-  @media (max-width: 768px) {
+
+  .header__cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.55rem 1.25rem;
+    border-radius: 50px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    box-shadow: 0 2px 8px rgba(27, 58, 92, 0.18);
+    transition: all 0.25s ease;
+  }
+
+  .header__cta:hover {
+    background: var(--color-primary-light);
+    color: var(--color-white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(27, 58, 92, 0.28);
+  }
+
+  .header__cta-wrapper-mobile {
+    display: none;
+  }
+
+  /* Hamburger Menu Button */
+  .header__menu-btn {
+    display: none;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .header__menu-btn:hover {
+    background: var(--color-bg-alt);
+    border-color: var(--color-primary-light);
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+
+  .header__menu-btn.is-active .hamburger-line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .header__menu-btn.is-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__menu-btn.is-active .hamburger-line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* Responsive Breakpoint (Tablet & Mobile) */
+  @media (max-width: 1024px) {
+    .header__inner {
+      padding-top: 0.55rem;
+      padding-bottom: 0.55rem;
+    }
+
     .header__nav {
       display: none;
       position: absolute;
@@ -282,28 +500,109 @@ import '../styles/global.css';
       right: 0;
       background: var(--color-white);
       flex-direction: column;
-      padding: 1rem 1.5rem;
+      align-items: stretch;
+      padding: 1rem 1.25rem 1.75rem;
       border-bottom: 1px solid var(--color-border);
-      box-shadow: var(--shadow-md);
+      box-shadow: 0 12px 28px rgba(27, 58, 92, 0.12);
+      max-height: calc(100vh - 75px);
+      overflow-y: auto;
+      gap: 0;
+      z-index: 1000;
     }
+
     .header__nav--open {
       display: flex;
+      animation: menuSlideDown 0.22s ease-out forwards;
     }
+
+    @keyframes menuSlideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-6px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header__nav-link {
+      padding: 0.85rem 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      border-bottom: 1px solid rgba(226, 226, 221, 0.5);
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .header__nav-link::after {
+      display: none;
+    }
+
+    .dropdown {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+    }
+
+    .dropdown::after {
+      display: none;
+    }
+
     .dropdown-content {
       position: static;
       display: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      pointer-events: auto;
       box-shadow: none;
       border: none;
-      padding: 0 1rem;
+      border-left: 2px solid var(--color-primary-light);
+      border-radius: 0;
+      background: var(--color-bg);
+      margin: 0.35rem 0 0.65rem 0.75rem;
+      padding: 0.35rem 0;
+      min-width: unset;
+      transition: none;
     }
+
     .dropdown.active .dropdown-content {
       display: block;
     }
+
+    .dropdown-content a {
+      padding: 0.6rem 1rem;
+      font-size: 0.88rem;
+      white-space: normal;
+      border-left: none;
+    }
+
+    .dropdown-content a:hover {
+      padding-left: 1rem;
+      background: rgba(44, 111, 154, 0.08);
+    }
+
+    .header__cta-wrapper-mobile {
+      display: block;
+      padding-top: 1.25rem;
+    }
+
+    .header__cta-mobile {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      padding: 0.75rem 1.5rem;
+    }
+
     .header__cta {
       display: none;
     }
+
     .header__menu-btn {
-      display: block;
+      display: flex;
     }
   }
 
