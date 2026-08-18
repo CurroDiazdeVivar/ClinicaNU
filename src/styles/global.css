@@ -4,12 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
 
 :root {
-  --color-primary: #1B3A5C;       /* Azul marino oscuro — máxima confianza, seriedad médica */
-  --color-primary-light: #2C6F9A;
-  --color-accent: #3A7D44;        /* Verde salvia — salud, naturaleza, calma */
-  --color-accent-light: #5A9E6A;
+  --color-primary: #0F8F74;       /* Verde profundo (tono del logo #1abc9c oscurecido) */
+  --color-primary-light: #2FB99C; /* Verde medio */
+  --color-accent: #1ABC9C;        /* Verde del logo — salud, naturaleza, calma */
+  --color-accent-light: #66D8C0;  /* Verde claro acento */
   --color-bg: #FAFAF8;            /* Fondo blanco cálido (no tocar) */
-  --color-bg-alt: #A8E6DA;        /* Verde menta claro, tono del logo #1abc9c */
+  --color-bg-alt: #8CE0CC;        /* Verde menta saturado (tono del logo) */
   --color-text: #1A1A2E;
   --color-text-muted: #5A5A6E;
   --color-white: #FFFFFF;
