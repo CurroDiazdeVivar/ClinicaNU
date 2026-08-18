@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -25,12 +26,7 @@ const sortedTratamientos = tratamientos.sort((a, b) => {
 ---
 
 <Layout title="Medicina Corporal" description="Tratamientos médicos corporales avanzados: LPG Endermologie, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Medicina Corporal</h1>
-      <p>Tratamientos médicos avanzados para el cuerpo, siempre bajo supervisión de la Dra. Nuria Ugarte.</p>
-    </div>
-  </section>
+  <PageHeader title="Medicina Corporal" description="Tratamientos médicos avanzados para el cuerpo, siempre bajo supervisión de la Dra. Nuria Ugarte." image="/img/tarjeta-corporal.jpg" />
 
   <section class="section">
     <div class="container">
@@ -59,15 +55,6 @@ const sortedTratamientos = tratamientos.sort((a, b) => {
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
-  
   .service-card {
     text-decoration: none;
     color: inherit;
@@ -92,8 +79,8 @@ const sortedTratamientos = tratamientos.sort((a, b) => {
   }
   .card-placeholder {
     width: 100%;
-    height: 160px;
-    background: linear-gradient(135deg, rgba(27, 58, 92, 0.08) 0%, rgba(58, 125, 68, 0.12) 100%);
+    height: 180px;
+    background: linear-gradient(135deg, rgba(27, 58, 92, 0.05) 0%, rgba(26, 188, 156, 0.12) 100%);
     display: flex;
     align-items: center;
     justify-content: center;

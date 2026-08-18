@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('oncologia-cuidados'));
@@ -7,24 +8,20 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="Oncología y Cuidados" description="Cuidados médicos especializados para pacientes oncológicos en Logroño. Nutrición, dermatología y calidad de vida durante y después del tratamiento oncológico.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Oncología y Cuidados</h1>
-      <p>Cuidados médicos integrales para pacientes oncológicos, con enfoque clínico y humano.</p>
-    </div>
-  </section>
+  <PageHeader title="Oncología y Cuidados" description="Cuidados médicos integrales para pacientes oncológicos, con enfoque clínico y humano." />
+
   <section class="section">
     <div class="container service-content">
       <div class="service-content__main">
         <Content />
         <div class="grid-2" style="margin-top: 2rem;">
           <div class="card">
-            <h3>👩‍⚕️ Cuidados en el paciente oncológico</h3>
+            <h3>Cuidados en el paciente oncológico</h3>
             <p>Nutrición, cuidado de la piel y calidad de vida durante y después del tratamiento.</p>
             <a href="/oncologia-cuidados/paciente-oncologico" class="btn btn-outline" style="margin-top: 1rem;">Ver detalles</a>
           </div>
           <div class="card">
-            <h3>🧴 Dermocosmética oncológica</h3>
+            <h3>Dermocosmética oncológica</h3>
             <p>Productos y tratamientos dermatológicos seguros y eficaces durante el tratamiento oncológico.</p>
             <a href="/oncologia-cuidados/dermocosmetica" class="btn btn-outline" style="margin-top: 1rem;">Ver detalles</a>
           </div>
@@ -32,7 +29,7 @@ const { Content } = await render(sec);
       </div>
       <div class="service-content__sidebar">
         <div class="card">
-          <h3>👩‍⚕️ Enfoque integral</h3>
+          <h3>Enfoque integral</h3>
           <p>Todos los tratamientos son supervisados por la Dra. Ugarte y coordinados con su oncólogo. No realizamos procedimientos sin el visto bueno del equipo médico que lleva su caso.</p>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
@@ -42,14 +39,6 @@ const { Content } = await render(sec);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
   .service-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

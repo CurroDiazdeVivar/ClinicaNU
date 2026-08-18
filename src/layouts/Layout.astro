@@ -24,7 +24,7 @@ import '../styles/global.css';
     <div class="container header__inner">
       <a href="/" class="header__logo" aria-label="Clínica Dra. Nuria Ugarte - Inicio">
         <img
-          src="/img/logo-clinica.png"
+          src="/img/logo-clinica-header.png"
           alt="Clínica Dra. Nuria Ugarte"
           class="header__logo-img"
           width="126"
@@ -111,7 +111,7 @@ import '../styles/global.css';
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__col">
-        <h4>Dra. Nuria Ugarte</h4>
+        <img src="/img/logo-clinica-footer.png" alt="Clínica Dra. Nuria Ugarte" class="footer__logo" />
         <p>Médica especialista en nutrición clínica con 25 años de experiencia. Medicina basada en evidencia, tecnología avanzada y trato humano.</p>
       </div>
       <div class="footer__col">
@@ -623,6 +623,12 @@ import '../styles/global.css';
     font-family: var(--font-serif);
     margin-bottom: 1rem;
     font-size: 1.1rem;
+  }
+  .footer__logo {
+    height: 48px;
+    width: auto;
+    margin-bottom: 1rem;
+    display: block;
   }
   .footer p, .footer address p {
     color: rgba(255,255,255,0.8);

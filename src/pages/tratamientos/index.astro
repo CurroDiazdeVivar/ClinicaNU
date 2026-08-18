@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('tratamientos'));
@@ -7,12 +8,7 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="Tratamientos Médicos" description="Tratamientos médicos avanzados en medicina facial, corporal y láser. Siempre bajo supervisión de la Dra. Nuria Ugarte.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Tratamientos Médicos</h1>
-      <p>Tratamientos médicos avanzados, siempre bajo supervisión de la Dra. Nuria Ugarte.</p>
-    </div>
-  </section>
+  <PageHeader title="Tratamientos Médicos" description="Tratamientos médicos avanzados, siempre bajo supervisión de la Dra. Nuria Ugarte." />
 
   <section class="section">
     <div class="container">
@@ -48,15 +44,6 @@ const { Content } = await render(sec);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
-  
   .service-card {
     text-decoration: none;
     color: inherit;

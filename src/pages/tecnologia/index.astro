@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('tecnologia'));
@@ -7,12 +8,8 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="Tecnología médica avanzada" description="Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso. Tanita y EPIXLIFE en Logroño.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Tecnología</h1>
-      <p>Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso.</p>
-    </div>
-  </section>
+  <PageHeader title="Tecnología" description="Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso." />
+
   <section class="section">
     <div class="container service-content">
       <div class="service-content__main">
@@ -20,12 +17,12 @@ const { Content } = await render(sec);
         
         <div class="grid-2" style="margin-top: 2rem;">
           <div class="card">
-            <h3>⚖️ Balanza Tanita</h3>
+            <h3>Balanza Tanita</h3>
             <p>Análisis preciso de composición corporal: masa muscular, grasa visceral, agua corporal, metabolismo basal y más.</p>
             <a href="/tecnologia-tanita" class="btn btn-outline" style="margin-top: 1rem;">Conoce Tanita</a>
           </div>
           <div class="card">
-            <h3>🧬 EPIXLIFE</h3>
+            <h3>EPIXLIFE</h3>
             <p>Tecnología avanzada no invasiva para análisis de piel, cabello y estado antioxidante corporal.</p>
             <a href="/epixlife" class="btn btn-outline" style="margin-top: 1rem;">Descubre EPIXLIFE</a>
           </div>
@@ -33,7 +30,7 @@ const { Content } = await render(sec);
       </div>
       <div class="service-content__sidebar">
         <div class="card">
-          <h3>🔬 Enfoque científico</h3>
+          <h3>Enfoque científico</h3>
           <p>Todas nuestras tecnologías están validadas científicamente y son supervisadas directamente por la Dra. Ugarte.</p>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
@@ -43,14 +40,6 @@ const { Content } = await render(sec);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
   .service-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;

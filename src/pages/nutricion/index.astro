@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('nutricion'));
@@ -7,12 +8,7 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="Nutrición Clínica" description="Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y supervisión de la Dra. Nuria Ugarte. 25 años de experiencia.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Nutrición Clínica</h1>
-      <p>Planes médicos personalizados con evaluación precisa y seguimiento continuo.</p>
-    </div>
-  </section>
+  <PageHeader title="Nutrición Clínica" description="Planes médicos personalizados con evaluación precisa y seguimiento continuo." />
 
   <section class="section">
     <div class="container service-content">
@@ -28,12 +24,6 @@ const { Content } = await render(sec);
             <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
             <li><strong>App digital:</strong> acceso a su evolución desde casa.</li>
           </ol>
-        </div>
-        <div class="card">
-          <h3>💶 Tarifas</h3>
-          <p>Primera consulta: <strong>60€</strong></p>
-          <p>Revisiones: <strong>40€</strong></p>
-          <p>Incluye informe Tanita digital.</p>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
       </div>
@@ -52,15 +42,6 @@ const { Content } = await render(sec);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
-
   .service-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -94,6 +75,19 @@ const { Content } = await render(sec);
   }
   .service-content__sidebar ol li {
     margin-bottom: 0.5rem;
+  }
+
+  .bg-alt {
+    background: var(--color-bg-alt);
+  }
+  .section__title-centered {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .section__subtitle-centered {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
   }
 
   @media (max-width: 768px) {

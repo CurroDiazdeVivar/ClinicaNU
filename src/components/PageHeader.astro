@@ -1,0 +1,140 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  tag?: string;
+  date?: string;
+  author?: string;
+}
+
+const { title, description, image, tag, date, author } = Astro.props;
+---
+
+<header class="page-header">
+  <div class="container">
+    {image && (
+      <div class="page-header__image-wrapper">
+        <img
+          src={image}
+          alt={title}
+          class="page-header__image"
+          width="1200"
+          height="400"
+          loading="eager"
+        />
+      </div>
+    )}
+    <div class="page-header__content">
+      {tag && <span class="page-header__badge">{tag}</span>}
+      {date && <span class="page-header__date">{date}</span>}
+      <h1 class="page-header__title">{title}</h1>
+      {description && <p class="page-header__description">{description}</p>}
+      {author && <p class="page-header__author">Por {author}</p>}
+      <slot />
+    </div>
+  </div>
+</header>
+
+<style>
+  .page-header {
+    background: linear-gradient(160deg, #FFFFFF 0%, var(--color-bg) 60%, rgba(140, 224, 204, 0.15) 100%);
+    padding: 3.5rem 0 3rem;
+    text-align: center;
+    position: relative;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .page-header::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+  }
+
+  .page-header__image-wrapper {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+  }
+
+  .page-header__image {
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    display: block;
+  }
+
+  .page-header__content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .page-header__badge {
+    display: inline-block;
+    background: rgba(26, 188, 156, 0.12);
+    color: var(--color-primary);
+    border: 1px solid rgba(26, 188, 156, 0.3);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    letter-spacing: 0.02em;
+  }
+
+  .page-header__date {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header__title {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 3.5vw + 0.5rem, 3rem);
+    color: var(--color-primary);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  .page-header__description {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .page-header__author {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin-top: 0.5rem;
+    font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .page-header {
+      padding: 2.5rem 0 2rem;
+    }
+    .page-header__image {
+      max-height: 220px;
+      border-radius: 12px;
+    }
+    .page-header__title {
+      font-size: 1.85rem;
+    }
+    .page-header__description {
+      font-size: 1rem;
+    }
+  }
+</style>

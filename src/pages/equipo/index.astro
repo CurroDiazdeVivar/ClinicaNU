@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 const secciones = await getCollection('secciones');
 const sec = secciones.find(s => s.id.includes('equipo'));
@@ -7,20 +8,12 @@ const { Content } = await render(sec);
 ---
 
 <Layout title="Equipo" description="Conozca al equipo médico de la Clínica Dra. Nuria Ugarte en Logroño. Especialistas en nutrición clínica, cuidados oncológicos y medicina regenerativa.">
-  <section class="page-header">
-    <div class="container">
-      <h1>Nuestro Equipo</h1>
-      <p>Profesionales sanitarios comprometidos con su salud.</p>
-    </div>
-  </section>
+  <PageHeader title="Nuestro Equipo" description="Profesionales sanitarios comprometidos con su salud." />
   <section class="section">
     <div class="container" style="max-width: 800px; margin: 0 auto;">
       <div class="card team-member">
         <div class="team-member__image">
-          <div class="team-member__placeholder">
-            <span>📸</span>
-            <small>Foto Dra. Ugarte</small>
-          </div>
+          <img src="/uploads/dra-nuria-ugarte.jpg" alt="Dra. Nuria Ugarte" class="team-member__img" width="400" height="400" loading="eager" />
         </div>
         <div class="team-member__info">
           <h2>Dra. Nuria Ugarte</h2>
@@ -33,36 +26,24 @@ const { Content } = await render(sec);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); }
-
   .team-member {
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 280px 1fr;
     gap: 2.5rem;
     align-items: start;
     padding: 2.5rem;
   }
-  .team-member__placeholder {
+  .team-member__image {
+    width: 100%;
+  }
+  .team-member__img {
     width: 100%;
     aspect-ratio: 1;
-    background: var(--color-border);
+    object-fit: cover;
+    object-position: center 20%;
     border-radius: var(--radius);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--color-text-muted);
-  }
-  .team-member__placeholder small {
-    font-size: 0.85rem;
+    box-shadow: var(--shadow-sm);
+    display: block;
   }
   .team-member__role {
     color: var(--color-accent);

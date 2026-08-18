@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 
 const items = await getCollection('especialidades', ({ data }) => data.categoria === 'capilar');
@@ -8,12 +9,7 @@ const { Content } = await render(item);
 ---
 
 <Layout title={item.data.title} description={item.data.description}>
-  <section class="page-header">
-    <div class="container">
-      <h1>{item.data.title}</h1>
-      <p>{item.data.description}</p>
-    </div>
-  </section>
+  <PageHeader title={item.data.title} description={item.data.description} image="/img/tarjeta-capilar.jpg" />
 
   <section class="section">
     <div class="container service-content">
@@ -37,15 +33,6 @@ const { Content } = await render(item);
 </Layout>
 
 <style>
-  .page-header {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-    color: var(--color-white);
-    padding: 4rem 0 3rem;
-    text-align: center;
-  }
-  .page-header h1 { color: var(--color-white); }
-  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
-
   .service-content {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
