@@ -8,8 +8,8 @@
   --color-primary-light: #2C6F9A;
   --color-accent: #3A7D44;        /* Verde salvia — salud, naturaleza, calma */
   --color-accent-light: #5A9E6A;
-  --color-bg: #FAFAF8;            /* Fondo cálido, casi blanco */
-  --color-bg-alt: #F0F0EB;        /* Fondo alternativo sutil */
+  --color-bg: #ECFAF7;            /* Fondo casi blanco con tinte menta (tono del logo) */
+  --color-bg-alt: #DDF5F0;        /* Fondo alternativo menta claro (tono del logo) */
   --color-text: #1A1A2E;
   --color-text-muted: #5A5A6E;
   --color-white: #FFFFFF;
