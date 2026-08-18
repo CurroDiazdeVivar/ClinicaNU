@@ -70,3 +70,17 @@ collections:
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "especialidades"
+    label: "Especialidades"
+    description: "Páginas de nutrición, oncología, capilar y tecnología"
+    folder: "src/content/especialidades"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Categoría", name: "categoria", widget: "select", options: ["nutricion", "oncologia", "capilar", "tecnologia", "testimonios"] }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }

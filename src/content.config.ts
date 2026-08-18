@@ -48,9 +48,21 @@ const tratamientosCollection = defineCollection({
   }),
 });
 
+const especialidadesCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/especialidades' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.enum(['nutricion', 'oncologia', 'capilar', 'tecnologia', 'testimonios']),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+  }),
+});
+
 export const collections = {
   pages: pagesCollection,
   servicios: serviciosCollection,
   blog: blogCollection,
   tratamientos: tratamientosCollection,
+  especialidades: especialidadesCollection,
 };

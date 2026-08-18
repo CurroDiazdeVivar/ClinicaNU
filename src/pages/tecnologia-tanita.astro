@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+const items = await getCollection('especialidades', ({ data }) => data.categoria === 'tecnologia' && !data.title.toLowerCase().includes('epix'));
+const item = items[0];
+const { Content } = await render(item);
+---
+
+<Layout title={item.data.title} description={item.data.description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>{item.data.title}</h1>
+      <p>{item.data.description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <Content />
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Primera consulta:</strong> historia clínica y evaluación.</li>
+            <li><strong>Diagnóstico médico:</strong> valoración personalizada.</li>
+            <li><strong>Plan de tratamiento:</strong> pautas claras y objetivos.</li>
+            <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
+          </ol>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  .service-content__sidebar ol { padding-left: 1.2rem; }
+  .service-content__sidebar ol li { margin-bottom: 0.5rem; }
+
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

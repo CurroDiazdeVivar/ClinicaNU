@@ -1,0 +1,102 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const especialidades = await getCollection('especialidades');
+  return especialidades
+    .filter(entry => entry.data.categoria === 'nutricion')
+    .map((entry) => {
+      // Usar entry.id para slugs (API Astro 7)
+      const slug = entry.id.replace('.md', '').replace('nutricion/', '');
+      return {
+        params: { slug },
+        props: { entry },
+      };
+    });
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <section class="page-header">
+    <div class="container">
+      <h1>{entry.data.title}</h1>
+      <p>{entry.data.description}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <Content />
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Consulta médica:</strong> Evaluación personalizada.</li>
+            <li><strong>Diagnóstico:</strong> Plan de tratamiento adaptado.</li>
+            <li><strong>Tratamiento:</strong> Aplicación del procedimiento.</li>
+            <li><strong>Seguimiento:</strong> Revisiones periódicas.</li>
+          </ol>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 {
+    margin-bottom: 1.5rem;
+  }
+  .service-content__main h3 {
+    margin: 2rem 0 1rem;
+  }
+  .service-content__main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-content__main li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-content__main li:last-child {
+    border-bottom: none;
+  }
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-content__sidebar ol {
+    padding-left: 1.2rem;
+  }
+  .service-content__sidebar ol li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
