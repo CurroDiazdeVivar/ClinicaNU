@@ -1,0 +1,66 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Láser Médico" description="Tratamientos médicos con láser: depilación, fotorejuvenecimiento, eliminación de tatuajes y tratamientos vasculares.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Láser Médico</h1>
+      <p>Tecnología láser médica avanzada, siempre bajo supervisión de la Dra. Nuria Ugarte.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <a href="/tratamientos/laser/depilacion" class="card service-card">
+          <h3>Depilación láser</h3>
+          <p>Eliminación permanente del vello con tecnología médica.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/laser/fotorejuvenecimiento" class="card service-card">
+          <h3>Fotorejuvenecimiento facial</h3>
+          <p>Mejora del tono y textura de la piel con luz intensa.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/laser/eliminacion-tatuajes" class="card service-card">
+          <h3>Eliminación de tatuajes</h3>
+          <p>Tratamiento láser para eliminación segura de tatuajes.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/laser/laser-vascular" class="card service-card">
+          <h3>Láser vascular</h3>
+          <p>Tratamiento de lesiones vasculares y enrojecimiento.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .service-card h3 {
+    margin-bottom: 0.8rem;
+  }
+  .service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+  }
+</style>

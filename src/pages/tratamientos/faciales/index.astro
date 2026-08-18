@@ -1,0 +1,81 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Medicina Facial" description="Tratamientos médicos faciales avanzados: acne, rosácea, hidratación, hilos tensores, rellenos, peeling y radiofrecuencia.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Medicina Facial</h1>
+      <p>Tratamientos médicos avanzados para el rostro, siempre bajo supervisión de la Dra. Nuria Ugarte.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <a href="/tratamientos/faciales/acne" class="card service-card">
+          <h3>Tratamiento médico del acné</h3>
+          <p>Enfoque clínico para el tratamiento del acné y secuelas.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/cuperosis-rosacea" class="card service-card">
+          <h3>Cuperosis y rosácea</h3>
+          <p>Tratamientos médicos para enrojecimiento y telangiectasias.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/hidratacion" class="card service-card">
+          <h3>Hidratación facial profunda</h3>
+          <p>Hidratación médica intensiva para pieles deshidratadas.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/hilos-tensores" class="card service-card">
+          <h3>Hilos tensores</h3>
+          <p>Lifting médico no quirúrgico con hilos absorbibles.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/rellenos" class="card service-card">
+          <h3>Rellenos</h3>
+          <p>Tratamiento con ácido hialurónico para volumen y arrugas.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/peeling" class="card service-card">
+          <h3>Peeling químico</h3>
+          <p>Renovación controlada de la piel con ácidos médicos.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/faciales/radiofrecuencia" class="card service-card">
+          <h3>Radiofrecuencia facial</h3>
+          <p>Estimulación de colágeno para firmeza y rejuvenecimiento.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .service-card h3 {
+    margin-bottom: 0.8rem;
+  }
+  .service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+  }
+</style>

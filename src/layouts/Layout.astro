@@ -31,11 +31,35 @@ import '../styles/global.css';
       </a>
       <nav class="header__nav" aria-label="Navegación principal">
         <a href="/">Inicio</a>
-        <a href="/nutricion">Nutrición Clínica</a>
-        <a href="/oncoestetica">Oncoestética</a>
-        <a href="/alopecia">Alopecia</a>
-        <a href="/tecnologia-tanita">Tecnología Tanita</a>
-        <a href="/equipo">Equipo</a>
+        <a href="/equipo">La Doctora</a>
+        <div class="dropdown">
+          <a href="/nutricion">Nutrición Clínica</a>
+          <div class="dropdown-content">
+            <a href="/nutricion/dieta-fodmap">Dieta FODMAP</a>
+            <a href="/nutricion/dieta-equilibrada">Dieta equilibrada</a>
+            <a href="/nutricion/dieta-proteinada">Dieta proteinada</a>
+            <a href="/nutricion-deportiva">Nutrición deportiva</a>
+            <a href="/nutricion/micronutricion">Micronutrición</a>
+            <a href="/nutricion/intolerancia-alimentaria">Intolerancia alimentaria</a>
+            <a href="/nutricion/paciente-oncologico">Nutrición en paciente oncológico</a>
+            <a href="/epixlife">EPIXLIFE</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="/oncologia-cuidados">Oncología y Cuidados</a>
+          <div class="dropdown-content">
+            <a href="/oncologia-cuidados/paciente-oncologico">Cuidados en el paciente oncológico</a>
+            <a href="/oncologia-cuidados/dermocosmetica">Dermocosmética oncológica</a>
+          </div>
+        </div>
+        <a href="/medicina-capilar">Medicina Capilar</a>
+        <div class="dropdown">
+          <a href="/tecnologia">Tecnología</a>
+          <div class="dropdown-content">
+            <a href="/tecnologia-tanita">Tanita</a>
+            <a href="/epixlife">EPIXLIFE</a>
+          </div>
+        </div>
         <a href="/blog">Blog</a>
         <a href="/contacto">Contacto</a>
       </nav>
@@ -59,8 +83,17 @@ import '../styles/global.css';
         <h4>Servicios</h4>
         <nav aria-label="Servicios">
           <a href="/nutricion">Nutrición Clínica</a>
-          <a href="/oncoestetica">Oncoestética</a>
-          <a href="/alopecia">Alopecia — Factores de Crecimiento</a>
+          <a href="/oncologia-cuidados">Oncología y Cuidados</a>
+          <a href="/medicina-capilar">Medicina Capilar</a>
+          <a href="/tecnologia-tanita">Tecnología Tanita</a>
+        </nav>
+      </div>
+      <div class="footer__col">
+        <h4>Tratamientos</h4>
+        <nav aria-label="Tratamientos">
+          <a href="/tratamientos/faciales">Faciales</a>
+          <a href="/tratamientos/corporales">Corporales</a>
+          <a href="/tratamientos/laser">Láser médico</a>
         </nav>
       </div>
       <div class="footer__col">
@@ -98,6 +131,25 @@ import '../styles/global.css';
         nav.classList.toggle('header__nav--open');
       });
     }
+
+    // Dropdown functionality
+    document.querySelectorAll('.dropdown').forEach(dropdown => {
+      dropdown.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        }
+      });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown').forEach(dropdown => {
+          dropdown.classList.remove('active');
+        });
+      }
+    });
   </script>
 </body>
 </html>
@@ -175,6 +227,42 @@ import '../styles/global.css';
     cursor: pointer;
     color: var(--color-primary);
   }
+
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--color-white);
+    min-width: 200px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.5rem 0;
+    z-index: 1000;
+    top: 100%;
+    left: 0;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown.active .dropdown-content {
+    display: block;
+  }
+  .dropdown-content a {
+    color: var(--color-text);
+    padding: 0.7rem 1.5rem;
+    display: block;
+    font-size: 0.85rem;
+    border-bottom: none;
+  }
+  .dropdown-content a:hover {
+    background: var(--color-bg-alt);
+    color: var(--color-primary);
+  }
+
   @media (max-width: 1024px) {
     .header__nav a {
       font-size: 0.82rem;
@@ -200,6 +288,16 @@ import '../styles/global.css';
     }
     .header__nav--open {
       display: flex;
+    }
+    .dropdown-content {
+      position: static;
+      display: none;
+      box-shadow: none;
+      border: none;
+      padding: 0 1rem;
+    }
+    .dropdown.active .dropdown-content {
+      display: block;
     }
     .header__cta {
       display: none;

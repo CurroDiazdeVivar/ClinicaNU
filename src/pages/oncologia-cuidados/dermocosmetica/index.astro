@@ -1,0 +1,84 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Dermocosmética oncológica" description="Productos y tratamientos dermatológicos seguros y eficaces para pacientes oncológicos durante el tratamiento.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Dermocosmética oncológica</h1>
+      <p>Productos y tratamientos dermatológicos seguros y eficaces durante el tratamiento oncológico.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Cuidado dermatológico durante el tratamiento oncológico</h2>
+        <p>Los tratamientos oncológicos pueden causar efectos secundarios cutáneos significativos. Nuestra dermocosmética oncológica utiliza productos médicos especializados para proporcionar cuidados seguros y eficaces.</p>
+        
+        <h3>Efectos cutáneos comunes</h3>
+        <p>Durante el tratamiento oncológico, los pacientes pueden experimentar:</p>
+        <ul>
+          <li>Xerosis (sequedad extrema de la piel)</li>
+          <li>Eritema (enrojecimiento e inflamación)</li>
+          <li>Descamación y picor</li>
+          <li>Alopecia inducida por quimioterapia</li>
+          <li>Alteraciones en las uñas</li>
+          <li>Hiperpigmentación o hipopigmentación</li>
+        </ul>
+        
+        <h3>Nuestro enfoque</h3>
+        <p>Utilizamos productos médicos hipoalergénicos y dermatológicamente testados:</p>
+        <ul>
+          <li>Libres de fragancias, parabenos y sulfatos</li>
+          <li>Con activos específicos para cada tipo de lesión cutánea</li>
+          <li>Desarrollados para pieles sensibilizadas por tratamientos oncológicos</li>
+          <li>Aplicación personalizada según las necesidades del paciente</li>
+        </ul>
+        
+        <h3>Tratamientos específicos</h3>
+        <ul>
+          <li><strong>Hidratación intensiva:</strong> Formulaciones ricas en ceramidas, ácido hialurónico y manteca de karité</li>
+          <li><strong>Protección solar médica:</strong> Fotoprotectores físicos de alta tolerancia</li>
+          <li><strong>Cuidado capilar:</strong> Tratamientos fortalecedores durante y después de la alopecia</li>
+          <li><strong>Cuidado de uñas:</strong> Hidratación y fortalecimiento de lechos ungueales</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>🧴 Productos médicos</h3>
+          <p>Trabajamos con marcas médicas especializadas en oncología como Eucerin, La Roche-Posay y A-Derma.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

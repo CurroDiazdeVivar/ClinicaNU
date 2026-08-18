@@ -1,0 +1,71 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+---
+
+<Layout title="Medicina Corporal" description="Tratamientos médicos corporales avanzados: LPG Endermologie, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Medicina Corporal</h1>
+      <p>Tratamientos médicos avanzados para el cuerpo, siempre bajo supervisión de la Dra. Nuria Ugarte.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <a href="/tratamientos/corporales/lpg-endermologie" class="card service-card">
+          <h3>LPG Endermologie Cellu M6</h3>
+          <p>Tratamiento médico de celulitis y remodelación corporal.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/corporales/mesoterapia" class="card service-card">
+          <h3>Mesoterapia</h3>
+          <p>Microinyecciones terapéuticas para diversos tratamientos.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/corporales/presoterapia" class="card service-card">
+          <h3>Presoterapia</h3>
+          <p>Drenaje linfático mecánico para edemas y circulación.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/corporales/radiofrecuencia" class="card service-card">
+          <h3>Radiofrecuencia corporal</h3>
+          <p>Estimulación de colágeno para firmeza y reducción de medidas.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+        <a href="/tratamientos/corporales/esclerosis-varices" class="card service-card">
+          <h3>Esclerosis de varices</h3>
+          <p>Tratamiento médico de microespuma para varices.</p>
+          <span class="service-link">Más información →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  
+  .service-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .service-card h3 {
+    margin-bottom: 0.8rem;
+  }
+  .service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+  }
+</style>

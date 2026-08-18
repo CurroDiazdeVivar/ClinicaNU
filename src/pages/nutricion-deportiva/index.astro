@@ -1,0 +1,74 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Nutrición deportiva" description="Optimización del rendimiento y composición corporal mediante nutrición personalizada para deportistas.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Nutrición deportiva</h1>
+      <p>Optimización del rendimiento y composición corporal</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Nutrición personalizada para deportistas</h2>
+        <p>La nutrición deportiva va más allá de una simple dieta. Se trata de un plan personalizado que optimiza el rendimiento, mejora la recuperación y favorece la composición corporal adecuada para cada disciplina.</p>
+        
+        <h3>Enfoque integral</h3>
+        <p>Nuestro trabajo con deportistas incluye:</p>
+        <ul>
+          <li><strong>Evaluación inicial completa:</strong> Composición corporal con Tanita, historia deportiva y objetivos</li>
+          <li><strong>Plan nutricional específico:</strong> Adaptado a la disciplina, volumen de entrenamiento y calendario competitivo</li>
+          <li><strong>Suplementación personalizada:</strong> Solo cuando es necesaria y basada en evidencia científica</li>
+          <li><strong>Seguimiento continuo:</strong> Ajustes según evolución, temporada deportiva y resultados</li>
+        </ul>
+        
+        <h3>Beneficios</h3>
+        <ul>
+          <li>Mejora del rendimiento físico</li>
+          <li>Optimización de la recuperación post-entreno</li>
+          <li>Reducción del riesgo de lesiones</li>
+          <li>Mejor composición corporal</li>
+          <li>Mayor resistencia y energía</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>🏅 Para todos los niveles</h3>
+          <p>Trabajamos con aficionados, amateur y profesionales de todas las disciplinas deportivas.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Consulta gratuita</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

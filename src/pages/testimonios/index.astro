@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Testimonios de pacientes" description="Experiencias reales de pacientes de la Clínica Dra. Nuria Ugarte en Logroño.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Testimonios</h1>
+      <p>Experiencias reales de nuestros pacientes</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Mª Ángeles, 45 años</h3>
+          <p>"Tras mi tratamiento oncológico, la Dra. Ugarte me ayudó a recuperar mi energía y mejorar mi estado nutricional. Su seguimiento personalizado hizo la diferencia en mi recuperación."</p>
+        </div>
+        <div class="card">
+          <h3>Carlos, 38 años</h3>
+          <p>"Llevaba años con problemas digestivos que nadie lograba resolver. Con la dieta FODMAP y el seguimiento de la Dra. Ugarte, por fin tengo una vida normal sin molestias."</p>
+        </div>
+        <div class="card">
+          <h3>Ana, 52 años</h3>
+          <p>"La tecnología Tanita me permitió entender mi cuerpo como nunca antes. Con su ayuda, logré mis objetivos de composición corporal de forma sostenible y saludable."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

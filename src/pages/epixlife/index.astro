@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="EPIXLIFE" description="Tecnología médica avanzada no invasiva para análisis de piel, cabello y estado antioxidante corporal.">
+  <section class="page-header">
+    <div class="container">
+      <h1>EPIXLIFE</h1>
+      <p>Tecnología médica avanzada no invasiva</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Análisis avanzado de piel y estado antioxidante</h2>
+        <p>EPIXLIFE es una tecnología médica avanzada no invasiva que permite analizar en tiempo real el estado de la piel, el cabello y el equilibrio antioxidante corporal.</p>
+        
+        <h3>¿Qué mide EPIXLIFE?</h3>
+        <ul>
+          <li><strong>Estado de la piel:</strong> Elasticidad, hidratación, textura y presencia de manchas</li>
+          <li><strong>Análisis capilar:</strong> Grosor, densidad y calidad del cabello</li>
+          <li><strong>Equilibrio antioxidante:</strong> Capacidad del organismo para combatir el estrés oxidativo</li>
+          <li><strong>Edad biológica vs cronológica:</strong> Evaluación del envejecimiento celular</li>
+        </ul>
+        
+        <h3>Aplicaciones médicas</h3>
+        <p>Esta tecnología tiene múltiples aplicaciones en el ámbito médico:</p>
+        <ul>
+          <li>Seguimiento de tratamientos dermatológicos y capilares</li>
+          <li>Evaluación del impacto del estilo de vida en el envejecimiento</li>
+          <li>Monitorización de la eficacia de intervenciones nutricionales</li>
+          <li>Prevención personalizada basada en datos objetivos</li>
+        </ul>
+        
+        <h3>Nuestro enfoque</h3>
+        <p>En la Clínica Dra. Nuria Ugarte utilizamos EPIXLIFE como herramienta de diagnóstico y seguimiento:</p>
+        <ul>
+          <li>Evaluación inicial completa del estado cutáneo y antioxidante</li>
+          <li>Desarrollo de planes personalizados basados en datos reales</li>
+          <li>Seguimiento continuo para medir la eficacia de los tratamientos</li>
+          <li>Ajustes precisos basados en la evolución individual</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>🔬 Tecnología validada</h3>
+          <p>EPIXLIFE está respaldada por evidencia científica y es utilizada por profesionales médicos en todo el mundo.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Consulta gratuita</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

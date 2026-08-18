@@ -1,0 +1,87 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout title="Radiofrecuencia corporal" description="Estimulación de colágeno para firmeza y reducción de medidas. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Radiofrecuencia corporal</h1>
+      <p>Estimulación de colágeno para firmeza y reducción de medidas.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Radiofrecuencia corporal médica</h2>
+        <p>La radiofrecuencia corporal es un tratamiento médico no invasivo que estimula la producción de colágeno y elastina mediante el calentamiento controlado de las capas profundas de la piel. Esta tecnología ayuda a mejorar la firmeza, reducir medidas y estimular el metabolismo local.</p>
+        <p>El procedimiento se realiza en varias sesiones, generalmente entre 6-10, espaciadas 1-2 semanas. Durante el tratamiento, se aplica energía controlada que calienta el tejido profundo sin dañar la superficie de la piel. El resultado es una mejora progresiva en la firmeza y contorno corporal.</p>
+        <p>Este tratamiento está indicado para pacientes que desean combatir la flacidez corporal, mejorar el aspecto de la celulitis, reducir medidas y estimular la producción natural de colágeno de forma no quirúrgica.</p>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Consulta médica:</strong> Evaluación y plan de tratamiento personalizado.</li>
+            <li><strong>Preparación:</strong> Limpieza de la zona y aplicación de gel conductor.</li>
+            <li><strong>Aplicación:</strong> Radiofrecuencia controlada en áreas corporales objetivo.</li>
+            <li><strong>Seguimiento:</strong> Revisiones periódicas para evaluar resultados.</li>
+          </ol>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 {
+    margin-bottom: 1.5rem;
+  }
+  .service-content__main h3 {
+    margin: 2rem 0 1rem;
+  }
+  .service-content__main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-content__main li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-content__main li:last-child {
+    border-bottom: none;
+  }
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-content__sidebar ol {
+    padding-left: 1.2rem;
+  }
+  .service-content__sidebar ol li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

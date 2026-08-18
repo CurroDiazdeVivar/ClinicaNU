@@ -1,0 +1,87 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+---
+
+<Layout title="LPG Endermologie Cellu M6" description="Tratamiento médico de celulitis y remodelación corporal con tecnología LPG Endermologie. Bajo supervisión de la Dra. Nuria Ugarte.">
+  <section class="page-header">
+    <div class="container">
+      <h1>LPG Endermologie Cellu M6</h1>
+      <p>Tratamiento médico de celulitis y remodelación corporal.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>LPG Endermologie Cellu M6</h2>
+        <p>La tecnología LPG Endermologie Cellu M6 es un tratamiento médico avanzado para el tratamiento de la celulitis y la remodelación corporal. Utiliza motas motorizadas que realizan movimientos específicos para estimular la microcirculación y el drenaje linfático.</p>
+        <p>El tratamiento se realiza en sesiones de aproximadamente 30-40 minutos, generalmente en zonas como muslos, glúteos y abdomen. La técnica Cellu M6 ha demostrado eficacia en la mejora de la textura de la piel, reducción de volumen y estimulación del metabolismo local.</p>
+        <p>Este tratamiento está indicado para pacientes que desean tratar la celulitis, mejorar la circulación, reducir medidas y tonificar la piel. Es especialmente efectivo como parte de un programa integral de manejo del peso.</p>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Consulta médica:</strong> Evaluación de la celulitis y plan de tratamiento personalizado.</li>
+            <li><strong>Preparación:</strong> Evaluación de la zona a tratar y ajuste del equipo.</li>
+            <li><strong>Aplicación:</strong> Sesión de LPG Endermologie Cellu M6 en áreas objetivo.</li>
+            <li><strong>Seguimiento:</strong> Revisiones periódicas para evaluar resultados.</li>
+          </ol>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 {
+    margin-bottom: 1.5rem;
+  }
+  .service-content__main h3 {
+    margin: 2rem 0 1rem;
+  }
+  .service-content__main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-content__main li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-content__main li:last-child {
+    border-bottom: none;
+  }
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-content__sidebar ol {
+    padding-left: 1.2rem;
+  }
+  .service-content__sidebar ol li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

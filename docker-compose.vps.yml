@@ -1,0 +1,14 @@
+services:
+  clinica-web:
+    image: nginx:alpine
+    container_name: clinica-web
+    restart: unless-stopped
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    networks:
+      - clinica-net
+
+networks:
+  clinica-net:
+    name: vuelta-ciclista-vps_vuelta-net
+    external: true

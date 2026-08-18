@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Tecnología médica avanzada" description="Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso. Tanita y EPIXLIFE en Logroño.">
+  <section class="page-header">
+    <div class="container">
+      <h1>Tecnología</h1>
+      <p>Tecnología médica avanzada no invasiva para diagnóstico y seguimiento preciso.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>Medicina basada en datos</h2>
+        <p>En la Clínica Dra. Nuria Ugarte utilizamos tecnologías médicas avanzadas para proporcionar diagnósticos precisos y tratamientos personalizados basados en datos objetivos.</p>
+        
+        <div class="grid-2" style="margin-top: 2rem;">
+          <div class="card">
+            <h3>⚖️ Balanza Tanita</h3>
+            <p>Análisis preciso de composición corporal: masa muscular, grasa visceral, agua corporal, metabolismo basal y más.</p>
+            <a href="/tecnologia-tanita" class="btn btn-outline" style="margin-top: 1rem;">Conoce Tanita</a>
+          </div>
+          <div class="card">
+            <h3>🧬 EPIXLIFE</h3>
+            <p>Tecnología avanzada no invasiva para análisis de piel, cabello y estado antioxidante corporal.</p>
+            <a href="/epixlife" class="btn btn-outline" style="margin-top: 1rem;">Descubre EPIXLIFE</a>
+          </div>
+        </div>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>🔬 Enfoque científico</h3>
+          <p>Todas nuestras tecnologías están validadas científicamente y son supervisadas directamente por la Dra. Ugarte.</p>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Solicita información</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .page-header {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+    color: var(--color-white);
+    padding: 4rem 0 3rem;
+    text-align: center;
+  }
+  .page-header h1 { color: var(--color-white); }
+  .page-header p { color: rgba(255,255,255,0.9); max-width: 500px; margin: 0 auto; }
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__main ul { list-style: none; padding: 0; }
+  .service-content__main li { padding: 0.6rem 0; border-bottom: 1px solid var(--color-border); }
+  .service-content__main li:last-child { border-bottom: none; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  @media (max-width: 1024px) {
+    .service-content { gap: 2rem; }
+  }
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>
