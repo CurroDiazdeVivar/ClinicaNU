@@ -12,6 +12,7 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
+  # ============ PÁGINAS ============
   - name: "pages"
     label: "Páginas"
     description: "Contenido de las páginas principales"
@@ -31,6 +32,21 @@ collections:
           - { label: "Texto diferenciación 3 (detalle)", name: "diff_3_text", widget: "text" }
           - { label: "Sobre la Dra.", name: "about_text", widget: "markdown" }
 
+  # ============ SECCIONES (páginas del menú) ============
+  - name: "secciones"
+    label: "Secciones"
+    description: "Páginas del menú: La Doctora, hubs, testimonios, contacto"
+    folder: "src/content/secciones"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ SERVICIOS ============
   - name: "servicios"
     label: "Servicios"
     description: "Servicios médicos de la clínica"
@@ -43,6 +59,119 @@ collections:
       - { label: "Contenido", name: "body", widget: "markdown" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
 
+  # ============ NUTRICIÓN (especialidades) ============
+  - name: "especialidades-nutricion"
+    label: "Nutrición"
+    description: "Dietas y tratamientos de nutrición"
+    folder: "src/content/especialidades/nutricion"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ ONCOLOGÍA (especialidades) ============
+  - name: "especialidades-oncologia"
+    label: "Oncología y Cuidados"
+    description: "Cuidados en el paciente oncológico"
+    folder: "src/content/especialidades/oncologia"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ MEDICINA CAPILAR (especialidades) ============
+  - name: "especialidades-capilar"
+    label: "Medicina Capilar"
+    description: "Alopecia y factores de crecimiento"
+    folder: "src/content/especialidades/capilar"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ TECNOLOGÍA (especialidades) ============
+  - name: "especialidades-tecnologia"
+    label: "Tecnología"
+    description: "Tanita y tecnología médica"
+    folder: "src/content/especialidades/tecnologia"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ TESTIMONIOS (especialidades) ============
+  - name: "especialidades-testimonios"
+    label: "Testimonios"
+    description: "Testimonios de pacientes"
+    folder: "src/content/especialidades/testimonios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ TRATAMIENTOS FACIALES ============
+  - name: "tratamientos-faciales"
+    label: "Tratamientos Faciales"
+    description: "Medicina facial"
+    folder: "src/content/tratamientos/facial"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ TRATAMIENTOS CORPORALES ============
+  - name: "tratamientos-corporales"
+    label: "Tratamientos Corporales"
+    description: "Medicina corporal"
+    folder: "src/content/tratamientos/corporal"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ TRATAMIENTOS LÁSER ============
+  - name: "tratamientos-laser"
+    label: "Tratamientos Láser"
+    description: "Láser médico"
+    folder: "src/content/tratamientos/laser"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+
+  # ============ BLOG ============
   - name: "blog"
     label: "Blog"
     description: "Artículos del blog"
@@ -55,45 +184,4 @@ collections:
       - { label: "Autor", name: "author", widget: "string", default: "Dra. Nuria Ugarte" }
       - { label: "Resumen", name: "excerpt", widget: "text" }
       - { label: "Imagen destacada", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  - name: "tratamientos"
-    label: "Tratamientos"
-    description: "Tratamientos médicos (facial, corporal, láser)"
-    folder: "src/content/tratamientos"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Categoría", name: "categoria", widget: "select", options: ["facial", "corporal", "laser"] }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  - name: "especialidades"
-    label: "Especialidades"
-    description: "Páginas de nutrición, oncología, capilar y tecnología"
-    folder: "src/content/especialidades"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Categoría", name: "categoria", widget: "select", options: ["nutricion", "oncologia", "capilar", "tecnologia", "testimonios"] }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  - name: "secciones"
-    label: "Secciones"
-    description: "Páginas del menú: La Doctora, hubs, testimonios, contacto"
-    folder: "src/content/secciones"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
