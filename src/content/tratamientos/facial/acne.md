@@ -4,6 +4,7 @@ description: "Tratamiento médico especializado para el acné y sus secuelas. En
 categoria: facial
 icon: "✨"
 order: 1
+image: ""
 ---
 
 ## Tratamiento médico del acné

@@ -4,6 +4,7 @@ description: "Estimulación de colágeno para firmeza y reducción de medidas. T
 categoria: corporal
 icon: "✨"
 order: 4
+image: ""
 ---
 
 ## Radiofrecuencia corporal médica

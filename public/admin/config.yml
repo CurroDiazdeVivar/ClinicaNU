@@ -44,6 +44,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ SERVICIOS ============
@@ -71,6 +72,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ ONCOLOGÍA (especialidades) ============
@@ -85,6 +87,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ MEDICINA CAPILAR (especialidades) ============
@@ -99,6 +102,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ TECNOLOGÍA (especialidades) ============
@@ -113,6 +117,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ TESTIMONIOS (especialidades) ============
@@ -127,6 +132,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ TRATAMIENTOS FACIALES ============
@@ -141,6 +147,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ TRATAMIENTOS CORPORALES ============
@@ -155,6 +162,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ TRATAMIENTOS LÁSER ============
@@ -169,6 +177,7 @@ collections:
       - { label: "Descripción breve", name: "description", widget: "text" }
       - { label: "Icono (emoji)", name: "icon", widget: "string" }
       - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
 
   # ============ BLOG ============

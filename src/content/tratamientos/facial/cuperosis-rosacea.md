@@ -4,6 +4,7 @@ description: "Tratamientos médicos especializados para cuperosis y rosácea. En
 categoria: facial
 icon: "✨"
 order: 2
+image: ""
 ---
 
 ## Tratamiento médico de cuperosis y rosácea

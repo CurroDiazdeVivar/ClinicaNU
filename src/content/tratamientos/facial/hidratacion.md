@@ -4,6 +4,7 @@ description: "Tratamiento médico de hidratación facial intensiva. Enfoque clí
 categoria: facial
 icon: "✨"
 order: 3
+image: ""
 ---
 
 ## Hidratación facial médica intensiva

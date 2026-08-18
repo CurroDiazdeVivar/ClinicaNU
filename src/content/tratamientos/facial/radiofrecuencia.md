@@ -4,6 +4,7 @@ description: "Estimulación de colágeno para firmeza y rejuvenecimiento. Tratam
 categoria: facial
 icon: "✨"
 order: 7
+image: ""
 ---
 
 ## Radiofrecuencia facial médica

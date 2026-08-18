@@ -4,6 +4,7 @@ description: "Tratamiento con ácido hialurónico para volumen y arrugas. Tratam
 categoria: facial
 icon: "✨"
 order: 5
+image: ""
 ---
 
 ## Rellenos con ácido hialurónico

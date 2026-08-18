@@ -4,6 +4,7 @@ description: "Renovación controlada de la piel con ácidos médicos. Tratamient
 categoria: facial
 icon: "✨"
 order: 6
+image: ""
 ---
 
 ## Peeling químico médico

@@ -19,22 +19,28 @@ const { Content } = await render(sec);
       <Content />
       <div class="grid-3">
         <a href="/tratamientos/faciales" class="card service-card">
-          <span class="service-icon">👤</span>
-          <h3>Medicina Facial</h3>
-          <p>Tratamientos médicos para el rostro: acne, rosácea, hidratación, hilos tensores, rellenos, peeling y radiofrecuencia.</p>
-          <span class="service-link">Ver tratamientos →</span>
+          <img src="/img/tarjeta-facial.jpg" alt="Medicina Facial" class="card-image" width="600" height="360" loading="lazy" />
+          <div class="service-card__body">
+            <h3>Medicina Facial</h3>
+            <p>Tratamientos médicos para el rostro: acne, rosácea, hidratación, hilos tensores, rellenos, peeling y radiofrecuencia.</p>
+            <span class="service-link">Ver tratamientos →</span>
+          </div>
         </a>
         <a href="/tratamientos/corporales" class="card service-card">
-          <span class="service-icon">胴</span>
-          <h3>Medicina Corporal</h3>
-          <p>Tratamientos médicos para el cuerpo: celulitis, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.</p>
-          <span class="service-link">Ver tratamientos →</span>
+          <img src="/img/tarjeta-corporal.jpg" alt="Medicina Corporal" class="card-image" width="600" height="360" loading="lazy" />
+          <div class="service-card__body">
+            <h3>Medicina Corporal</h3>
+            <p>Tratamientos médicos para el cuerpo: celulitis, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.</p>
+            <span class="service-link">Ver tratamientos →</span>
+          </div>
         </a>
         <a href="/tratamientos/laser" class="card service-card">
-          <span class="service-icon">镭</span>
-          <h3>Láser Médico</h3>
-          <p>Tecnología láser médica para depilación, fotorejuvenecimiento, eliminación de tatuajes y tratamientos vasculares.</p>
-          <span class="service-link">Ver tratamientos →</span>
+          <img src="/img/tarjeta-laser.jpg" alt="Láser Médico" class="card-image" width="600" height="360" loading="lazy" />
+          <div class="service-card__body">
+            <h3>Láser Médico</h3>
+            <p>Tecnología láser médica para depilación, fotorejuvenecimiento, eliminación de tatuajes y tratamientos vasculares.</p>
+            <span class="service-link">Ver tratamientos →</span>
+          </div>
         </a>
       </div>
     </div>
@@ -54,21 +60,45 @@ const { Content } = await render(sec);
   .service-card {
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
   }
-  .service-icon {
-    font-size: 2.5rem;
+  .card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
     display: block;
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: transform 0.3s ease;
+  }
+  .service-card:hover .card-image {
+    transform: scale(1.03);
+  }
+  .service-card__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .service-card__body h3 {
+    margin-bottom: 0.75rem;
+  }
+  .service-card__body p {
+    flex-grow: 1;
     margin-bottom: 1rem;
-  }
-  .service-card h3 {
-    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
   .service-link {
     display: inline-block;
-    margin-top: 1rem;
     font-weight: 600;
     color: var(--color-primary-light);
     font-size: 0.9rem;
+    margin-top: auto;
   }
 </style>

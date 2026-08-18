@@ -4,6 +4,7 @@ description: "Microinyecciones terapéuticas para diversos tratamientos corporal
 categoria: corporal
 icon: "✨"
 order: 2
+image: ""
 ---
 
 ## Mesoterapia médica

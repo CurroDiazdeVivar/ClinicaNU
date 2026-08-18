@@ -4,6 +4,7 @@ description: "Tratamiento médico de celulitis y remodelación corporal con tecn
 categoria: corporal
 icon: "✨"
 order: 1
+image: ""
 ---
 
 ## LPG Endermologie Cellu M6

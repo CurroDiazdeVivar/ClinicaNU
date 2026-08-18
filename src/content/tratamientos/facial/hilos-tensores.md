@@ -4,6 +4,7 @@ description: "Lifting médico no quirúrgico con hilos absorbibles. Tratamiento 
 categoria: facial
 icon: "✨"
 order: 4
+image: ""
 ---
 
 ## Lifting médico con hilos tensores

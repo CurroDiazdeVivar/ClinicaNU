@@ -4,6 +4,7 @@ description: "Eliminación permanente del vello con tecnología láser médica. 
 categoria: laser
 icon: "✨"
 order: 1
+image: ""
 ---
 
 ## Depilación láser médica

@@ -4,6 +4,7 @@ description: "Tratamiento médico de microespuma para varices. Tratamiento bajo 
 categoria: corporal
 icon: "✨"
 order: 5
+image: ""
 ---
 
 ## Esclerosis de varices con microespuma

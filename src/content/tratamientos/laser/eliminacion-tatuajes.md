@@ -4,6 +4,7 @@ description: "Tratamiento láser para eliminación segura de tatuajes. Tratamien
 categoria: laser
 icon: "✨"
 order: 3
+image: ""
 ---
 
 ## Eliminación de tatuajes con láser médico

@@ -4,6 +4,7 @@ description: "Drenaje linfático mecánico para edemas y circulación. Tratamien
 categoria: corporal
 icon: "✨"
 order: 3
+image: ""
 ---
 
 ## Presoterapia médica

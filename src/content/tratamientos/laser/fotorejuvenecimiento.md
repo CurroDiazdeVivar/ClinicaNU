@@ -4,6 +4,7 @@ description: "Mejora del tono y textura de la piel con luz intensa. Tratamiento 
 categoria: laser
 icon: "✨"
 order: 2
+image: ""
 ---
 
 ## Fotorejuvenecimiento facial médico

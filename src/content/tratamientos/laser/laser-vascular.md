@@ -4,6 +4,7 @@ description: "Tratamiento de lesiones vasculares y enrojecimiento con láser mé
 categoria: laser
 icon: "✨"
 order: 4
+image: ""
 ---
 
 ## Láser vascular médico

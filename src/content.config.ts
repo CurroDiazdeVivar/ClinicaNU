@@ -45,6 +45,7 @@ const tratamientosCollection = defineCollection({
     categoria: z.enum(['facial', 'corporal', 'laser']),
     icon: z.string().optional(),
     order: z.number().optional(),
+    image: z.string().optional(),
   }),
 });
 
@@ -56,6 +57,7 @@ const especialidadesCollection = defineCollection({
     categoria: z.enum(['nutricion', 'oncologia', 'capilar', 'tecnologia', 'testimonios']),
     icon: z.string().optional(),
     order: z.number().optional(),
+    image: z.string().optional(),
   }),
 });
 
@@ -66,6 +68,7 @@ const seccionesCollection = defineCollection({
     description: z.string(),
     icon: z.string().optional(),
     order: z.number().optional(),
+    image: z.string().optional(),
   }),
 });
 
