@@ -56,3 +56,17 @@ collections:
       - { label: "Resumen", name: "excerpt", widget: "text" }
       - { label: "Imagen destacada", name: "image", widget: "image", required: false }
       - { label: "Contenido", name: "body", widget: "markdown" }
+
+  - name: "tratamientos"
+    label: "Tratamientos"
+    description: "Tratamientos médicos (facial, corporal, láser)"
+    folder: "src/content/tratamientos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Descripción breve", name: "description", widget: "text" }
+      - { label: "Categoría", name: "categoria", widget: "select", options: ["facial", "corporal", "laser"] }
+      - { label: "Icono (emoji)", name: "icon", widget: "string" }
+      - { label: "Orden", name: "order", widget: "number", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown" }

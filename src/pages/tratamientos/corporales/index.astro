@@ -1,5 +1,27 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  // This page is static, no dynamic paths needed
+  return [
+    { 
+      params: {}, 
+      props: {} 
+    }
+  ];
+}
+
+const tratamientos = await getCollection('tratamientos', ({ data }) => data.categoria === 'corporal');
+// Sort by order field if available, otherwise by title
+const sortedTratamientos = tratamientos.sort((a, b) => {
+  const orderA = a.data.order || 0;
+  const orderB = b.data.order || 0;
+  if (orderA !== orderB) {
+    return orderA - orderB;
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
 ---
 
 <Layout title="Medicina Corporal" description="Tratamientos médicos corporales avanzados: LPG Endermologie, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.">
@@ -13,31 +35,15 @@ import Layout from '../../../layouts/Layout.astro';
   <section class="section">
     <div class="container">
       <div class="grid-3">
-        <a href="/tratamientos/corporales/lpg-endermologie" class="card service-card">
-          <h3>LPG Endermologie Cellu M6</h3>
-          <p>Tratamiento médico de celulitis y remodelación corporal.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/corporales/mesoterapia" class="card service-card">
-          <h3>Mesoterapia</h3>
-          <p>Microinyecciones terapéuticas para diversos tratamientos.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/corporales/presoterapia" class="card service-card">
-          <h3>Presoterapia</h3>
-          <p>Drenaje linfático mecánico para edemas y circulación.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/corporales/radiofrecuencia" class="card service-card">
-          <h3>Radiofrecuencia corporal</h3>
-          <p>Estimulación de colágeno para firmeza y reducción de medidas.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/corporales/esclerosis-varices" class="card service-card">
-          <h3>Esclerosis de varices</h3>
-          <p>Tratamiento médico de microespuma para varices.</p>
-          <span class="service-link">Más información →</span>
-        </a>
+        {
+          sortedTratamientos.map((tratamiento) => (
+            <a href={`/tratamientos/${tratamiento.data.categoria}/${tratamiento.id.replace('.md', '').replace('corporal/', '')}`} class="card service-card">
+              <h3>{tratamiento.data.title}</h3>
+              <p>{tratamiento.data.description}</p>
+              <span class="service-link">Más información →</span>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>

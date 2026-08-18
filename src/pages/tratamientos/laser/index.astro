@@ -1,5 +1,27 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  // This page is static, no dynamic paths needed
+  return [
+    { 
+      params: {}, 
+      props: {} 
+    }
+  ];
+}
+
+const tratamientos = await getCollection('tratamientos', ({ data }) => data.categoria === 'laser');
+// Sort by order field if available, otherwise by title
+const sortedTratamientos = tratamientos.sort((a, b) => {
+  const orderA = a.data.order || 0;
+  const orderB = b.data.order || 0;
+  if (orderA !== orderB) {
+    return orderA - orderB;
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
 ---
 
 <Layout title="Láser Médico" description="Tratamientos médicos con láser: depilación, fotorejuvenecimiento, eliminación de tatuajes y tratamientos vasculares.">
@@ -13,26 +35,15 @@ import Layout from '../../../layouts/Layout.astro';
   <section class="section">
     <div class="container">
       <div class="grid-3">
-        <a href="/tratamientos/laser/depilacion" class="card service-card">
-          <h3>Depilación láser</h3>
-          <p>Eliminación permanente del vello con tecnología médica.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/laser/fotorejuvenecimiento" class="card service-card">
-          <h3>Fotorejuvenecimiento facial</h3>
-          <p>Mejora del tono y textura de la piel con luz intensa.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/laser/eliminacion-tatuajes" class="card service-card">
-          <h3>Eliminación de tatuajes</h3>
-          <p>Tratamiento láser para eliminación segura de tatuajes.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/laser/laser-vascular" class="card service-card">
-          <h3>Láser vascular</h3>
-          <p>Tratamiento de lesiones vasculares y enrojecimiento.</p>
-          <span class="service-link">Más información →</span>
-        </a>
+        {
+          sortedTratamientos.map((tratamiento) => (
+            <a href={`/tratamientos/${tratamiento.data.categoria}/${tratamiento.id.replace('.md', '').replace('laser/', '')}`} class="card service-card">
+              <h3>{tratamiento.data.title}</h3>
+              <p>{tratamiento.data.description}</p>
+              <span class="service-link">Más información →</span>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>

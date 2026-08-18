@@ -37,8 +37,20 @@ const blogCollection = defineCollection({
   }),
 });
 
+const tratamientosCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/tratamientos' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.enum(['facial', 'corporal', 'laser']),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+  }),
+});
+
 export const collections = {
   pages: pagesCollection,
   servicios: serviciosCollection,
   blog: blogCollection,
+  tratamientos: tratamientosCollection,
 };

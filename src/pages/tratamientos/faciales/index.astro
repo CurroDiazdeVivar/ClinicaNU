@@ -1,5 +1,27 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  // This page is static, no dynamic paths needed
+  return [
+    { 
+      params: {}, 
+      props: {} 
+    }
+  ];
+}
+
+const tratamientos = await getCollection('tratamientos', ({ data }) => data.categoria === 'facial');
+// Sort by order field if available, otherwise by title
+const sortedTratamientos = tratamientos.sort((a, b) => {
+  const orderA = a.data.order || 0;
+  const orderB = b.data.order || 0;
+  if (orderA !== orderB) {
+    return orderA - orderB;
+  }
+  return a.data.title.localeCompare(b.data.title);
+});
 ---
 
 <Layout title="Medicina Facial" description="Tratamientos médicos faciales avanzados: acne, rosácea, hidratación, hilos tensores, rellenos, peeling y radiofrecuencia.">
@@ -13,41 +35,15 @@ import Layout from '../../../layouts/Layout.astro';
   <section class="section">
     <div class="container">
       <div class="grid-3">
-        <a href="/tratamientos/faciales/acne" class="card service-card">
-          <h3>Tratamiento médico del acné</h3>
-          <p>Enfoque clínico para el tratamiento del acné y secuelas.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/cuperosis-rosacea" class="card service-card">
-          <h3>Cuperosis y rosácea</h3>
-          <p>Tratamientos médicos para enrojecimiento y telangiectasias.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/hidratacion" class="card service-card">
-          <h3>Hidratación facial profunda</h3>
-          <p>Hidratación médica intensiva para pieles deshidratadas.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/hilos-tensores" class="card service-card">
-          <h3>Hilos tensores</h3>
-          <p>Lifting médico no quirúrgico con hilos absorbibles.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/rellenos" class="card service-card">
-          <h3>Rellenos</h3>
-          <p>Tratamiento con ácido hialurónico para volumen y arrugas.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/peeling" class="card service-card">
-          <h3>Peeling químico</h3>
-          <p>Renovación controlada de la piel con ácidos médicos.</p>
-          <span class="service-link">Más información →</span>
-        </a>
-        <a href="/tratamientos/faciales/radiofrecuencia" class="card service-card">
-          <h3>Radiofrecuencia facial</h3>
-          <p>Estimulación de colágeno para firmeza y rejuvenecimiento.</p>
-          <span class="service-link">Más información →</span>
-        </a>
+        {
+          sortedTratamientos.map((tratamiento) => (
+            <a href={`/tratamientos/${tratamiento.data.categoria}/${tratamiento.id.replace('.md', '').replace('facial/', '')}`} class="card service-card">
+              <h3>{tratamiento.data.title}</h3>
+              <p>{tratamiento.data.description}</p>
+              <span class="service-link">Más información →</span>
+            </a>
+          ))
+        }
       </div>
     </div>
   </section>
