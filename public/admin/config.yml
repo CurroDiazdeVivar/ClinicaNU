@@ -5,7 +5,7 @@ backend:
   name: github
   repo: CurroDiazdeVivar/ClinicaNU
   branch: main
-  base_url: https://prueba.clinicanuriaugarte.es/api/oauth
+  base_url: https://prueba.clinicanuriaugarte.es
   auth_endpoint: auth
 
 media_folder: "public/uploads"
