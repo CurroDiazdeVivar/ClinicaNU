@@ -120,6 +120,19 @@ const seccionesCollection = defineCollection({
   }),
 });
 
+const settingsCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/settings' }),
+  schema: z.object({
+    site_name: z.string(),
+    phone: z.string(),
+    phone_link: z.string(),
+    email: z.string(),
+    address: z.string(),
+    hours: z.string(),
+    cta_text: z.string(),
+  }),
+});
+
 export const collections = {
   pages: pagesCollection,
   servicios: serviciosCollection,
@@ -131,4 +144,5 @@ export const collections = {
   tecnologia: tecnologiaCollection,
   testimonios: testimoniosCollection,
   secciones: seccionesCollection,
+  settings: settingsCollection,
 };

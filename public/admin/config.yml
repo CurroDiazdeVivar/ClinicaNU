@@ -9,13 +9,13 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  # ============ GRUPO 1: PÁGINAS ============
+  # 1. Página Principal
   - name: "pages"
-    label: "Páginas"
-    description: "Contenido de las páginas principales"
+    label: "Página Principal"
+    description: "Contenido de la página de inicio"
     files:
       - name: "home"
-        label: "Página de Inicio"
+        label: "Página Principal"
         file: "src/content/pages/home.md"
         fields:
           - { name: "hero_title", label: "Título Hero", widget: "string" }
@@ -29,20 +29,20 @@ collections:
           - { name: "diff_3_text", label: "Texto diferenciación 3 (detalle)", widget: "text" }
           - { name: "about_text", label: "Sobre la Dra.", widget: "markdown" }
 
-  - name: "secciones"
-    label: "Secciones"
-    folder: "src/content/secciones"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Título", widget: "string" }
-      - { name: "description", label: "Descripción breve", widget: "text" }
-      - { name: "icon", label: "Icono (emoji)", widget: "string" }
-      - { name: "order", label: "Orden", widget: "number", required: false }
-      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
-      - { name: "body", label: "Contenido", widget: "markdown" }
+  # 2. La Doctora
+  - name: "equipo"
+    label: "La Doctora"
+    description: "Página sobre la Dra. Nuria Ugarte"
+    files:
+      - name: "equipo"
+        label: "La Doctora"
+        file: "src/content/secciones/equipo.md"
+        fields:
+          - { name: "title", label: "Título", widget: "string" }
+          - { name: "description", label: "Descripción breve", widget: "text" }
+          - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ GRUPO 2: NUTRICIÓN ============
+  # 3. Nutrición
   - name: "nutricion"
     label: "Nutrición"
     folder: "src/content/nutricion"
@@ -56,7 +56,7 @@ collections:
       - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ GRUPO 3: ONCOLOGÍA ============
+  # 4. Oncología y Cuidados
   - name: "oncologia"
     label: "Oncología y Cuidados"
     folder: "src/content/oncologia"
@@ -70,7 +70,7 @@ collections:
       - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ GRUPO 4: MEDICINA CAPILAR ============
+  # 5. Medicina Capilar
   - name: "capilar"
     label: "Medicina Capilar"
     folder: "src/content/capilar"
@@ -84,35 +84,7 @@ collections:
       - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ GRUPO 5: TECNOLOGÍA ============
-  - name: "tecnologia"
-    label: "Tecnología"
-    folder: "src/content/tecnologia"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Título", widget: "string" }
-      - { name: "description", label: "Descripción breve", widget: "text" }
-      - { name: "icon", label: "Icono (emoji)", widget: "string" }
-      - { name: "order", label: "Orden", widget: "number", required: false }
-      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
-      - { name: "body", label: "Contenido", widget: "markdown" }
-
-  # ============ GRUPO 6: TESTIMONIOS ============
-  - name: "testimonios"
-    label: "Testimonios"
-    folder: "src/content/testimonios"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Título", widget: "string" }
-      - { name: "description", label: "Descripción breve", widget: "text" }
-      - { name: "icon", label: "Icono (emoji)", widget: "string" }
-      - { name: "order", label: "Orden", widget: "number", required: false }
-      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
-      - { name: "body", label: "Contenido", widget: "markdown" }
-
-  # ============ GRUPO 7: TRATAMIENTOS ============
+  # 6. Tratamientos
   - name: "tratamientos"
     label: "Tratamientos"
     folder: "src/content/tratamientos"
@@ -127,7 +99,7 @@ collections:
       - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ GRUPO 8: BLOG Y SERVICIOS ============
+  # 7. Blog
   - name: "blog"
     label: "Blog"
     folder: "src/content/blog"
@@ -141,13 +113,32 @@ collections:
       - { name: "image", label: "Imagen destacada", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
-  - name: "servicios"
-    label: "Servicios"
-    folder: "src/content/servicios"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { name: "title", label: "Título del servicio", widget: "string" }
-      - { name: "description", label: "Descripción breve", widget: "text" }
-      - { name: "icon", label: "Icono (emoji)", widget: "string" }
-      - { name: "body", label: "Contenido", widget: "markdown" }
+  # 8. Contacto
+  - name: "contacto"
+    label: "Contacto"
+    description: "Página de contacto"
+    files:
+      - name: "contacto"
+        label: "Contacto"
+        file: "src/content/secciones/contacto.md"
+        fields:
+          - { name: "title", label: "Título", widget: "string" }
+          - { name: "description", label: "Descripción breve", widget: "text" }
+          - { name: "body", label: "Contenido", widget: "markdown" }
+
+  # 9. Ajustes
+  - name: "settings"
+    label: "Ajustes"
+    description: "Datos del header y footer (teléfono, email, dirección, horario)"
+    files:
+      - name: "site"
+        label: "Ajustes"
+        file: "src/content/settings/site.md"
+        fields:
+          - { name: "site_name", label: "Nombre del sitio", widget: "string" }
+          - { name: "phone", label: "Teléfono", widget: "string" }
+          - { name: "phone_link", label: "Enlace teléfono", widget: "string" }
+          - { name: "email", label: "Email", widget: "string" }
+          - { name: "address", label: "Dirección", widget: "string" }
+          - { name: "hours", label: "Horario", widget: "string" }
+          - { name: "cta_text", label: "Texto CTA", widget: "string" }

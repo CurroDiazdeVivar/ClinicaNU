@@ -6,6 +6,20 @@ export interface Props {
 }
 const { title, description } = Astro.props;
 import '../styles/global.css';
+import { getCollection } from 'astro:content';
+
+const settings = await getCollection('settings');
+const site = settings[0] || {
+  data: {
+    site_name: 'Clínica Dra. Nuria Ugarte',
+    phone: '941 234 567',
+    phone_link: '+34941234567',
+    email: 'info@clinicanuriaugarte.es',
+    address: 'Calle Ejemplo, 12 · 26001 Logroño, La Rioja',
+    hours: 'Lunes a Viernes: 9:00 - 14:00 · 16:00 - 20:00',
+    cta_text: 'Reserva tu cita',
+  },
+};
 ---
 
 <!DOCTYPE html>
@@ -16,16 +30,16 @@ import '../styles/global.css';
   <meta name="description" content={description} />
   <meta name="robots" content="index, follow" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <title>{title} | Clínica Dra. Nuria Ugarte</title>
+  <title>{title} | {site.data.site_name}</title>
 </head>
 <body>
   <!-- Header -->
   <header class="header">
     <div class="container header__inner">
-      <a href="/" class="header__logo" aria-label="Clínica Dra. Nuria Ugarte - Inicio">
+      <a href="/" class="header__logo" aria-label={`${site.data.site_name} - Inicio`}>
         <img
           src="/img/logo-clinica-header.png"
-          alt="Clínica Dra. Nuria Ugarte"
+          alt={site.data.site_name}
           class="header__logo-img"
           width="126"
           height="55"
@@ -71,29 +85,16 @@ import '../styles/global.css';
 
         <a href="/medicina-capilar" class="header__nav-link">Medicina Capilar</a>
 
-        <div class="dropdown">
-          <a href="/tecnologia" class="header__nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
-            <span>Tecnología</span>
-            <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <div class="dropdown-content" role="menu">
-            <a href="/tecnologia-tanita" role="menuitem">Tanita</a>
-            <a href="/epixlife" role="menuitem">EPIXLIFE</a>
-          </div>
-        </div>
-
         <a href="/blog" class="header__nav-link">Blog</a>
         <a href="/contacto" class="header__nav-link">Contacto</a>
 
         <div class="header__cta-wrapper-mobile">
-          <a href="/contacto" class="btn btn-primary header__cta-mobile">Reserva tu cita</a>
+          <a href="/contacto" class="btn btn-primary header__cta-mobile">{site.data.cta_text}</a>
         </div>
       </nav>
 
       <div class="header__actions">
-        <a href="/contacto" class="btn btn-primary header__cta">Reserva tu cita</a>
+        <a href="/contacto" class="btn btn-primary header__cta">{site.data.cta_text}</a>
         <button class="header__menu-btn" aria-label="Abrir menú" aria-expanded="false" id="menu-toggle">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -111,7 +112,7 @@ import '../styles/global.css';
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__col">
-        <img src="/img/logo-clinica-footer.png" alt="Clínica Dra. Nuria Ugarte" class="footer__logo" />
+        <img src="/img/logo-clinica-footer.png" alt={site.data.site_name} class="footer__logo" />
         <p>Médica especialista en nutrición clínica con 25 años de experiencia. Medicina basada en evidencia, tecnología avanzada y trato humano.</p>
       </div>
       <div class="footer__col">
@@ -134,20 +135,19 @@ import '../styles/global.css';
       <div class="footer__col">
         <h4>Contacto</h4>
         <address>
-          <p>Calle Ejemplo, 12 · 26001 Logroño, La Rioja</p>
-          <p>📞 <a href="tel:+34941234567">941 234 567</a></p>
-          <p>✉️ <a href="mailto:info@clinicanuriaugarte.es">info@clinicanuriaugarte.es</a></p>
+          <p>{site.data.address}</p>
+          <p>📞 <a href={`tel:${site.data.phone_link}`}>{site.data.phone}</a></p>
+          <p>✉️ <a href={`mailto:${site.data.email}`}>{site.data.email}</a></p>
         </address>
       </div>
       <div class="footer__col">
         <h4>Horario</h4>
-        <p>Lunes a Viernes: 9:00 - 14:00 · 16:00 - 20:00</p>
-        <p>Sábados: 9:00 - 13:00</p>
+        <p>{site.data.hours}</p>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© 2025 Clínica Dra. Nuria Ugarte. Todos los derechos reservados.</p>
+        <p>© 2025 {site.data.site_name}. Todos los derechos reservados.</p>
         <nav aria-label="Legal">
           <a href="#">Aviso Legal</a>
           <a href="#">Política de Privacidad</a>
