@@ -50,8 +50,8 @@ const { data } = home;
   <!-- ===== DIFERENCIACIÓN ===== -->
   <section class="section bg-alt">
     <div class="container">
-      <h2 class="section__title-centered">¿Por qué elegir una consulta médica?</h2>
-      <p class="section__subtitle-centered">No encontrará dietas de moda ni tratamientos sin supervisión. Esto es medicina real.</p>
+      <h2 class="section__title-centered">{data.section_why_title}</h2>
+      <p class="section__subtitle-centered">{data.section_why_subtitle}</p>
       <div class="grid-3">
         <div class="card diff-card">
           <div class="diff-icon-wrapper">
@@ -91,30 +91,30 @@ const { data } = home;
   <!-- ===== SERVICIOS ===== -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title-centered">Servicios Médicos</h2>
-      <p class="section__subtitle-centered">Tratamientos supervisados por la Dra. Nuria Ugarte, especialista en nutrición clínica.</p>
+      <h2 class="section__title-centered">{data.section_services_title}</h2>
+      <p class="section__subtitle-centered">{data.section_services_subtitle}</p>
       <div class="grid-3">
-        <a href="/nutricion" class="card service-card">
-          <img src="/img/tarjeta-nutricion.jpg" alt="Nutrición Clínica" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.service_1_link} class="card service-card">
+          <img src="/img/tarjeta-nutricion.jpg" alt={data.service_1_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Nutrición Clínica</h3>
-            <p>Planes personalizados para pérdida de peso, control metabólico, diabetes, hipertensión y patologías digestivas. Con evaluación Tanita y seguimiento continuo.</p>
+            <h3>{data.service_1_title}</h3>
+            <p>{data.service_1_text}</p>
             <span class="service-link">Más información →</span>
           </div>
         </a>
-        <a href="/oncologia-cuidados" class="card service-card">
-          <img src="/img/tarjeta-oncologia.jpg" alt="Oncología y Cuidados" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.service_2_link} class="card service-card">
+          <img src="/img/tarjeta-oncologia.jpg" alt={data.service_2_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Oncología y Cuidados</h3>
-            <p>Cuidados dermatológicos y nutricionales para pacientes oncológicos. Mejora de la calidad de vida durante y después de los tratamientos.</p>
+            <h3>{data.service_2_title}</h3>
+            <p>{data.service_2_text}</p>
             <span class="service-link">Más información →</span>
           </div>
         </a>
-        <a href="/alopecia" class="card service-card">
-          <img src="/img/tarjeta-capilar.jpg" alt="Alopecia y Factores de Crecimiento" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.service_3_link} class="card service-card">
+          <img src="/img/tarjeta-capilar.jpg" alt={data.service_3_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Alopecia — Factores de Crecimiento</h3>
-            <p>Tratamiento médico para la caída del cabello con factores de crecimiento autólogos. Enfoque clínico, no cosmético.</p>
+            <h3>{data.service_3_title}</h3>
+            <p>{data.service_3_text}</p>
             <span class="service-link">Más información →</span>
           </div>
         </a>
@@ -129,7 +129,7 @@ const { data } = home;
         <img src="/ClinicaNU/uploads/dra-nuria-ugarte.jpg" alt="Dra. Nuria Ugarte" class="about__image-img" width="600" height="400" loading="lazy" />
       </div>
       <div class="about__content">
-        <h2>Sobre la Dra. Nuria Ugarte</h2>
+        <h2>{data.section_about_title}</h2>
         <p>{data.about_text}</p>
         <a href="/equipo" class="btn btn-primary">Conoce al equipo</a>
       </div>
@@ -139,20 +139,24 @@ const { data } = home;
   <!-- ===== TESTIMONIOS ===== -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title-centered">Lo que dicen nuestros pacientes</h2>
-      <div class="grid-2 testimonials">
+      <h2 class="section__title-centered">{data.section_testimonials_title}</h2>
+      <div class="grid-3 testimonials">
         <div class="card testimonial">
-          <p>"Empecé por recomendación de mi endocrino y no puedo estar más satisfecha. La Dra. Ugarte me ha ayudado a perder peso de forma saludable, sin dietas imposibles."</p>
+          <p>"{data.testimonial_1_text}"</p>
           <div class="testimonial__author">
-            <strong>María L.</strong>
-            <span>Logroño</span>
+            <strong>{data.testimonial_1_name}</strong>
           </div>
         </div>
         <div class="card testimonial">
-          <p>"Después de probar mil métodos, por fin alguien me explicó qué le pasa a mi cuerpo con un informe real de la Tanita. El seguimiento es constante y cercano."</p>
+          <p>"{data.testimonial_2_text}"</p>
           <div class="testimonial__author">
-            <strong>Carlos G.</strong>
-            <span>Logroño</span>
+            <strong>{data.testimonial_2_name}</strong>
+          </div>
+        </div>
+        <div class="card testimonial">
+          <p>"{data.testimonial_3_text}"</p>
+          <div class="testimonial__author">
+            <strong>{data.testimonial_3_name}</strong>
           </div>
         </div>
       </div>
@@ -162,30 +166,30 @@ const { data } = home;
   <!-- ===== OTROS TRATAMIENTOS ===== -->
   <section class="section">
     <div class="container">
-      <h2 class="section__title-centered">Otros tratamientos médicos</h2>
-      <p class="section__subtitle-centered">Descubra nuestros tratamientos adicionales en medicina facial, corporal y láser médico.</p>
+      <h2 class="section__title-centered">{data.section_others_title}</h2>
+      <p class="section__subtitle-centered">{data.section_others_subtitle}</p>
       <div class="grid-3">
-        <a href="/tratamientos/faciales" class="card service-card">
-          <img src="/img/tarjeta-facial.jpg" alt="Medicina Facial" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.other_1_link} class="card service-card">
+          <img src="/img/tarjeta-facial.jpg" alt={data.other_1_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Medicina Facial</h3>
-            <p>Tratamientos médicos para el rostro: acne, rosácea, hidratación, hilos tensores, rellenos, peeling y radiofrecuencia.</p>
+            <h3>{data.other_1_title}</h3>
+            <p>{data.other_1_text}</p>
             <span class="service-link">Ver tratamientos →</span>
           </div>
         </a>
-        <a href="/tratamientos/corporales" class="card service-card">
-          <img src="/img/tarjeta-corporal.jpg" alt="Medicina Corporal" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.other_2_link} class="card service-card">
+          <img src="/img/tarjeta-corporal.jpg" alt={data.other_2_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Medicina Corporal</h3>
-            <p>Tratamientos médicos para el cuerpo: celulitis, mesoterapia, presoterapia, radiofrecuencia y esclerosis de varices.</p>
+            <h3>{data.other_2_title}</h3>
+            <p>{data.other_2_text}</p>
             <span class="service-link">Ver tratamientos →</span>
           </div>
         </a>
-        <a href="/tratamientos/laser" class="card service-card">
-          <img src="/img/tarjeta-laser.jpg" alt="Láser Médico" class="card-image" width="600" height="360" loading="lazy" />
+        <a href={data.other_3_link} class="card service-card">
+          <img src="/img/tarjeta-laser.jpg" alt={data.other_3_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
-            <h3>Láser Médico</h3>
-            <p>Tecnología láser médica para depilación, fotorejuvenecimiento, eliminación de tatuajes y tratamientos vasculares.</p>
+            <h3>{data.other_3_title}</h3>
+            <p>{data.other_3_text}</p>
             <span class="service-link">Ver tratamientos →</span>
           </div>
         </a>
@@ -196,9 +200,9 @@ const { data } = home;
   <!-- ===== CTA FINAL ===== -->
   <section class="section cta-final">
     <div class="container cta-final__inner">
-      <h2>¿Listo para empezar con medicina real?</h2>
-      <p>Reserve su primera consulta y descubra la diferencia de un enfoque médico con 25 años de experiencia.</p>
-      <a href="/contacto" class="btn btn-primary btn-lg">Reserva tu cita</a>
+      <h2>{data.section_cta_title}</h2>
+      <p>{data.section_cta_text}</p>
+      <a href={data.section_cta_link} class="btn btn-primary btn-lg">{data.section_cta_button}</a>
       <p class="cta-final__phone">O llámenos al <a href="tel:+34941234567">941 234 567</a></p>
     </div>
   </section>
