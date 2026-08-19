@@ -49,12 +49,60 @@ const tratamientosCollection = defineCollection({
   }),
 });
 
-const especialidadesCollection = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: 'src/content/especialidades' }),
+const nutricionCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/nutricion' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    categoria: z.enum(['nutricion', 'oncologia', 'capilar', 'tecnologia', 'testimonios']),
+    categoria: z.string().optional(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+    image: z.string().optional(),
+  }),
+});
+
+const oncologiaCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/oncologia' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.string().optional(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+    image: z.string().optional(),
+  }),
+});
+
+const capilarCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/capilar' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.string().optional(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+    image: z.string().optional(),
+  }),
+});
+
+const tecnologiaCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/tecnologia' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.string().optional(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+    image: z.string().optional(),
+  }),
+});
+
+const testimoniosCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/testimonios' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.string().optional(),
     icon: z.string().optional(),
     order: z.number().optional(),
     image: z.string().optional(),
@@ -77,6 +125,10 @@ export const collections = {
   servicios: serviciosCollection,
   blog: blogCollection,
   tratamientos: tratamientosCollection,
-  especialidades: especialidadesCollection,
+  nutricion: nutricionCollection,
+  oncologia: oncologiaCollection,
+  capilar: capilarCollection,
+  tecnologia: tecnologiaCollection,
+  testimonios: testimoniosCollection,
   secciones: seccionesCollection,
 };

@@ -13,6 +13,12 @@ export async function getStaticPaths() {
   ];
 }
 
+const getSlug = (t: any) => {
+  let s = t.id.replace('.md', '');
+  if (s === 'radiofrecuencia-corporal' || s === 'corporal-radiofrecuencia') return 'radiofrecuencia';
+  return s;
+};
+
 const tratamientos = await getCollection('tratamientos', ({ data }) => data.categoria === 'corporal');
 // Sort by order field if available, otherwise by title
 const sortedTratamientos = tratamientos.sort((a, b) => {
@@ -33,7 +39,7 @@ const sortedTratamientos = tratamientos.sort((a, b) => {
       <div class="grid-3">
         {
           sortedTratamientos.map((tratamiento) => (
-            <a href={`/tratamientos/${tratamiento.data.categoria}/${tratamiento.id.replace('.md', '').replace('corporal/', '')}`} class="card service-card">
+            <a href={`/tratamientos/${tratamiento.data.categoria}/${getSlug(tratamiento)}`} class="card service-card">
               {tratamiento.data.image && tratamiento.data.image.trim() !== '' ? (
                 <img src={tratamiento.data.image} alt={tratamiento.data.title} class="card-image" loading="lazy" />
               ) : (

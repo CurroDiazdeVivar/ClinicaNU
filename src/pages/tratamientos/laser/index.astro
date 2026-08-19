@@ -13,6 +13,10 @@ export async function getStaticPaths() {
   ];
 }
 
+const getSlug = (t: any) => {
+  return t.id.replace('.md', '');
+};
+
 const tratamientos = await getCollection('tratamientos', ({ data }) => data.categoria === 'laser');
 // Sort by order field if available, otherwise by title
 const sortedTratamientos = tratamientos.sort((a, b) => {
@@ -33,7 +37,7 @@ const sortedTratamientos = tratamientos.sort((a, b) => {
       <div class="grid-3">
         {
           sortedTratamientos.map((tratamiento) => (
-            <a href={`/tratamientos/${tratamiento.data.categoria}/${tratamiento.id.replace('.md', '').replace('laser/', '')}`} class="card service-card">
+            <a href={`/tratamientos/${tratamiento.data.categoria}/${getSlug(tratamiento)}`} class="card service-card">
               {tratamiento.data.image && tratamiento.data.image.trim() !== '' ? (
                 <img src={tratamiento.data.image} alt={tratamiento.data.title} class="card-image" loading="lazy" />
               ) : (

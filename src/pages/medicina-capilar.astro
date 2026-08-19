@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 
-const items = await getCollection('especialidades', ({ data }) => data.categoria === 'capilar');
+const items = await getCollection('capilar');
 const item = items[0];
 const { Content } = await render(item);
 ---

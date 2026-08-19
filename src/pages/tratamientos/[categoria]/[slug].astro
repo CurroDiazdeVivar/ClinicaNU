@@ -6,51 +6,18 @@ import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const tratamientos = await getCollection('tratamientos');
   return tratamientos.map((tratamiento) => {
-    // Log the treatment object to debug
-    console.log('Treatment object:', tratamiento);
-    
-    // Ensure the slug is properly formatted (Astro 7 glob loader: usar .id, no .slug)
-    const fullSlug = tratamiento.id;
     const categoria = tratamiento.data.categoria;
-    
-    // Check if fullSlug is a string before calling replace
-    if (typeof fullSlug !== 'string') {
-      console.error('fullSlug is not a string:', fullSlug);
-      return {
-        params: {
-          categoria: categoria,
-          slug: 'default',
-        },
-        props: {
-          tratamiento,
-        },
-      };
+    let slug = tratamiento.id.replace('.md', '');
+    if (slug === 'radiofrecuencia-facial' || slug === 'facial-radiofrecuencia') {
+      slug = 'radiofrecuencia';
+    } else if (slug === 'radiofrecuencia-corporal' || slug === 'corporal-radiofrecuencia') {
+      slug = 'radiofrecuencia';
     }
-    
-    // Also check if categoria is a string
-    if (typeof categoria !== 'string') {
-      console.error('categoria is not a string:', categoria);
-      return {
-        params: {
-          categoria: 'default',
-          slug: fullSlug,
-        },
-        props: {
-          tratamiento,
-        },
-      };
-    }
-    
-    const slug = fullSlug.replace(`${categoria}/`, '');
-    
-    console.log('Full slug:', fullSlug);
-    console.log('Categoria:', categoria);
-    console.log('Processed slug:', slug);
-    
+
     return {
       params: {
-        categoria: categoria,
-        slug: slug,
+        categoria,
+        slug,
       },
       props: {
         tratamiento,

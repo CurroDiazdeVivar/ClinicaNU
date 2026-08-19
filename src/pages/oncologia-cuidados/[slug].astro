@@ -4,17 +4,15 @@ import PageHeader from '../../components/PageHeader.astro';
 import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
-  const especialidades = await getCollection('especialidades');
-  return especialidades
-    .filter(entry => entry.data.categoria === 'oncologia')
-    .map((entry) => {
-      // Usar entry.id para slugs (API Astro 7)
-      const slug = entry.id.replace('.md', '').replace('oncologia/', '');
-      return {
-        params: { slug },
-        props: { entry },
-      };
-    });
+  const oncologia = await getCollection('oncologia');
+  return oncologia.map((entry) => {
+    // Usar entry.id para slugs (API Astro 7)
+    const slug = entry.id.replace('.md', '');
+    return {
+      params: { slug },
+      props: { entry },
+    };
+  });
 }
 
 const { entry } = Astro.props;

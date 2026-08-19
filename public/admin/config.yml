@@ -1,6 +1,3 @@
-# Public admin/index.html — Panel de administración Decap CMS
-# La Dra. entra aquí para gestionar la web
----
 backend:
   name: github
   repo: CurroDiazdeVivar/ClinicaNU
@@ -12,185 +9,145 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
-  # ============ PÁGINAS ============
+  # ============ GRUPO 1: PÁGINAS ============
   - name: "pages"
     label: "Páginas"
     description: "Contenido de las páginas principales"
     files:
       - name: "home"
-        label: "Inicio"
+        label: "Página de Inicio"
         file: "src/content/pages/home.md"
         fields:
-          - { label: "Título Hero", name: "hero_title", widget: "string" }
-          - { label: "Subtítulo Hero", name: "hero_subtitle", widget: "text" }
-          - { label: "CTA Hero", name: "hero_cta", widget: "string", default: "Reserva tu primera consulta" }
-          - { label: "Texto diferenciación 1", name: "diff_1_title", widget: "string" }
-          - { label: "Texto diferenciación 1 (detalle)", name: "diff_1_text", widget: "text" }
-          - { label: "Texto diferenciación 2", name: "diff_2_title", widget: "string" }
-          - { label: "Texto diferenciación 2 (detalle)", name: "diff_2_text", widget: "text" }
-          - { label: "Texto diferenciación 3", name: "diff_3_title", widget: "string" }
-          - { label: "Texto diferenciación 3 (detalle)", name: "diff_3_text", widget: "text" }
-          - { label: "Sobre la Dra.", name: "about_text", widget: "markdown" }
+          - { name: "hero_title", label: "Título Hero", widget: "string" }
+          - { name: "hero_subtitle", label: "Subtítulo Hero", widget: "text" }
+          - { name: "hero_cta", label: "CTA Hero", widget: "string", default: "Reserva tu primera consulta" }
+          - { name: "diff_1_title", label: "Texto diferenciación 1", widget: "string" }
+          - { name: "diff_1_text", label: "Texto diferenciación 1 (detalle)", widget: "text" }
+          - { name: "diff_2_title", label: "Texto diferenciación 2", widget: "string" }
+          - { name: "diff_2_text", label: "Texto diferenciación 2 (detalle)", widget: "text" }
+          - { name: "diff_3_title", label: "Texto diferenciación 3", widget: "string" }
+          - { name: "diff_3_text", label: "Texto diferenciación 3 (detalle)", widget: "text" }
+          - { name: "about_text", label: "Sobre la Dra.", widget: "markdown" }
 
-  # ============ SECCIONES (páginas del menú) ============
   - name: "secciones"
     label: "Secciones"
-    description: "Páginas del menú: La Doctora, hubs, testimonios, contacto"
     folder: "src/content/secciones"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ SERVICIOS ============
-  - name: "servicios"
-    label: "Servicios"
-    description: "Servicios médicos de la clínica"
-    create: true
-    folder: "src/content/servicios"
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título del servicio", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-
-  # ============ NUTRICIÓN (especialidades) ============
-  - name: "especialidades-nutricion"
+  # ============ GRUPO 2: NUTRICIÓN ============
+  - name: "nutricion"
     label: "Nutrición"
-    description: "Dietas y tratamientos de nutrición"
-    folder: "src/content/especialidades/nutricion"
+    folder: "src/content/nutricion"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ ONCOLOGÍA (especialidades) ============
-  - name: "especialidades-oncologia"
+  # ============ GRUPO 3: ONCOLOGÍA ============
+  - name: "oncologia"
     label: "Oncología y Cuidados"
-    description: "Cuidados en el paciente oncológico"
-    folder: "src/content/especialidades/oncologia"
+    folder: "src/content/oncologia"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ MEDICINA CAPILAR (especialidades) ============
-  - name: "especialidades-capilar"
+  # ============ GRUPO 4: MEDICINA CAPILAR ============
+  - name: "capilar"
     label: "Medicina Capilar"
-    description: "Alopecia y factores de crecimiento"
-    folder: "src/content/especialidades/capilar"
+    folder: "src/content/capilar"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ TECNOLOGÍA (especialidades) ============
-  - name: "especialidades-tecnologia"
+  # ============ GRUPO 5: TECNOLOGÍA ============
+  - name: "tecnologia"
     label: "Tecnología"
-    description: "Tanita y tecnología médica"
-    folder: "src/content/especialidades/tecnologia"
+    folder: "src/content/tecnologia"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ TESTIMONIOS (especialidades) ============
-  - name: "especialidades-testimonios"
+  # ============ GRUPO 6: TESTIMONIOS ============
+  - name: "testimonios"
     label: "Testimonios"
-    description: "Testimonios de pacientes"
-    folder: "src/content/especialidades/testimonios"
+    folder: "src/content/testimonios"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ TRATAMIENTOS FACIALES ============
-  - name: "tratamientos-faciales"
-    label: "Tratamientos Faciales"
-    description: "Medicina facial"
-    folder: "src/content/tratamientos/facial"
+  # ============ GRUPO 7: TRATAMIENTOS ============
+  - name: "tratamientos"
+    label: "Tratamientos"
+    folder: "src/content/tratamientos"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "categoria", label: "Categoría", widget: "select", options: ["facial", "corporal", "laser"] }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
 
-  # ============ TRATAMIENTOS CORPORALES ============
-  - name: "tratamientos-corporales"
-    label: "Tratamientos Corporales"
-    description: "Medicina corporal"
-    folder: "src/content/tratamientos/corporal"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  # ============ TRATAMIENTOS LÁSER ============
-  - name: "tratamientos-laser"
-    label: "Tratamientos Láser"
-    description: "Láser médico"
-    folder: "src/content/tratamientos/laser"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Descripción breve", name: "description", widget: "text" }
-      - { label: "Icono (emoji)", name: "icon", widget: "string" }
-      - { label: "Orden", name: "order", widget: "number", required: false }
-      - { label: "Imagen (URL)", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
-
-  # ============ BLOG ============
+  # ============ GRUPO 8: BLOG Y SERVICIOS ============
   - name: "blog"
     label: "Blog"
-    description: "Artículos del blog"
     folder: "src/content/blog"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Fecha", name: "date", widget: "datetime" }
-      - { label: "Autor", name: "author", widget: "string", default: "Dra. Nuria Ugarte" }
-      - { label: "Resumen", name: "excerpt", widget: "text" }
-      - { label: "Imagen destacada", name: "image", widget: "image", required: false }
-      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "date", label: "Fecha", widget: "datetime" }
+      - { name: "author", label: "Autor", widget: "string", default: "Dra. Nuria Ugarte" }
+      - { name: "excerpt", label: "Resumen", widget: "text" }
+      - { name: "image", label: "Imagen destacada", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
+
+  - name: "servicios"
+    label: "Servicios"
+    folder: "src/content/servicios"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Título del servicio", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "body", label: "Contenido", widget: "markdown" }
