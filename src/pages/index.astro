@@ -41,7 +41,7 @@ const { data } = home;
       </div>
       <div class="hero__image">
         <div class="hero__image-card">
-          <img src="/ClinicaNU/uploads/dra-nuria-ugarte.jpg" alt="Dra. Nuria Ugarte" class="hero__image-img" width="640" height="480" />
+          <img src={data.hero_image} alt="Dra. Nuria Ugarte" class="hero__image-img" width="640" height="480" />
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@ const { data } = home;
       <p class="section__subtitle-centered">{data.section_services_subtitle}</p>
       <div class="grid-3">
         <a href={data.service_1_link} class="card service-card">
-          <img src="/img/tarjeta-nutricion.jpg" alt={data.service_1_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.service_1_image} alt={data.service_1_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.service_1_title}</h3>
             <p>{data.service_1_text}</p>
@@ -103,7 +103,7 @@ const { data } = home;
           </div>
         </a>
         <a href={data.service_2_link} class="card service-card">
-          <img src="/img/tarjeta-oncologia.jpg" alt={data.service_2_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.service_2_image} alt={data.service_2_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.service_2_title}</h3>
             <p>{data.service_2_text}</p>
@@ -111,7 +111,7 @@ const { data } = home;
           </div>
         </a>
         <a href={data.service_3_link} class="card service-card">
-          <img src="/img/tarjeta-capilar.jpg" alt={data.service_3_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.service_3_image} alt={data.service_3_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.service_3_title}</h3>
             <p>{data.service_3_text}</p>
@@ -126,7 +126,7 @@ const { data } = home;
   <section class="section bg-alt">
     <div class="container about">
       <div class="about__image">
-        <img src="/ClinicaNU/uploads/dra-nuria-ugarte.jpg" alt="Dra. Nuria Ugarte" class="about__image-img" width="600" height="400" loading="lazy" />
+        <img src={data.about_image || data.hero_image} alt="Dra. Nuria Ugarte" class="about__image-img" width="600" height="400" loading="lazy" />
       </div>
       <div class="about__content">
         <h2>{data.section_about_title}</h2>
@@ -170,7 +170,7 @@ const { data } = home;
       <p class="section__subtitle-centered">{data.section_others_subtitle}</p>
       <div class="grid-3">
         <a href={data.other_1_link} class="card service-card">
-          <img src="/img/tarjeta-facial.jpg" alt={data.other_1_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.other_1_image} alt={data.other_1_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.other_1_title}</h3>
             <p>{data.other_1_text}</p>
@@ -178,7 +178,7 @@ const { data } = home;
           </div>
         </a>
         <a href={data.other_2_link} class="card service-card">
-          <img src="/img/tarjeta-corporal.jpg" alt={data.other_2_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.other_2_image} alt={data.other_2_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.other_2_title}</h3>
             <p>{data.other_2_text}</p>
@@ -186,7 +186,7 @@ const { data } = home;
           </div>
         </a>
         <a href={data.other_3_link} class="card service-card">
-          <img src="/img/tarjeta-laser.jpg" alt={data.other_3_title} class="card-image" width="600" height="360" loading="lazy" />
+          <img src={data.other_3_image} alt={data.other_3_title} class="card-image" width="600" height="360" loading="lazy" />
           <div class="service-card__body">
             <h3>{data.other_3_title}</h3>
             <p>{data.other_3_text}</p>

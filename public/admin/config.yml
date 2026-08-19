@@ -22,6 +22,7 @@ collections:
           - { name: "hero_title", label: "Título Hero", widget: "string" }
           - { name: "hero_subtitle", label: "Subtítulo Hero", widget: "text" }
           - { name: "hero_cta", label: "CTA Hero", widget: "string", default: "Reserva tu primera consulta" }
+          - { label: "Foto principal (hero)", name: "hero_image", widget: "image", required: false }
           # Sección: ¿Por qué elegir una consulta médica?
           - { name: "section_why_title", label: "Título sección: ¿Por qué elegir?", widget: "string" }
           - { name: "section_why_subtitle", label: "Subtítulo sección: ¿Por qué elegir?", widget: "text" }
@@ -37,15 +38,19 @@ collections:
           - { name: "service_1_title", label: "Servicio 1: Título", widget: "string" }
           - { name: "service_1_text", label: "Servicio 1: Texto", widget: "text" }
           - { name: "service_1_link", label: "Servicio 1: Enlace", widget: "string" }
+          - { label: "Imagen Servicio 1 (Nutrición)", name: "service_1_image", widget: "image", required: false }
           - { name: "service_2_title", label: "Servicio 2: Título", widget: "string" }
           - { name: "service_2_text", label: "Servicio 2: Texto", widget: "text" }
           - { name: "service_2_link", label: "Servicio 2: Enlace", widget: "string" }
+          - { label: "Imagen Servicio 2 (Oncología)", name: "service_2_image", widget: "image", required: false }
           - { name: "service_3_title", label: "Servicio 3: Título", widget: "string" }
           - { name: "service_3_text", label: "Servicio 3: Texto", widget: "text" }
           - { name: "service_3_link", label: "Servicio 3: Enlace", widget: "string" }
+          - { label: "Imagen Servicio 3 (Alopecia)", name: "service_3_image", widget: "image", required: false }
           # Sección: Sobre la Dra.
           - { name: "section_about_title", label: "Título sección: Sobre la Dra.", widget: "string" }
           - { name: "about_text", label: "Sobre la Dra.", widget: "markdown" }
+          - { label: "Imagen Sobre la Dra.", name: "about_image", widget: "image", required: false }
           # Sección: Testimonios
           - { name: "section_testimonials_title", label: "Título sección: Testimonios", widget: "string" }
           - { name: "testimonial_1_text", label: "Testimonio 1: Texto", widget: "text" }
@@ -60,12 +65,15 @@ collections:
           - { name: "other_1_title", label: "Otro tratamiento 1: Título", widget: "string" }
           - { name: "other_1_text", label: "Otro tratamiento 1: Texto", widget: "text" }
           - { name: "other_1_link", label: "Otro tratamiento 1: Enlace", widget: "string" }
+          - { label: "Imagen Otro tratamiento 1 (Facial)", name: "other_1_image", widget: "image", required: false }
           - { name: "other_2_title", label: "Otro tratamiento 2: Título", widget: "string" }
           - { name: "other_2_text", label: "Otro tratamiento 2: Texto", widget: "text" }
           - { name: "other_2_link", label: "Otro tratamiento 2: Enlace", widget: "string" }
+          - { label: "Imagen Otro tratamiento 2 (Corporal)", name: "other_2_image", widget: "image", required: false }
           - { name: "other_3_title", label: "Otro tratamiento 3: Título", widget: "string" }
           - { name: "other_3_text", label: "Otro tratamiento 3: Texto", widget: "text" }
           - { name: "other_3_link", label: "Otro tratamiento 3: Enlace", widget: "string" }
+          - { label: "Imagen Otro tratamiento 3 (Láser)", name: "other_3_image", widget: "image", required: false }
           # Sección: CTA final
           - { name: "section_cta_title", label: "Título CTA final", widget: "string" }
           - { name: "section_cta_text", label: "Texto CTA final", widget: "text" }
