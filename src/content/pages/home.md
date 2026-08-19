@@ -1,5 +1,5 @@
 ---
-hero_title: Nutrición Médica con Tecnología Avanzada en Logroño KK
+hero_title: Nutrición Médica con Tecnología Avanzada en Logroño
 hero_subtitle: No somos una franquicia de dietas. Somos una consulta médica real
   con 25 años de evidencia clínica, evaluaciones corporales precisas con balanza
   Tanita y seguimiento digital personalizado.
