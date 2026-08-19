@@ -1,8 +1,8 @@
 ---
 hero_title: Nutrición Médica con Tecnología Avanzada en Logroño
-hero_subtitle: No somos una franquicia de dietas. Somos una consulta médica real
-  con 25 años de evidencia clínica, evaluaciones corporales precisas con balanza
-  Tanita y seguimiento digital personalizado.
+hero_subtitle: >-2
+   Somos una consulta médica real con 25 años de evidencia clínica
+  Nuestro objetivo es cuidar de la salud de nuestros pacientes. Te ofrecemos los últimos avances tecnológicos. Proporcionamos tratamientos adaptados a las necesidades de nuestros pacientes
 hero_cta: Reserva tu primera consulta
 hero_image: /uploads/dra-nuria-ugarte.jpg
 section_why_title: ¿Por qué elegir una consulta médica?
