@@ -17,5 +17,5 @@ diff_3_text: No se queda solo con un plan de comidas. Hacemos seguimiento
   una app.
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
   clínica, cuidados oncológicos y medicina regenerativa. Mi objetivo es que cada
-  paciente reciba un tratamiento basado en evidencia, no en promesas vacías. kk
+  paciente reciba un tratamiento basado en evidencia, no en promesas vacías.
 ---
