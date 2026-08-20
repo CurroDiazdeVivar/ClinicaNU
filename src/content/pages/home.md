@@ -16,7 +16,7 @@ diff_2_title: Tecnología Tanita
 diff_2_text: Evaluamos su composición corporal con el analizador médico Tanita
   (BIA multifrecuencia segmental). El informe detallado llega directamente a su
   móvil con un enlace web y guía el tratamiento con precisión.
-diff_3_title: Seguimiento médico real
+diff_3_title: Seguimiento médico continuo
 diff_3_text: No se queda solo con un plan de comidas. Hacemos seguimiento
   continuo, ajustamos objetivos y resolvemos dudas. Usted tiene una médica, no
   una app.
@@ -75,7 +75,7 @@ other_3_text: Tecnología láser médica para depilación, fotorejuvenecimiento,
   eliminación de tatuajes y tratamientos vasculares.
 other_3_link: /tratamientos/laser
 other_3_image: /img/tarjeta-laser.jpg
-section_cta_title: ¿Listo para empezar con medicina real?
+section_cta_title: ¿Listo para empezar?
 section_cta_text: Reserve su primera consulta y descubra la diferencia de un
   enfoque médico con 25 años de experiencia.
 section_cta_button: Reserva tu cita
