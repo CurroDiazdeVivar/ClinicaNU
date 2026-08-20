@@ -8,10 +8,9 @@ hero_image: /uploads/dra-nuria-ugarte.jpg
 section_why_title: ¿Por qué elegir una consulta médica?
 section_why_subtitle: No encontrará dietas de moda ni tratamientos sin
   respaldo médico. Esto es medicina con evidencia.
-diff_1_title: Medicina, no moda
-diff_1_text: Cada plan nutricional está basado en evidencia científica y
-  realizado por una médica colegiada, no en tendencias de Instagram ni dietas
-  milagro.
+diff_1_title: Medicina basada en ciencia
+diff_1_text: Cada plan nutricional está diseñado y realizado por una médica
+  colegiada, no en tendencias de Instagram ni dietas milagro.
 diff_2_title: Tecnología Tanita
 diff_2_text: Evaluamos su composición corporal con el analizador médico Tanita
   (BIA multifrecuencia segmental). El informe detallado llega directamente a su
