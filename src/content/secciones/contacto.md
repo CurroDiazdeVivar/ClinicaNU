@@ -10,7 +10,7 @@ Estaremos encantados de atenderle. Reserve su primera consulta o resuelva sus du
 ## Datos de contacto
 
 * **Dirección**: C/ Pedregales nº 8 bajo, 26006 Logroño, La Rioja
-* **Teléfono**: 941 501290
+* **Teléfono**: 941 50 12 90
 * **Email**: info@clinicanuriaugarte.es
 
 ## Horario
