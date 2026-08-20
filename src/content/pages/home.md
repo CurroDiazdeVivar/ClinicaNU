@@ -35,11 +35,11 @@ service_2_text: Cuidados dermatológicos y nutricionales para pacientes
   tratamientos.
 service_2_link: /oncologia-cuidados
 service_2_image: /img/tarjeta-oncologia.jpg
-service_3_title: Medicina Capilar
-service_3_text: "Tratamientos médicos para la caída del cabello: factores de
-  crecimiento autólogos, PRP y medicina regenerativa capilar, con valoración
-  médica previa."
-service_3_link: /medicina-capilar
+service_3_title: Medicina Regenerativa
+service_3_text: "Tratamientos con factores de crecimiento autólogos (PRP) para
+  regeneración de cabello, piel y tejidos. Valoración médica previa y plan
+  personalizado."
+service_3_link: /medicina-regenerativa
 service_3_image: /img/tarjeta-capilar.jpg
 section_about_title: Sobre la Dra. Nuria Ugarte
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
