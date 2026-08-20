@@ -135,6 +135,20 @@ collections:
       - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
       - { name: "body", label: "Contenido", widget: "markdown" }
 
+  # 5b. Medicina Regenerativa
+  - name: "regenerativa"
+    label: "Medicina Regenerativa"
+    folder: "src/content/regenerativa"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Título", widget: "string" }
+      - { name: "description", label: "Descripción breve", widget: "text" }
+      - { name: "icon", label: "Icono (emoji)", widget: "string" }
+      - { name: "order", label: "Orden", widget: "number", required: false }
+      - { name: "image", label: "Imagen (URL)", widget: "image", required: false }
+      - { name: "body", label: "Contenido", widget: "markdown" }
+
   # 6. Tratamientos
   - name: "tratamientos"
     label: "Tratamientos"
