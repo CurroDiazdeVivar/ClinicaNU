@@ -1,6 +1,6 @@
 ---
 title: 'Tecnología Tanita'
-description: 'Balanza Tanita de última generación para evaluación precisa de la composición corporal en Logroño. Informes digitales detallados.'
+description: 'Analizador médico Tanita MC-780MA-N (BIA multifrecuencia segmental) para evaluación precisa de la composición corporal en Logroño. Informe detallado directamente en su móvil.'
 categoria: 'tecnologia'
 icon: '⚖️'
 order: 2
@@ -8,7 +8,7 @@ order: 2
 
 ## Más allá de la báscula
 
-La balanza Tanita de última generación utiliza tecnología de bioimpedancia para medir no solo su peso, sino su composición corporal completa. Esto permite obtener datos objetivos que guían el tratamiento con precisión milimétrica.
+Utilizamos el analizador médico Tanita **MC-780MA-N**, con tecnología de bioimpedancia **BIA multifrecuencia segmental** (técnica 4-C). No mide solo su peso, sino su composición corporal completa, con datos objetivos que guían el tratamiento con precisión.
 
 ### ¿Qué mide?
 
@@ -21,4 +21,4 @@ La balanza Tanita de última generación utiliza tecnología de bioimpedancia pa
 
 ## Informe digital personalizado
 
-Cada medición genera un informe claro y visual que explica su composición corporal. Puede consultar su evolución en cada visita y ver los cambios reales, no solo el número de la báscula.
+Cada medición genera un informe claro y visual que explica su composición corporal, elaborado con el software **Suite Biológica 8.0**. El informe llega directamente a su móvil con un enlace web: puede consultar su evolución en cada visita y ver los cambios reales, no solo el número de la báscula.
