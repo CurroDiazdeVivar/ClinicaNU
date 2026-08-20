@@ -35,10 +35,11 @@ service_2_text: Cuidados dermatológicos y nutricionales para pacientes
   tratamientos.
 service_2_link: /oncologia-cuidados
 service_2_image: /img/tarjeta-oncologia.jpg
-service_3_title: Alopecia — Factores de Crecimiento
-service_3_text: Tratamiento médico para la caída del cabello con factores de
-  crecimiento autólogos. Enfoque clínico, no cosmético.
-service_3_link: /alopecia
+service_3_title: Medicina Capilar
+service_3_text: "Tratamientos médicos para la caída del cabello: factores de
+  crecimiento autólogos, PRP y medicina regenerativa capilar, con valoración
+  médica previa."
+service_3_link: /medicina-capilar
 service_3_image: /img/tarjeta-capilar.jpg
 section_about_title: Sobre la Dra. Nuria Ugarte
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
@@ -72,12 +73,11 @@ other_2_text: "Tratamientos médicos para el cuerpo: celulitis, mesoterapia,
   presoterapia, radiofrecuencia y esclerosis de varices."
 other_2_link: /tratamientos/corporales
 other_2_image: /img/tarjeta-corporal.jpg
-other_3_title: Medicina Capilar
-other_3_text: Tratamientos médicos para la caída del cabello: factores de
-  crecimiento autólogos, PRP y medicina regenerativa capilar, con valoración
-  médica previa.
-other_3_link: /medicina-capilar
-other_3_image: /img/tarjeta-capilar.jpg
+other_3_title: Láser Médico
+other_3_text: Tecnología láser médica para depilación, fotorejuvenecimiento,
+  eliminación de tatuajes y tratamientos vasculares.
+other_3_link: /tratamientos/laser
+other_3_image: /img/tarjeta-laser.jpg
 section_cta_title: ¿Listo para empezar?
 section_cta_text: Reserve su primera consulta y descubra la diferencia de un
   enfoque médico con 25 años de experiencia.
