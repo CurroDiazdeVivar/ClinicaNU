@@ -11,10 +11,10 @@ section_why_subtitle: No encontrará dietas de moda ni tratamientos sin
 diff_1_title: Medicina basada en ciencia
 diff_1_text: Cada plan nutricional está diseñado y realizado por una médica
   colegiada, no en tendencias ni dietas milagro.
-diff_2_title: Tecnología Tanita
+diff_2_title: Análisis corporal de precisión
 diff_2_text: Evaluamos su composición corporal con el analizador médico Tanita
   (BIA multifrecuencia segmental). El informe detallado llega directamente a su
-  móvil con un enlace web y guía el tratamiento con precisión.
+  móvil con un enlace web y guía el tratamiento con datos objetivos.
 diff_3_title: Seguimiento médico continuo
 diff_3_text: No se queda solo con un plan de comidas. Hacemos seguimiento
   continuo, ajustamos objetivos y resolvemos dudas. Usted tiene una médica, no
