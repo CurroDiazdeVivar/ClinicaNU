@@ -10,7 +10,8 @@ section_why_subtitle: No encontrará dietas de moda ni tratamientos sin
   respaldo médico. Esto es medicina con evidencia.
 diff_1_title: Medicina basada en ciencia
 diff_1_text: Cada plan nutricional está diseñado y realizado por una médica
-  colegiada, no en tendencias ni dietas milagro.
+  colegiada: un plan personalizado de nutrición clínica, adaptado a la situación
+  real de cada paciente. Nada de tendencias ni dietas milagro.
 diff_2_title: Análisis corporal de precisión
 diff_2_text: Evaluamos su composición corporal con el analizador médico Tanita
   (BIA multifrecuencia segmental). El informe detallado llega directamente a su
