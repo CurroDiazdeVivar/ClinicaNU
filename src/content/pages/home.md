@@ -42,8 +42,10 @@ service_3_link: /alopecia
 service_3_image: /img/tarjeta-capilar.jpg
 section_about_title: Sobre la Dra. Nuria Ugarte
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
-  clínica, cuidados oncológicos y medicina regenerativa. Mi objetivo es que cada
-  paciente reciba un tratamiento basado en evidencia, no en promesas vacías.
+  clínica, cuidados oncológicos y medicina regenerativa. Licenciada en Medicina
+  por la Universidad de Cantabria y socia de SEEDO, SEME, GEMEON y la Sociedad
+  Riojana de Medicina Estética. Mi objetivo es que cada paciente reciba un
+  tratamiento basado en evidencia, no en promesas vacías.
 about_image: /uploads/dra-nuria-ugarte.jpg
 section_testimonials_title: Lo que dicen nuestros pacientes
 testimonial_1_text: Empecé por recomendación de mi endocrino y no puedo estar
