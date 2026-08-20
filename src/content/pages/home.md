@@ -16,9 +16,9 @@ diff_2_text: Evaluamos su composición corporal con el analizador médico Tanita
   (BIA multifrecuencia segmental). El informe detallado llega directamente a su
   móvil con un enlace web y guía el tratamiento con datos objetivos.
 diff_3_title: Seguimiento médico continuo
-diff_3_text: No se queda solo con un plan de comidas. Hacemos seguimiento
-  continuo, ajustamos objetivos y resolvemos dudas. Usted tiene una médica, no
-  una app.
+diff_3_text: Su tratamiento no acaba al salir de la consulta. Hacemos
+  seguimiento continuo, ajustamos objetivos y resolvemos dudas. Usted tiene una
+  médica, no una app.
 section_services_title: Servicios Médicos
 section_services_subtitle: Tratamientos realizados por la Dra. Nuria Ugarte,
   especialista en nutrición clínica, medicina regenerativa y cuidados oncológicos.
