@@ -48,17 +48,17 @@ about_text: Médica especialista con más de 25 años de experiencia en nutrici�
   promesas vacías.
 about_image: /uploads/dra-nuria-ugarte.jpg
 section_testimonials_title: Lo que dicen nuestros pacientes
-testimonial_1_text: Empecé por recomendación de mi endocrino y no puedo estar
-  más satisfecha. La Dra. Ugarte me ha ayudado a perder peso de forma saludable,
-  sin dietas imposibles.
-testimonial_1_name: María L., Logroño
-testimonial_2_text: Después de probar mil métodos, por fin alguien me explicó
-  qué le pasa a mi cuerpo con un informe real de la Tanita. El seguimiento es
-  constante y cercano.
-testimonial_2_name: Carlos G., Logroño
-testimonial_3_text: Después de años de dietas milagro, por fin encontré un
-  enfoque serio y con resultados.
-testimonial_3_name: Carmen, 45 años
+testimonial_1_text: Nuria es muy profesional y te hace sentir bien y con
+  confianza. Me hice la prueba de intolerancia alimentaria y aprendí mucho sobre
+  cómo la alimentación afecta a mi vida.
+testimonial_1_name: Paciente
+testimonial_2_text: Soy clienta desde hace años y mi experiencia siempre es
+  inmejorable. Gran profesionalidad a todos los niveles, tanto de Nuria como de
+  las profesionales que trabajan en la clínica.
+testimonial_2_name: Paciente
+testimonial_3_text: Magníficas instalaciones. La Dra. tiene muy buena
+  actualización y gran experiencia clínica. Un gran descubrimiento en Logroño.
+testimonial_3_name: Paciente
 section_others_title: Otros tratamientos médicos
 section_others_subtitle: Descubra nuestros tratamientos adicionales en medicina
   facial, corporal y láser médico.
