@@ -39,7 +39,7 @@ service_3_title: Medicina Regenerativa
 service_3_text: "Tratamientos con factores de crecimiento autólogos (PRP) para
   regeneración de cabello, piel y tejidos. Valoración médica previa y plan
   personalizado."
-service_3_link: /medicina-regenerativa
+service_3_link: /medicina-capilar
 service_3_image: /img/tarjeta-capilar.jpg
 section_about_title: Sobre la Dra. Nuria Ugarte
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
