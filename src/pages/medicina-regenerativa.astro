@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { getCollection, render } from 'astro:content';
+
+const items = await getCollection('regenerativa');
+const item = items[0];
+const { Content } = await render(item);
+---
+
+<Layout title={item.data.title} description={item.data.description}>
+  <PageHeader title={item.data.title} description={item.data.description} image="/img/tarjeta-capilar.jpg" />
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <Content />
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>📋 El proceso</h3>
+          <ol>
+            <li><strong>Primera consulta:</strong> historia clínica y evaluación.</li>
+            <li><strong>Diagnóstico médico:</strong> valoración personalizada.</li>
+            <li><strong>Plan de tratamiento:</strong> pautas claras y objetivos.</li>
+            <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
+          </ol>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 { margin-bottom: 1.5rem; }
+  .service-content__main h3 { margin: 2rem 0 1rem; }
+  .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
+  .service-content__sidebar ol { padding-left: 1.2rem; }
+  .service-content__sidebar ol li { margin-bottom: 0.5rem; }
+
+  @media (max-width: 768px) {
+    .service-content { grid-template-columns: 1fr; }
+  }
+</style>

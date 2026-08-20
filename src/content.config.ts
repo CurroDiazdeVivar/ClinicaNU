@@ -141,6 +141,18 @@ const tecnologiaCollection = defineCollection({
   }),
 });
 
+const regenerativaCollection = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: 'src/content/regenerativa' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    categoria: z.string().optional(),
+    icon: z.string().optional(),
+    order: z.number().optional(),
+    image: z.string().optional(),
+  }),
+});
+
 const testimoniosCollection = defineCollection({
   loader: glob({ pattern: '**/*.md', base: 'src/content/testimonios' }),
   schema: z.object({
@@ -186,6 +198,7 @@ export const collections = {
   oncologia: oncologiaCollection,
   capilar: capilarCollection,
   tecnologia: tecnologiaCollection,
+  regenerativa: regenerativaCollection,
   testimonios: testimoniosCollection,
   secciones: seccionesCollection,
   settings: settingsCollection,
