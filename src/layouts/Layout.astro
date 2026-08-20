@@ -17,7 +17,7 @@ const site = settings[0] || {
     email: 'info@clinicanuriaugarte.es',
     address: 'Calle Ejemplo, 12 · 26001 Logroño, La Rioja',
     hours: 'Lunes a Viernes: 9:00 - 14:00 · 16:00 - 20:00',
-    cta_text: 'Reserva tu cita',
+    cta_text: 'Reserva tu primera consulta',
   },
 };
 ---
@@ -88,14 +88,9 @@ const site = settings[0] || {
 
         <a href="/blog" class="header__nav-link">Blog</a>
         <a href="/contacto" class="header__nav-link">Contacto</a>
-
-        <div class="header__cta-wrapper-mobile">
-          <a href="/contacto" class="btn btn-primary header__cta-mobile">{site.data.cta_text}</a>
-        </div>
       </nav>
 
       <div class="header__actions">
-        <a href="/contacto" class="btn btn-primary header__cta">{site.data.cta_text}</a>
         <button class="header__menu-btn" aria-label="Abrir menú" aria-expanded="false" id="menu-toggle">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>

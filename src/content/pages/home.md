@@ -81,6 +81,6 @@ other_3_image: /img/tarjeta-laser.jpg
 section_cta_title: ¿Listo para empezar?
 section_cta_text: Reserve su primera consulta y descubra la diferencia de un
   enfoque médico con 25 años de experiencia.
-section_cta_button: Reserva tu cita
+section_cta_button: Reserva tu primera consulta
 section_cta_link: /contacto
 ---
