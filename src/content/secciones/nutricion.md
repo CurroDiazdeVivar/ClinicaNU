@@ -13,7 +13,7 @@ No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se dise
 
 - **Pérdida de peso** — cuando ha probado dietas por su cuenta sin resultados duraderos.
 - **Control metabólico** — diabetes tipo 2, resistencia a la insulina, colesterol elevado, hipertensión.
-- **Patologías digestivas** — SII, enfermedad inflamatoria intestinal, reflujo, intolerancias.
+- **Patologías digestivas** — síndrome del intestino irritable, enfermedad inflamatoria intestinal, colitis ulcerosa, reflujo, intolerancias alimentarias, dieta FODMAP y candidiasis.
 - **Nutrición deportiva** — optimización del rendimiento y composición corporal.
 - **Embarazo y lactancia** — alimentación para la salud de la madre y el bebé.
 
