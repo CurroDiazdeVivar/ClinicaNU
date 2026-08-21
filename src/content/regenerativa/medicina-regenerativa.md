@@ -22,6 +22,8 @@ Los tratamientos utilizan **sustancias biológicas** —seleccionadas según el 
 
 El resultado es una reparación desde dentro, con los recursos del propio organismo y sin sustancias ajenas.
 
+Todas las sustancias biológicas que utilizamos cuentan con el **marcado CE**, que garantiza su seguridad y calidad como productos sanitarios de uso médico.
+
 ### Medicina regenerativa capilar
 
 Para la caída del cabello (alopecia) y el debilitamiento capilar. Estimula la actividad del folículo piloso y favorece la regeneración del cabello.
