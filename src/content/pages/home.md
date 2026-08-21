@@ -30,9 +30,8 @@ service_1_text: Planes personalizados para obesidad y sobrepeso, enfermedades
 service_1_link: /nutricion
 service_1_image: /img/tarjeta-nutricion.jpg
 service_2_title: Medicina Regenerativa
-service_2_text: "Tratamientos con factores de crecimiento autólogos (PRP) para
-  regeneración de cabello, piel y tejidos. Valoración médica previa y plan
-  personalizado."
+service_2_text: La medicina regenerativa estimula la regeneración de los
+  tejidos con sustancias biológicas, en las áreas capilar, facial y corporal.
 service_2_link: /medicina-regenerativa
 service_2_image: /img/tarjeta-capilar.jpg
 service_3_title: Oncología y Cuidados
