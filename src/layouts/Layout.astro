@@ -67,7 +67,6 @@ const site = settings[0] || {
             <a href="/nutricion/intolerancia-alimentaria" role="menuitem">Intolerancia alimentaria</a>
             <a href="/nutricion/paciente-oncologico" role="menuitem">Nutrición en paciente oncológico</a>
             <a href="/tecnologia-tanita" role="menuitem">Análisis corporal Tanita</a>
-            <a href="/medicina-regenerativa" role="menuitem">Medicina Regenerativa</a>
             <a href="/epixlife" role="menuitem">EPIXLIFE</a>
           </div>
         </div>
@@ -85,7 +84,19 @@ const site = settings[0] || {
           </div>
         </div>
 
-        <a href="/medicina-capilar" class="header__nav-link">Medicina Capilar</a>
+        <div class="dropdown">
+          <a href="/medicina-regenerativa" class="header__nav-link dropdown-toggle" aria-haspopup="true" aria-expanded="false">
+            <span>Medicina Regenerativa</span>
+            <svg class="dropdown-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <div class="dropdown-content" role="menu">
+            <a href="/medicina-regenerativa#medicina-regenerativa-capilar" role="menuitem">Medicina regenerativa capilar</a>
+            <a href="/medicina-regenerativa#medicina-regenerativa-facial" role="menuitem">Medicina regenerativa facial</a>
+            <a href="/medicina-regenerativa#medicina-regenerativa-corporal" role="menuitem">Medicina regenerativa corporal</a>
+          </div>
+        </div>
 
         <a href="/blog" class="header__nav-link">Blog</a>
         <a href="/contacto" class="header__nav-link">Contacto</a>
