@@ -1,6 +1,6 @@
 ---
 title: 'Medicina Regenerativa'
-description: 'Medicina regenerativa en Logroño: regeneración capilar, facial y corporal con factores de crecimiento autólogos, exosomas, aminoácidos, vitaminas y ácido hialurónico. Realizada por la Dra. Nuria Ugarte, con valoración médica previa.'
+description: 'Medicina regenerativa en Logroño: regeneración capilar, facial y corporal con sustancias biológicas seleccionadas según el caso. Realizada por la Dra. Nuria Ugarte, con valoración médica previa.'
 categoria: 'regenerativa'
 icon: '🔬'
 order: 1
@@ -14,7 +14,7 @@ Se aplica en tres áreas —capilar, facial y corporal— y cada tratamiento com
 
 ### ¿Cómo actúa?
 
-Los tratamientos utilizan **sustancias biológicas** —factores de crecimiento autólogos, exosomas, aminoácidos, vitaminas y ácido hialurónico— que actúan como señalizadores celulares:
+Los tratamientos utilizan **sustancias biológicas** —seleccionadas según el objetivo de cada caso— que actúan como señalizadores celulares:
 
 - estimulan la **regeneración celular**,
 - favorecen la formación de **tejido conectivo**,
