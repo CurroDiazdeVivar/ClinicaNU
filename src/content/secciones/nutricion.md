@@ -15,5 +15,5 @@ No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se dise
 - **Sobrepeso y obesidad** — hacemos de su alimentación la mejor aliada de su salud: tratamiento médico para perder peso de forma saludable, con objetivos realistas y seguimiento continuo. Sin dietas milagro.
 - **Control metabólico y endocrino** — obesidad, resistencia a la insulina, diabetes, dislipemia, hígado graso, menopausia, hipertensión, etc.
 - **Patologías digestivas** — síndrome del intestino irritable, enfermedad inflamatoria intestinal (enfermedad de Crohn y colitis ulcerosa), reflujo gastroesofágico, distensión abdominal, intolerancias alimentarias, SIBO/IMO, enfermedad celíaca y alteraciones de la microbiota intestinal. Abordaje nutricional mediante dieta baja en FODMAP y otras estrategias dietéticas individualizadas.
-- **Nutrición deportiva** — optimización del rendimiento y composición corporal.
+- **Nutrición deportiva** — optimización del rendimiento y la composición corporal, ajustes energéticos según su entrenamiento, prevención de lesiones y recuperación muscular, con pautas nutricionales antes y después del esfuerzo.
 - **Embarazo y lactancia** — alimentación para la salud de la madre y el bebé.
