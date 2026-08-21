@@ -7,4 +7,4 @@ description: "Cuidados médicos especializados para pacientes oncológicos en Lo
 
 Los tratamientos oncológicos pueden afectar significativamente la nutrición, la piel y la calidad de vida del paciente. Nuestro enfoque se centra en proporcionar cuidados médicos especializados que complementan el tratamiento oncológico principal.
 
-La Dra. Ugarte combina su experiencia en nutrición clínica y medicina con tecnologías avanzadas para ofrecer un acompañamiento integral, realizado directamente por ella como médica y coordinado con el oncólogo del paciente.
+La Dra. Ugarte ofrece un acompañamiento integral basado en su experiencia en nutrición clínica, realizado directamente por ella como médica y coordinado con el oncólogo del paciente. No realizamos tratamientos sin el visto bueno del equipo médico que lleva su caso.
