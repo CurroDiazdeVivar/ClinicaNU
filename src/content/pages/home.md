@@ -29,18 +29,18 @@ service_1_text: Planes personalizados para obesidad y sobrepeso, enfermedades
   emocional. Con análisis corporal mediante Tanita y seguimiento continuo.
 service_1_link: /nutricion
 service_1_image: /img/tarjeta-nutricion.jpg
-service_2_title: Oncología y Cuidados
-service_2_text: Cuidados dermatológicos y nutricionales para pacientes
-  oncológicos. Mejora de la calidad de vida durante y después de los
-  tratamientos.
-service_2_link: /oncologia-cuidados
-service_2_image: /img/tarjeta-oncologia.jpg
-service_3_title: Medicina Regenerativa
-service_3_text: "Tratamientos con factores de crecimiento autólogos (PRP) para
+service_2_title: Medicina Regenerativa
+service_2_text: "Tratamientos con factores de crecimiento autólogos (PRP) para
   regeneración de cabello, piel y tejidos. Valoración médica previa y plan
   personalizado."
-service_3_link: /medicina-regenerativa
-service_3_image: /img/tarjeta-capilar.jpg
+service_2_link: /medicina-regenerativa
+service_2_image: /img/tarjeta-capilar.jpg
+service_3_title: Oncología y Cuidados
+service_3_text: Cuidados dermatológicos y nutricionales para pacientes
+  oncológicos. Mejora de la calidad de vida durante y después de los
+  tratamientos.
+service_3_link: /oncologia-cuidados
+service_3_image: /img/tarjeta-oncologia.jpg
 section_about_title: Sobre la Dra. Nuria Ugarte
 about_text: Médica especialista con más de 25 años de experiencia en nutrición
   clínica, cuidados oncológicos y medicina regenerativa. Licenciada en Medicina
