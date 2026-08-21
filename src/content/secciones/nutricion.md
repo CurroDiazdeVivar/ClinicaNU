@@ -12,8 +12,8 @@ No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se dise
 ## ¿Cuándo acudir a una consulta de nutrición clínica?
 
 - **Pérdida de peso** — cuando ha probado dietas por su cuenta sin resultados duraderos.
-- **Control metabólico** — diabetes tipo 2, resistencia a la insulina, colesterol elevado, hipertensión.
-- **Patologías digestivas** — síndrome del intestino irritable, enfermedad inflamatoria intestinal, colitis ulcerosa, reflujo, intolerancias alimentarias, dieta FODMAP y candidiasis.
+- **Control metabólico y endocrino** — obesidad, resistencia a la insulina, diabetes, dislipemia, hígado graso, menopausia, hipertensión, etc.
+- **Patologías digestivas** — síndrome de intestino irritable, enfermedad inflamatoria intestinal (enfermedad de Crohn y colitis ulcerosa), reflujo gastroesofágico, distensión abdominal, intolerancias alimentarias, SIBO/IMO, enfermedad celíaca y alteraciones de la microbiota intestinal. Abordaje nutricional mediante dieta baja en FODMAP y otras estrategias dietéticas individualizadas.
 - **Nutrición deportiva** — optimización del rendimiento y composición corporal.
 - **Embarazo y lactancia** — alimentación para la salud de la madre y el bebé.
 
