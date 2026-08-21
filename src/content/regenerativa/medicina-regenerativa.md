@@ -44,29 +44,3 @@ Estimula la regeneración celular, el aumento del tejido conectivo y la reestruc
 ### ¿Para quién está indicada?
 
 Para personas que buscan una solución médica a la caída del cabello o a la pérdida de calidad de la piel, y que prefieren tratamientos con sustancias biológicas, **sin sustancias ajenas al organismo**. La indicación exacta se determina siempre en la valoración médica previa.
-
-### Preguntas frecuentes
-
-**¿Qué sustancias se utilizan?**
-
-Sustancias biológicas de uso médico: factores de crecimiento autólogos (obtenidos de su propia sangre), exosomas, aminoácidos, vitaminas y ácido hialurónico. La selección depende del objetivo del tratamiento y se decide en la valoración médica.
-
-**¿Qué son los factores de crecimiento autólogos?**
-
-Son proteínas obtenidas de su propia sangre que estimulan la regeneración de los tejidos. Al ser de su propio organismo, minimizan el riesgo de reacciones adversas.
-
-**¿En qué áreas puede aplicarse?**
-
-En tres áreas: capilar (caída del cabello), facial (calidad y estructura de la piel) y corporal (regeneración celular y del tejido conectivo). La indicación concreta se establece en la valoración médica.
-
-**¿Cuántas sesiones son necesarias?**
-
-Depende de cada caso. En la primera consulta se establece un plan personalizado con el número orientativo de sesiones y los intervalos, según la valoración médica.
-
-**¿Es doloroso?**
-
-Es un procedimiento médico ambulatorio y bien tolerado. La zona a tratar se prepara adecuadamente para minimizar las molestias.
-
-**¿Cuándo se ven resultados?**
-
-La regeneración es un proceso gradual. El plan de sesiones y los plazos orientativos de evolución se concretan en la valoración médica, junto con el seguimiento y las sesiones de mantenimiento.
