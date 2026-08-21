@@ -1,6 +1,6 @@
 ---
 title: "Nutrición Clínica"
-description: "Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y supervisión de la Dra. Nuria Ugarte. 25 años de experiencia."
+description: "Planes personalizados de nutrición médica en Logroño. Evaluación con balanza Tanita, seguimiento digital y planes realizados por la Dra. Nuria Ugarte. 25 años de experiencia."
 ---
 
 ## Medicina nutricional con rigor científico

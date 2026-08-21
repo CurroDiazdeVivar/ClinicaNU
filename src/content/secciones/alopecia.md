@@ -1,6 +1,6 @@
 ---
 title: "Alopecia — Factores de Crecimiento"
-description: "Tratamiento médico para la caída del cabello con factores de crecimiento autólogos en Logroño. Enfoque clínico supervisado por la Dra. Nuria Ugarte."
+description: "Tratamiento médico para la caída del cabello con factores de crecimiento autólogos en Logroño. Enfoque clínico realizado por la Dra. Nuria Ugarte."
 ---
 
 ## Tratamiento clínico, no cosmético
