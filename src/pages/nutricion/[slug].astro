@@ -29,13 +29,13 @@ const { Content } = await render(entry);
       </div>
       <div class="service-content__sidebar">
         <div class="card">
-          <h3>📋 El proceso</h3>
-          <ol>
+          <h3>La primera consulta, paso a paso</h3>
+          <ul>
             <li><strong>Consulta médica:</strong> Evaluación personalizada.</li>
             <li><strong>Diagnóstico:</strong> Plan de tratamiento adaptado.</li>
             <li><strong>Tratamiento:</strong> Aplicación del procedimiento.</li>
             <li><strong>Seguimiento:</strong> Revisiones periódicas.</li>
-          </ol>
+          </ul>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
       </div>
@@ -72,10 +72,11 @@ const { Content } = await render(entry);
     flex-direction: column;
     gap: 1.5rem;
   }
-  .service-content__sidebar ol {
+  .service-content__sidebar ul {
+    list-style-type: '-';
     padding-left: 1.2rem;
   }
-  .service-content__sidebar ol li {
+  .service-content__sidebar ul li {
     margin-bottom: 0.5rem;
   }
 

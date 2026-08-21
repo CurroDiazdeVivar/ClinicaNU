@@ -18,13 +18,13 @@ const { Content } = await render(item);
       </div>
       <div class="service-content__sidebar">
         <div class="card">
-          <h3>📋 El proceso</h3>
-          <ol>
+          <h3>La primera consulta, paso a paso</h3>
+          <ul>
             <li><strong>Primera consulta:</strong> historia clínica y evaluación.</li>
             <li><strong>Diagnóstico médico:</strong> valoración personalizada.</li>
             <li><strong>Plan de tratamiento:</strong> pautas claras y objetivos.</li>
             <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
-          </ol>
+          </ul>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
       </div>
@@ -42,8 +42,9 @@ const { Content } = await render(item);
   .service-content__main h2 { margin-bottom: 1.5rem; }
   .service-content__main h3 { margin: 2rem 0 1rem; }
   .service-content__sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-  .service-content__sidebar ol { padding-left: 1.2rem; }
-  .service-content__sidebar ol li { margin-bottom: 0.5rem; }
+  .service-content__sidebar ul {
+    list-style-type: '-'; padding-left: 1.2rem; }
+  .service-content__sidebar ul li { margin-bottom: 0.5rem; }
 
   @media (max-width: 768px) {
     .service-content { grid-template-columns: 1fr; }
