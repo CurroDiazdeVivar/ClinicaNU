@@ -28,15 +28,15 @@ Todas las sustancias biológicas que utilizamos cuentan con el **marcado CE**, q
 
 ### Medicina regenerativa capilar
 
-Para la caída del cabello (alopecia) y el debilitamiento capilar. Estimula la actividad del folículo piloso y favorece la regeneración del cabello.
+Tratamos la **alopecia androgenética** (caída del cabello de origen hormonal), el **efluvio telógeno** (caída difusa por estrés, posparto o enfermedad), la **alopecia areata** (caída en placas) y el **debilitamiento del folículo piloso**. Las sustancias biológicas estimulan la actividad del folículo y favorecen la regeneración del cabello.
 
 ### Medicina regenerativa facial
 
-Para la piel del rostro. Estimula la regeneración celular y el aumento del tejido conectivo, mejorando la estructura y la calidad de la piel.
+Tratamos **cicatrices** (atróficas por acné, quirúrgicas o traumáticas), **rosácea**, **xerosis** (sequedad patológica de la piel) e **hiperpigmentación postinflamatoria** (manchas tras una inflamación o lesión). Estimula la regeneración celular y el aumento del tejido conectivo, mejorando la estructura y la salud de la piel.
 
 ### Medicina regenerativa corporal
 
-Estimula la regeneración celular, el aumento del tejido conectivo y la reestructuración fibrilar de los tejidos. La indicación concreta se determina en la valoración médica, en función de cada caso.
+Tratamos **alteraciones del tejido conectivo**, **cicatrices**, **atrofia cutánea**, **edema**, **insuficiencia venosa crónica** y **lipedema**. Estimula la regeneración celular, el aumento del tejido conectivo y la reestructuración fibrilar de los tejidos. La indicación concreta se determina siempre en la valoración médica, en función de cada caso.
 
 ### ¿Cómo se realiza?
 
