@@ -18,12 +18,12 @@ const { Content } = await render(sec);
       <div class="service-content__sidebar">
         <div class="card">
           <h3>📋 El proceso</h3>
-          <ol>
+          <ul>
             <li><strong>Primera consulta:</strong> historia clínica y medición Tanita.</li>
             <li><strong>Plan personalizado:</strong> objetivo realista, pautas claras.</li>
             <li><strong>Seguimiento:</strong> revisiones periódicas y ajustes.</li>
             <li><strong>App digital:</strong> acceso a su evolución desde casa.</li>
-          </ol>
+          </ul>
         </div>
         <a href="/contacto" class="btn btn-primary" style="width:100%;text-align:center;">Reserva tu consulta</a>
       </div>
@@ -70,10 +70,11 @@ const { Content } = await render(sec);
     flex-direction: column;
     gap: 1.5rem;
   }
-  .service-content__sidebar ol {
+  .service-content__sidebar ul {
     padding-left: 1.2rem;
+    list-style-type: '-';
   }
-  .service-content__sidebar ol li {
+  .service-content__sidebar ul li {
     margin-bottom: 0.5rem;
   }
 
