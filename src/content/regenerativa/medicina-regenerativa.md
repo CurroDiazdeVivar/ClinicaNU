@@ -39,7 +39,3 @@ Estimula la regeneración celular, el aumento del tejido conectivo y la reestruc
 - **Valoración médica previa:** historia clínica y estudio de su caso para confirmar la indicación y seleccionar la sustancia adecuada.
 - **Aplicación:** se aplica en la zona a tratar, con la seguridad de un procedimiento médico.
 - **Seguimiento:** revisiones programadas para valorar la evolución y ajustar el plan.
-
-### ¿Para quién está indicada?
-
-Para personas que buscan una solución médica a la caída del cabello o a la pérdida de calidad de la piel, y que prefieren tratamientos con sustancias biológicas, **sin sustancias ajenas al organismo**. La indicación exacta se determina siempre en la valoración médica previa.
