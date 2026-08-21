@@ -12,6 +12,8 @@ La medicina regenerativa es la rama de la medicina que busca **reparar, regenera
 
 Se aplica en tres áreas —capilar, facial y corporal— y cada tratamiento comienza siempre con una **valoración médica previa**.
 
+> *"La salud es un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades."* — **OMS**. La medicina regenerativa trabaja en esa línea: restaurar la función de los tejidos para recuperar el bienestar.
+
 ### ¿Cómo actúa?
 
 Los tratamientos utilizan **sustancias biológicas** —seleccionadas según el objetivo de cada caso— que actúan como señalizadores celulares:
