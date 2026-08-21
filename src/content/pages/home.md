@@ -24,9 +24,9 @@ section_services_title: Servicios Médicos
 section_services_subtitle: Tratamientos realizados por la Dra. Nuria Ugarte,
   especialista en nutrición clínica, medicina regenerativa y cuidados oncológicos.
 service_1_title: Nutrición Clínica
-service_1_text: "Planes personalizados para obesidad y sobrepeso, enfermedades
-  metabólicas (diabetes, hipertensión), enfermedades digestivas y nutrición
-  oncológica. Con análisis corporal mediante Tanita y seguimiento continuo."
+service_1_text: Planes personalizados para obesidad y sobrepeso, enfermedades
+  endocrino-metabólicas, enfermedades digestivas, nutrición oncológica y hambre
+  emocional. Con análisis corporal mediante Tanita y seguimiento continuo.
 service_1_link: /nutricion
 service_1_image: /img/tarjeta-nutricion.jpg
 service_2_title: Oncología y Cuidados
