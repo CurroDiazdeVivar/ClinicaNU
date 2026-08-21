@@ -31,7 +31,8 @@ service_1_link: /nutricion
 service_1_image: /img/tarjeta-nutricion.jpg
 service_2_title: Medicina Regenerativa
 service_2_text: La medicina regenerativa estimula la regeneración de los
-  tejidos con sustancias biológicas, en las áreas capilar, facial y corporal.
+  tejidos con sustancias biológicas, en las áreas capilar, facial y corporal,
+  orientada a restaurar la función de los tejidos y recuperar el bienestar.
 service_2_link: /medicina-regenerativa
 service_2_image: /img/tarjeta-capilar.jpg
 service_3_title: Oncología y Cuidados
