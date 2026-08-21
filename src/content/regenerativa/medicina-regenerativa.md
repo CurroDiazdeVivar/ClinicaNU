@@ -36,10 +36,9 @@ Estimula la regeneración celular, el aumento del tejido conectivo y la reestruc
 
 ### ¿Cómo se realiza?
 
-1. **Valoración médica previa:** historia clínica y estudio de su caso para confirmar la indicación y seleccionar la sustancia adecuada.
-2. **Preparación del tratamiento:** según el caso, se obtiene el concentrado de factores de crecimiento de su propia sangre o se preparan las sustancias indicadas.
-3. **Aplicación:** se aplica en la zona a tratar, con la seguridad de un procedimiento médico.
-4. **Seguimiento:** revisiones programadas para valorar la evolución y ajustar el plan.
+- **Valoración médica previa:** historia clínica y estudio de su caso para confirmar la indicación y seleccionar la sustancia adecuada.
+- **Aplicación:** se aplica en la zona a tratar, con la seguridad de un procedimiento médico.
+- **Seguimiento:** revisiones programadas para valorar la evolución y ajustar el plan.
 
 ### ¿Para quién está indicada?
 
