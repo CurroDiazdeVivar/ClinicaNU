@@ -1,0 +1,90 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+---
+
+<Layout title="Medicina Regenerativa" description="Medicina regenerativa en Logroño: regeneración capilar, facial y corporal con sustancias biológicas. Realizada por la Dra. Nuria Ugarte, con valoración médica previa.">
+  <PageHeader title="Medicina Regenerativa" description="Regeneración capilar, facial y corporal con sustancias biológicas, realizada por la Dra. Nuria Ugarte." />
+
+  <section class="section">
+    <div class="container service-content">
+      <div class="service-content__main">
+        <h2>¿Qué es la medicina regenerativa?</h2>
+        <p>La medicina regenerativa es la rama de la medicina que busca <strong>reparar, regenerar y restaurar la función de los tejidos</strong>, estimulando los propios mecanismos biológicos del organismo. En lugar de sustituir lo que falla, activa la capacidad natural del cuerpo para recuperarse.</p>
+        <p>Se aplica en tres áreas —capilar, facial y corporal— y cada tratamiento comienza siempre con una <strong>valoración médica previa</strong>.</p>
+        <blockquote><em>"La salud es un estado de completo bienestar físico, mental y social, y no solamente la ausencia de afecciones o enfermedades."</em> — <strong>OMS</strong>. La medicina regenerativa trabaja en esa línea: restaurar la función de los tejidos para recuperar el bienestar.</blockquote>
+
+        <h3>¿Cómo actúa?</h3>
+        <p>Los tratamientos utilizan <strong>sustancias biológicas</strong> —seleccionadas según el objetivo de cada caso— que actúan como señalizadores celulares: estimulan la <strong>regeneración celular</strong>, favorecen la formación de <strong>tejido conectivo</strong> y promueven la <strong>reestructuración fibrilar</strong> de los tejidos.</p>
+        <p>Todas las sustancias biológicas que utilizamos cuentan con el <strong>marcado CE</strong>, que garantiza su seguridad y calidad como productos sanitarios de uso médico.</p>
+
+        <h3>Áreas de tratamiento</h3>
+        <ul>
+          <li><a href="/medicina-regenerativa/capilar"><strong>Medicina regenerativa capilar</strong></a> — alopecia androgenética, efluvio telógeno, alopecia areata y debilitamiento del folículo piloso.</li>
+          <li><a href="/medicina-regenerativa/facial"><strong>Medicina regenerativa facial</strong></a> — cicatrices, rosácea, xerosis e hiperpigmentación postinflamatoria.</li>
+          <li><a href="/medicina-regenerativa/corporal"><strong>Medicina regenerativa corporal</strong></a> — alteraciones del tejido conectivo, cicatrices, atrofia cutánea, edema, insuficiencia venosa crónica y lipedema.</li>
+        </ul>
+      </div>
+      <div class="service-content__sidebar">
+        <div class="card">
+          <h3>Su tratamiento, paso a paso</h3>
+          <ul>
+            <li><strong>Consulta médica:</strong> Evaluación personalizada.</li>
+            <li><strong>Diagnóstico:</strong> Plan de tratamiento adaptado.</li>
+            <li><strong>Tratamiento:</strong> Aplicación del procedimiento.</li>
+            <li><strong>Seguimiento:</strong> Revisiones periódicas.</li>
+            <li><strong>Mantenimiento:</strong> control de su evolución a largo plazo para consolidar los resultados y prevenir recaídas.</li>
+          </ul>
+        </div>
+        <a href="/contacto" class="btn btn-primary" style="width:100%;justify-content:center;">Reserva tu primera consulta</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .service-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+  .service-content__main h2 {
+    margin-bottom: 1.5rem;
+  }
+  .service-content__main h3 {
+    margin: 2rem 0 1rem;
+  }
+  .service-content__main ul {
+    list-style: none;
+    padding: 0;
+  }
+  .service-content__main li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .service-content__main li:last-child {
+    border-bottom: none;
+  }
+  .service-content__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .service-content__sidebar h3 {
+    margin-bottom: 1rem;
+  }
+  .service-content__sidebar ul {
+    list-style-type: '-';
+    padding-left: 1.2rem;
+  }
+  .service-content__sidebar ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .service-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
