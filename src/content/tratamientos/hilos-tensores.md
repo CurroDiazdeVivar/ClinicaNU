@@ -1,6 +1,6 @@
 ---
 title: "Hilos tensores"
-description: "Lifting médico no quirúrgico con hilos absorbibles. Tratamiento bajo supervisión de la Dra. Nuria Ugarte."
+description: "Lifting médico no quirúrgico con hilos absorbibles. Tratamiento realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 4

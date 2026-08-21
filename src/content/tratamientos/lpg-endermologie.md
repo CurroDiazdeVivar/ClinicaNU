@@ -1,6 +1,6 @@
 ---
 title: "LPG Endermologie Cellu M6"
-description: "Tratamiento médico de celulitis y remodelación corporal con tecnología LPG Endermologie. Bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento médico de celulitis y remodelación corporal con tecnología LPG Endermologie. Realizado por la Dra. Nuria Ugarte."
 categoria: corporal
 icon: "✨"
 order: 1

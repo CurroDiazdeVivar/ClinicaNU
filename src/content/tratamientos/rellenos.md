@@ -1,6 +1,6 @@
 ---
 title: "Rellenos"
-description: "Tratamiento con ácido hialurónico para volumen y arrugas. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento con ácido hialurónico para volumen y arrugas. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 5

@@ -1,6 +1,6 @@
 ---
 title: "Radiofrecuencia corporal"
-description: "Estimulación de colágeno para firmeza y reducción de medidas. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Estimulación de colágeno para firmeza y reducción de medidas. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: corporal
 icon: "✨"
 order: 4

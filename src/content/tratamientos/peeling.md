@@ -1,6 +1,6 @@
 ---
 title: "Peeling químico"
-description: "Renovación controlada de la piel con ácidos médicos. Tratamiento bajo supervisión de la Dra. Nuria Ugarte."
+description: "Renovación controlada de la piel con ácidos médicos. Tratamiento realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 6

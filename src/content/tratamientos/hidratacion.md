@@ -1,6 +1,6 @@
 ---
 title: "Hidratación facial profunda"
-description: "Tratamiento médico de hidratación facial intensiva. Enfoque clínico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento médico de hidratación facial intensiva. Enfoque clínico realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 3

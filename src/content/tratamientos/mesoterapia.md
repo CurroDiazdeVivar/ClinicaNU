@@ -1,6 +1,6 @@
 ---
 title: "Mesoterapia"
-description: "Microinyecciones terapéuticas para diversos tratamientos corporales. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Microinyecciones terapéuticas para diversos tratamientos corporales. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: corporal
 icon: "✨"
 order: 2

@@ -1,6 +1,6 @@
 ---
 title: "Cuperosis y rosácea"
-description: "Tratamientos médicos especializados para cuperosis y rosácea. Enfoque clínico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamientos médicos especializados para cuperosis y rosácea. Enfoque clínico realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 2

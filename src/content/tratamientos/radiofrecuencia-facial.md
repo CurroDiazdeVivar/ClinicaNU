@@ -1,6 +1,6 @@
 ---
 title: "Radiofrecuencia facial"
-description: "Estimulación de colágeno para firmeza y rejuvenecimiento. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Estimulación de colágeno para firmeza y rejuvenecimiento. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 7

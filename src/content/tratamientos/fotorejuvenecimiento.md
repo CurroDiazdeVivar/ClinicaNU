@@ -1,6 +1,6 @@
 ---
 title: "Fotorejuvenecimiento facial"
-description: "Mejora del tono y textura de la piel con luz intensa. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Mejora del tono y textura de la piel con luz intensa. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: laser
 icon: "✨"
 order: 2

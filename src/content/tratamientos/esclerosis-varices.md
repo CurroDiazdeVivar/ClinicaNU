@@ -1,6 +1,6 @@
 ---
 title: "Esclerosis de varices"
-description: "Tratamiento médico de microespuma para varices. Tratamiento bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento médico de microespuma para varices. Tratamiento realizado por la Dra. Nuria Ugarte."
 categoria: corporal
 icon: "✨"
 order: 5

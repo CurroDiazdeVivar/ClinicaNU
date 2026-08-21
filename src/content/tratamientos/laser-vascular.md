@@ -1,6 +1,6 @@
 ---
 title: "Láser vascular"
-description: "Tratamiento de lesiones vasculares y enrojecimiento con láser médico. Tratamiento bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento de lesiones vasculares y enrojecimiento con láser médico. Tratamiento realizado por la Dra. Nuria Ugarte."
 categoria: laser
 icon: "✨"
 order: 4

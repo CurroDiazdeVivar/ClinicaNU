@@ -1,6 +1,6 @@
 ---
 title: "Eliminación de tatuajes"
-description: "Tratamiento láser para eliminación segura de tatuajes. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento láser para eliminación segura de tatuajes. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: laser
 icon: "✨"
 order: 3

@@ -1,6 +1,6 @@
 ---
 title: "Presoterapia"
-description: "Drenaje linfático mecánico para edemas y circulación. Tratamiento médico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Drenaje linfático mecánico para edemas y circulación. Tratamiento médico realizado por la Dra. Nuria Ugarte."
 categoria: corporal
 icon: "✨"
 order: 3

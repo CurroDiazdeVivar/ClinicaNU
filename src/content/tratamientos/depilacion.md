@@ -1,6 +1,6 @@
 ---
 title: "Depilación láser"
-description: "Eliminación permanente del vello con tecnología láser médica. Tratamiento bajo supervisión de la Dra. Nuria Ugarte."
+description: "Eliminación permanente del vello con tecnología láser médica. Tratamiento realizado por la Dra. Nuria Ugarte."
 categoria: laser
 icon: "✨"
 order: 1

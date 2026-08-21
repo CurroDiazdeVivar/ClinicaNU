@@ -1,6 +1,6 @@
 ---
 title: "Tratamiento médico del acné"
-description: "Tratamiento médico especializado para el acné y sus secuelas. Enfoque clínico bajo supervisión de la Dra. Nuria Ugarte."
+description: "Tratamiento médico especializado para el acné y sus secuelas. Enfoque clínico realizado por la Dra. Nuria Ugarte."
 categoria: facial
 icon: "✨"
 order: 1
