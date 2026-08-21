@@ -9,7 +9,7 @@ La nutrición clínica va mucho más allá de una simple dieta. En la consulta d
 
 No trabajamos con dietas prefabricadas ni métodos genéricos. Cada plan se diseña específicamente para usted, teniendo en cuenta su historial clínico, sus análisis, su metabolismo y sus objetivos reales.
 
-## ¿Cuándo acudir a una consulta de nutrición clínica?
+## ¿Qué tratamos en la consulta de nutrición clínica?
 
 - **Psicología y alimentación** — trabajamos en equipo con un psicólogo el eje intestino-cerebro y la parte emocional de la comida: ansiedad, estrés, compulsión y hambre emocional. Técnicas psicológicas para mejorar su relación con la comida, su autoestima y su percepción corporal.
 - **Sobrepeso y obesidad** — hacemos de su alimentación la mejor aliada de su salud: tratamiento médico para perder peso de forma saludable, con objetivos realistas y seguimiento continuo. Sin dietas milagro.
